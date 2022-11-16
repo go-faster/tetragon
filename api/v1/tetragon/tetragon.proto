@@ -285,3 +285,23 @@ message ProcessLoader {
 	string path = 2;
 	bytes buildid = 3;
 }
+
+// RuntimeHookRequest synchronously propagates information to the agent about run-time state.
+message RuntimeHookRequest {
+    oneof event {
+        CreateContainer createContainer = 1;
+    }
+}
+
+message RuntimeHookResponse {}
+
+// CreateContainer informs the agent that a container was created
+message CreateContainer {
+    // cgroupPath is the cgroup path for the container
+    string cgroupPath = 1;
+    // rootDir is the root directory of the container
+    string rootDir = 2;
+    // annotations are the run-time annotations for the container
+    // see https://github.com/opencontainers/runtime-spec/blob/main/config.md#annotations
+    map<string, string> annotations = 3;
+}
