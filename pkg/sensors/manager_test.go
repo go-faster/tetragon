@@ -42,7 +42,8 @@ func TestAddPolicy(t *testing.T) {
 			panic("failed to stop sensor manager")
 		}
 	})
-	err = mgr.AddTracingPolicy(ctx, "test-policy", &policy)
+	policy.ObjectMeta.Name = "test-policy"
+	err = mgr.AddTracingPolicy(ctx, &policy)
 	assert.NoError(t, err)
 	l, err := mgr.ListSensors(ctx)
 	assert.NoError(t, err)
@@ -69,7 +70,8 @@ func TestAddPolicies(t *testing.T) {
 			panic("failed to stop sensor manager")
 		}
 	})
-	err = mgr.AddTracingPolicy(ctx, "test-policy", &policy)
+	policy.ObjectMeta.Name = "test-policy"
+	err = mgr.AddTracingPolicy(ctx, &policy)
 	assert.NoError(t, err)
 	l, err := mgr.ListSensors(ctx)
 	assert.NoError(t, err)
@@ -99,7 +101,8 @@ func TestAddPolicySpecError(t *testing.T) {
 			panic("failed to stop sensor manager")
 		}
 	})
-	err = mgr.AddTracingPolicy(ctx, "test-policy", &policy)
+	policy.ObjectMeta.Name = "test-policy"
+	err = mgr.AddTracingPolicy(ctx, &policy)
 	assert.NotNil(t, err)
 	t.Logf("got error (as expected): %s", err)
 	l, err := mgr.ListSensors(ctx)
@@ -130,7 +133,8 @@ func TestAddPolicyLoadError(t *testing.T) {
 			panic("failed to stop sensor manager")
 		}
 	})
-	err = mgr.AddTracingPolicy(ctx, "test-policy", &policy)
+	policy.ObjectMeta.Name = "test-policy"
+	err = mgr.AddTracingPolicy(ctx, &policy)
 	assert.NotNil(t, err)
 	t.Logf("got error (as expected): %s", err)
 	l, err := mgr.ListSensors(ctx)
