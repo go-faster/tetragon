@@ -238,6 +238,7 @@ execve_send(struct sched_execve_args *ctx)
 		}
 		curr->flags = 0;
 		curr->binary = event->binary;
+		curr->cgroupid = event->kube.cgrpid;
 #ifdef __NS_CHANGES_FILTER
 		if (init_curr)
 			memcpy(&(curr->ns), &(event->ns),

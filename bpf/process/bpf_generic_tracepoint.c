@@ -11,6 +11,7 @@
 #include "types/basic.h"
 #include "generic_calls.h"
 #include "pfilter.h"
+#include "policy_filter.h"
 
 struct {
 	__uint(type, BPF_MAP_TYPE_PROG_ARRAY);
@@ -176,6 +177,9 @@ generic_tracepoint_event(struct generic_tracepoint_event_arg *ctx)
 #ifdef __CAP_CHANGES_FILTER
 	msg->sel.match_cap = 0;
 #endif
+	if (!policy_filter_check(config->policy_id))
+		return 0;
+
 	/* Tail call into filters. */
 	msg->idx = 0;
 	msg->id = config->func_id;
