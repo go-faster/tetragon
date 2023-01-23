@@ -4,7 +4,6 @@
 package config
 
 import (
-	"fmt"
 	"os"
 	"strings"
 
@@ -33,7 +32,7 @@ func (cnf *GenericTracingConf) TpSpec() *v1alpha1.TracingPolicySpec {
 }
 
 func (cnf *GenericTracingConf) TpInfo() string {
-	return fmt.Sprintf("%s", cnf.Metadata.Name)
+	return cnf.Metadata.Name
 }
 
 func ReadConfigYaml(data string) (*GenericTracingConf, error) {
