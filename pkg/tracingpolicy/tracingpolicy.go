@@ -4,6 +4,8 @@ import (
 	"github.com/cilium/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
 )
 
+// revive:disable
+
 // TracingPolicy is an interface for a tracing policy
 // This is implemented by v1alpha1.types.TracingPolicy and
 // config.GenericTracingConf. The former is what is the k8s API server uses,
@@ -15,4 +17,11 @@ type TracingPolicy interface {
 	TpSpec() *v1alpha1.TracingPolicySpec
 	// TpInfo returns a description of the policy
 	TpInfo() string
+}
+
+// TracingPolicyNamespaced is a tracing policy applied on a specific namespace
+type TracingPolicyNamespaced interface {
+	TracingPolicy
+	// TpNamespace returns the namespace of the policy
+	TpNamespace() string
 }
