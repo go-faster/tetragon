@@ -4,10 +4,13 @@
 package config
 
 import (
+	"fmt"
 	"os"
 	"strings"
 
 	"github.com/cilium/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
+	"github.com/cilium/tetragon/pkg/tracingpolicy"
+
 	"k8s.io/apimachinery/pkg/util/validation"
 	"sigs.k8s.io/yaml"
 )
@@ -35,7 +38,7 @@ func (cnf *GenericTracingConf) TpInfo() string {
 	return cnf.Metadata.Name
 }
 
-func ReadConfigYaml(data string) (*GenericTracingConf, error) {
+func PolicyFromYaml(data string) (tracingpolicy.TracingPolicy, error) {
 	var k GenericTracingConf
 
 	err := yaml.UnmarshalStrict([]byte(data), &k)
@@ -54,24 +57,12 @@ func ReadConfigYaml(data string) (*GenericTracingConf, error) {
 	return &k, nil
 }
 
-func fileConfig(fileName string) (*GenericTracingConf, error) {
+func PolicyFromYamlFilename(fileName string) (tracingpolicy.TracingPolicy, error) {
 	config, err := os.ReadFile(fileName)
 	if err != nil {
 		return nil, err
 	}
-	return ReadConfigYaml(string(config))
-}
-
-func FileConfigSpec(fileName string) (*v1alpha1.TracingPolicySpec, error) {
-	k, err := fileConfig(fileName)
-	if err != nil {
-		return nil, err
-	}
-	return &k.Spec, err
-}
-
-func FileConfigYaml(fileName string) (*GenericTracingConf, error) {
-	return fileConfig(fileName)
+	return PolicyFromYaml(string(config))
 }
 
 type MetadataNamespaced struct {
