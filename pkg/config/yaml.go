@@ -42,8 +42,10 @@ func PolicyFromYaml(data string) (tracingpolicy.TracingPolicy, error) {
 	var k GenericTracingConf
 
 	err := yaml.UnmarshalStrict([]byte(data), &k)
+	// if yaml file contains a namespace field, partsing will fail. Retry
+	// again to parse it as a namespaced policy.
 	if err != nil {
-		return nil, err
+		return NamespacedPolicyFromYaml(data)
 	}
 
 	// validates that metadata.name value is compliant with RFC 1123 for the
@@ -91,4 +93,14 @@ func (cnf *GenericTracingConfNamespaced) TpSpec() *v1alpha1.TracingPolicySpec {
 
 func (cnf *GenericTracingConfNamespaced) TpInfo() string {
 	return cnf.Metadata.Name
+}
+
+func NamespacedPolicyFromYaml(data string) (tracingpolicy.TracingPolicy, error) {
+	var k GenericTracingConfNamespaced
+
+	err := yaml.UnmarshalStrict([]byte(data), &k)
+	if err != nil {
+		return nil, err
+	}
+	return &k, nil
 }
