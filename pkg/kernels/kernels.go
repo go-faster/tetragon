@@ -151,3 +151,14 @@ func GenericKprobeObjs() (string, string) {
 		return "bpf_generic_kprobe.o", "bpf_generic_retkprobe.o"
 	}
 }
+
+// ExecObj returns the exec object based on the kernel version
+func ExecObj() string {
+	if EnableV60Progs() {
+		return "bpf_execve_event_v60.o"
+	} else if EnableLargeProgs() {
+		return "bpf_execve_event_v53.o"
+	} else {
+		return "bpf_execve_event.o"
+	}
+}
