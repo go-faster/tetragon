@@ -52,7 +52,7 @@ func debugPodLogger(log logrus.FieldLogger, p *podInfo) logrus.FieldLogger {
 	return log
 }
 
-func (s *State) debugLogWithCallers(nCallers int) logrus.FieldLogger {
+func (s *state) debugLogWithCallers(nCallers int) logrus.FieldLogger {
 	if !debugInfo {
 		return emptyLogger
 	}
@@ -71,7 +71,7 @@ func (s *State) debugLogWithCallers(nCallers int) logrus.FieldLogger {
 	return log
 }
 
-func (s *State) Debug(args ...interface{}) {
+func (s *state) Debug(args ...interface{}) {
 	if debugInfo {
 		s.log.Info(args...)
 	} else {
@@ -79,7 +79,7 @@ func (s *State) Debug(args ...interface{}) {
 	}
 }
 
-func (s *State) Debugf(fmt string, args ...interface{}) {
+func (s *state) Debugf(fmt string, args ...interface{}) {
 	if debugInfo {
 		s.log.Infof(fmt, args...)
 	} else {
