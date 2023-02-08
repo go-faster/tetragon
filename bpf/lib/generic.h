@@ -68,7 +68,7 @@ struct names_map_key {
 
 struct {
 	__uint(type, BPF_MAP_TYPE_HASH);
-	__uint(max_entries, 64);
+	__uint(max_entries, 256);
 	__type(key, struct names_map_key);
 	__type(value, __u32);
 } names_map SEC(".maps");
