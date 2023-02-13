@@ -47,7 +47,7 @@ func TestAddPolicy(t *testing.T) {
 	assert.NoError(t, err)
 	l, err := mgr.ListSensors(ctx)
 	assert.NoError(t, err)
-	assert.Equal(t, []SensorStatus{{Name: "dummy-sensor", Enabled: true}}, *l)
+	assert.Equal(t, []SensorStatus{{Name: "dummy-sensor", Enabled: true, Collection: "test-policy (object:0/) (type:/)"}}, *l)
 }
 
 // TestAddPolicies tests the addition of a policy with two dummy sensors
@@ -76,8 +76,8 @@ func TestAddPolicies(t *testing.T) {
 	l, err := mgr.ListSensors(ctx)
 	assert.NoError(t, err)
 	assert.ElementsMatch(t, []SensorStatus{
-		{Name: "dummy-sensor1", Enabled: true},
-		{Name: "dummy-sensor2", Enabled: true},
+		{Name: "dummy-sensor1", Enabled: true, Collection: "test-policy (object:0/) (type:/)"},
+		{Name: "dummy-sensor2", Enabled: true, Collection: "test-policy (object:0/) (type:/)"},
 	}, *l)
 }
 
