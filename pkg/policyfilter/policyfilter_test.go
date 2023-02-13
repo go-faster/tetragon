@@ -38,6 +38,10 @@ func TestMain(m *testing.M) {
 		"tetragon lib directory (location of btf file and bpf objs).")
 	flag.Parse()
 
+	if envLib := os.Getenv("TETRAGON_LIB"); envLib != "" {
+		option.Config.HubbleLib = envLib
+	}
+
 	// setup a custom bpffs path to pin objects
 	dirPath := initBpffs()
 
