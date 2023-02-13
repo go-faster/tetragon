@@ -28,3 +28,29 @@ type TracingPolicyNamespaced interface {
 	// TpNamespace returns the namespace of the policy
 	TpNamespace() string
 }
+
+type SpecTp struct {
+	name string
+	info string
+	spec *v1alpha1.TracingPolicySpec
+}
+
+func NewTp(name string, info string, spec *v1alpha1.TracingPolicySpec) *SpecTp {
+	return &SpecTp{
+		name: name,
+		info: info,
+		spec: spec,
+	}
+}
+
+func (s *SpecTp) TpName() string {
+	return s.name
+}
+
+func (s *SpecTp) TpInfo() string {
+	return s.info
+}
+
+func (s *SpecTp) TpSpec() *v1alpha1.TracingPolicySpec {
+	return s.spec
+}

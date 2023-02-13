@@ -19,6 +19,7 @@ import (
 	"github.com/cilium/tetragon/pkg/logger"
 	"github.com/cilium/tetragon/pkg/observer"
 	"github.com/cilium/tetragon/pkg/option"
+	"github.com/cilium/tetragon/pkg/policyfilter"
 	"github.com/cilium/tetragon/pkg/reader/notify"
 	"github.com/cilium/tetragon/pkg/sensors"
 	"github.com/cilium/tetragon/pkg/sensors/base"
@@ -26,6 +27,7 @@ import (
 	"github.com/cilium/tetragon/pkg/testutils"
 	"github.com/cilium/tetragon/pkg/testutils/perfring"
 	tus "github.com/cilium/tetragon/pkg/testutils/sensors"
+	"github.com/cilium/tetragon/pkg/tracingpolicy"
 	"github.com/google/go-cmp/cmp"
 	"github.com/sirupsen/logrus"
 	"golang.org/x/sys/unix"
@@ -50,7 +52,9 @@ func loadGenericSensorTest(t *testing.T, ctx context.Context, spec *v1alpha1.Tra
 	if err := observer.InitDataCache(1024); err != nil {
 		t.Fatalf("observer.InitDataCache: %s", err)
 	}
-	ret, err := sensors.GetSensorsFromParserPolicy(spec)
+
+	tp := tracingpolicy.NewTp("name", "info", spec)
+	ret, err := sensors.SensorsFromPolicy(tp, policyfilter.PolicyID(0))
 	if err != nil {
 		t.Fatalf("GetSensorsFromParserPolicy failed: %v", err)
 	} else if len(ret) != 1 {
