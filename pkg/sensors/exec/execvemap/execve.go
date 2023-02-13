@@ -22,6 +22,7 @@ type ExecveValue struct {
 	Nspid        uint32                     `align:"nspid"`
 	Binary       uint32                     `align:"binary"`
 	Pad          uint32                     `align:"pad"`
+	CgroupID     uint64                     `align:"cgroupid"`
 	Namespaces   processapi.MsgNamespaces   `align:"ns"`
 	Capabilities processapi.MsgCapabilities `align:"caps"`
 }
