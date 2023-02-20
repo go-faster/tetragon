@@ -13,9 +13,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cilium/tetragon/api/v1/tetragon"
-	"github.com/cilium/tetragon/pkg/ratelimit"
-	"github.com/cilium/tetragon/pkg/server"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/pkg/ratelimit"
+	"github.com/go-faster/tetragon/pkg/server"
 	"github.com/stretchr/testify/assert"
 )
 

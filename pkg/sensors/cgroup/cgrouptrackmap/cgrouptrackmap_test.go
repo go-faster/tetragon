@@ -6,10 +6,11 @@ package cgrouptrackmap
 import (
 	"testing"
 
-	"github.com/cilium/tetragon/pkg/api/ops"
-	"github.com/cilium/tetragon/pkg/api/processapi"
-	"github.com/cilium/tetragon/pkg/cgroups"
 	"github.com/stretchr/testify/assert"
+
+	"github.com/go-faster/tetragon/pkg/api/ops"
+	"github.com/go-faster/tetragon/pkg/api/processapi"
+	"github.com/go-faster/tetragon/pkg/cgroups"
 )
 
 func TestDeepCopyMapValue(t *testing.T) {

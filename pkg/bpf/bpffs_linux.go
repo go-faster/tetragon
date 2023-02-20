@@ -25,9 +25,9 @@ import (
 	"syscall"
 
 	"github.com/cilium/ebpf/rlimit"
-	"github.com/cilium/tetragon/pkg/defaults"
-	"github.com/cilium/tetragon/pkg/logger"
-	"github.com/cilium/tetragon/pkg/mountinfo"
+	"github.com/go-faster/tetragon/pkg/defaults"
+	"github.com/go-faster/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/mountinfo"
 )
 
 var (

@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	tus "github.com/cilium/tetragon/pkg/testutils/sensors"
+	tus "github.com/go-faster/tetragon/pkg/testutils/sensors"
 )
 
 var tetragonLib string

@@ -12,12 +12,12 @@ import (
 
 	"sync/atomic"
 
-	"github.com/cilium/tetragon/pkg/api/ops"
-	api "github.com/cilium/tetragon/pkg/api/testapi"
-	"github.com/cilium/tetragon/pkg/grpc/test"
-	"github.com/cilium/tetragon/pkg/observer"
-	"github.com/cilium/tetragon/pkg/sensors"
-	"github.com/cilium/tetragon/pkg/sensors/program"
+	"github.com/go-faster/tetragon/pkg/api/ops"
+	api "github.com/go-faster/tetragon/pkg/api/testapi"
+	"github.com/go-faster/tetragon/pkg/grpc/test"
+	"github.com/go-faster/tetragon/pkg/observer"
+	"github.com/go-faster/tetragon/pkg/sensors"
+	"github.com/go-faster/tetragon/pkg/sensors/program"
 )
 
 var (

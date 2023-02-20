@@ -18,33 +18,33 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/cilium/tetragon/api/v1/tetragon"
-	"github.com/cilium/tetragon/pkg/bpf"
-	"github.com/cilium/tetragon/pkg/btf"
-	"github.com/cilium/tetragon/pkg/bugtool"
-	"github.com/cilium/tetragon/pkg/cilium"
-	"github.com/cilium/tetragon/pkg/config"
-	"github.com/cilium/tetragon/pkg/defaults"
-	"github.com/cilium/tetragon/pkg/exporter"
-	"github.com/cilium/tetragon/pkg/filters"
-	tetragonGrpc "github.com/cilium/tetragon/pkg/grpc"
-	"github.com/cilium/tetragon/pkg/logger"
-	"github.com/cilium/tetragon/pkg/metrics"
-	"github.com/cilium/tetragon/pkg/observer"
-	"github.com/cilium/tetragon/pkg/option"
-	"github.com/cilium/tetragon/pkg/process"
-	"github.com/cilium/tetragon/pkg/ratelimit"
-	"github.com/cilium/tetragon/pkg/sensors"
-	"github.com/cilium/tetragon/pkg/sensors/base"
-	"github.com/cilium/tetragon/pkg/sensors/program"
-	"github.com/cilium/tetragon/pkg/server"
-	"github.com/cilium/tetragon/pkg/unixlisten"
-	"github.com/cilium/tetragon/pkg/version"
-	"github.com/cilium/tetragon/pkg/watcher"
-	"github.com/cilium/tetragon/pkg/watcher/crd"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/pkg/bpf"
+	"github.com/go-faster/tetragon/pkg/btf"
+	"github.com/go-faster/tetragon/pkg/bugtool"
+	"github.com/go-faster/tetragon/pkg/cilium"
+	"github.com/go-faster/tetragon/pkg/config"
+	"github.com/go-faster/tetragon/pkg/defaults"
+	"github.com/go-faster/tetragon/pkg/exporter"
+	"github.com/go-faster/tetragon/pkg/filters"
+	tetragonGrpc "github.com/go-faster/tetragon/pkg/grpc"
+	"github.com/go-faster/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/metrics"
+	"github.com/go-faster/tetragon/pkg/observer"
+	"github.com/go-faster/tetragon/pkg/option"
+	"github.com/go-faster/tetragon/pkg/process"
+	"github.com/go-faster/tetragon/pkg/ratelimit"
+	"github.com/go-faster/tetragon/pkg/sensors"
+	"github.com/go-faster/tetragon/pkg/sensors/base"
+	"github.com/go-faster/tetragon/pkg/sensors/program"
+	"github.com/go-faster/tetragon/pkg/server"
+	"github.com/go-faster/tetragon/pkg/unixlisten"
+	"github.com/go-faster/tetragon/pkg/version"
+	"github.com/go-faster/tetragon/pkg/watcher"
+	"github.com/go-faster/tetragon/pkg/watcher/crd"
 
 	// Imported to allow sensors to be initialized inside init().
-	_ "github.com/cilium/tetragon/pkg/sensors"
+	_ "github.com/go-faster/tetragon/pkg/sensors"
 
 	"github.com/cilium/lumberjack/v2"
 	gops "github.com/google/gops/agent"
@@ -372,7 +372,7 @@ func logStatus(ctx context.Context, obs *observer.Observer) {
 
 // getObserverDir returns the path to the observer directory based on the BPF
 // map root. This function relies on the map root to be set properly via
-// github.com/cilium/tetragon/pkg/bpf.CheckOrMountFS().
+// github.com/go-faster/tetragon/pkg/bpf.CheckOrMountFS().
 func getObserverDir() string {
 	return bpf.MapPrefixPath()
 }

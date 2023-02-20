@@ -5,7 +5,7 @@ package path
 import (
 	"path/filepath"
 
-	"github.com/cilium/tetragon/pkg/api/processapi"
+	"github.com/go-faster/tetragon/pkg/api/processapi"
 )
 
 func GetBinaryAbsolutePath(binary string, cwd string) string {

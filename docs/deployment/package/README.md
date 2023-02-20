@@ -94,8 +94,8 @@ To update Tetragon:
 4. Install new Tetragon version
 
    ```bash
-   tar -xvf tetragon-v0.8.4-amd64.tar.gz
-   cd tetragon-v0.8.4-amd64/
+   tar -xvf tetragon-v0.8.5-amd64.tar.gz
+   cd tetragon-v0.8.5-amd64/
    sudo ./install.sh
    ```
 

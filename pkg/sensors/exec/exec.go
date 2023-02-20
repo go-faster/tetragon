@@ -8,19 +8,20 @@ import (
 	"fmt"
 	"unsafe"
 
-	"github.com/cilium/tetragon/pkg/api"
-	"github.com/cilium/tetragon/pkg/api/dataapi"
-	"github.com/cilium/tetragon/pkg/api/ops"
-	"github.com/cilium/tetragon/pkg/api/processapi"
-	"github.com/cilium/tetragon/pkg/cgroups"
-	exec "github.com/cilium/tetragon/pkg/grpc/exec"
-	"github.com/cilium/tetragon/pkg/logger"
-	"github.com/cilium/tetragon/pkg/observer"
-	"github.com/cilium/tetragon/pkg/process"
-	"github.com/cilium/tetragon/pkg/sensors"
-	"github.com/cilium/tetragon/pkg/sensors/exec/procevents"
-	"github.com/cilium/tetragon/pkg/sensors/program"
 	"github.com/sirupsen/logrus"
+
+	"github.com/go-faster/tetragon/pkg/api"
+	"github.com/go-faster/tetragon/pkg/api/dataapi"
+	"github.com/go-faster/tetragon/pkg/api/ops"
+	"github.com/go-faster/tetragon/pkg/api/processapi"
+	"github.com/go-faster/tetragon/pkg/cgroups"
+	"github.com/go-faster/tetragon/pkg/grpc/exec"
+	"github.com/go-faster/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/observer"
+	"github.com/go-faster/tetragon/pkg/process"
+	"github.com/go-faster/tetragon/pkg/sensors"
+	"github.com/go-faster/tetragon/pkg/sensors/exec/procevents"
+	"github.com/go-faster/tetragon/pkg/sensors/program"
 )
 
 func msgToExecveUnix(m *processapi.MsgExecveEvent) *exec.MsgExecveEventUnix {
