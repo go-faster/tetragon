@@ -1,4 +1,4 @@
-module github.com/cilium/tetragon/api
+module github.com/go-faster/tetragon/api
 
 go 1.18
 
