@@ -198,24 +198,24 @@ lint:
 
 .PHONY: image image-operator image-test image-codegen
 image:
-	$(CONTAINER_ENGINE) build -t "go-faster/tetragon:${DOCKER_IMAGE_TAG}" --build-arg TETRAGON_VERSION=$(VERSION) .
+	$(CONTAINER_ENGINE) build -t "ghcr.io/go-faster/tetragon:${DOCKER_IMAGE_TAG}" --build-arg TETRAGON_VERSION=$(VERSION) .
 	$(QUIET)echo "Push like this when ready:"
-	$(QUIET)echo "${CONTAINER_ENGINE} push go-faster/tetragon:$(DOCKER_IMAGE_TAG)"
+	$(QUIET)echo "${CONTAINER_ENGINE} push ghcr.io/go-faster/tetragon:$(DOCKER_IMAGE_TAG)"
 
 image-operator:
-	$(CONTAINER_ENGINE) build -f operator.Dockerfile -t "go-faster/tetragon-operator:${DOCKER_IMAGE_TAG}" .
+	$(CONTAINER_ENGINE) build -f operator.Dockerfile -t "ghcr.io/go-faster/tetragon-operator:${DOCKER_IMAGE_TAG}" .
 	$(QUIET)echo "Push like this when ready:"
-	$(QUIET)echo "${CONTAINER_ENGINE} push go-faster/tetragon-operator:$(DOCKER_IMAGE_TAG)"
+	$(QUIET)echo "${CONTAINER_ENGINE} push ghcr.io/go-faster/tetragon-operator:$(DOCKER_IMAGE_TAG)"
 
 image-test: image-clang
-	$(CONTAINER_ENGINE) build -f Dockerfile.test -t "go-faster/tetragon-test:${DOCKER_IMAGE_TAG}" .
+	$(CONTAINER_ENGINE) build -f Dockerfile.test -t "ghcr.io/go-faster/tetragon-test:${DOCKER_IMAGE_TAG}" .
 	$(QUIET)echo "Push like this when ready:"
-	$(QUIET)echo "${CONTAINER_ENGINE} push go-faster/tetragon-test:$(DOCKER_IMAGE_TAG)"
+	$(QUIET)echo "${CONTAINER_ENGINE} push ghcr.io/go-faster/tetragon-test:$(DOCKER_IMAGE_TAG)"
 
 image-codegen:
-	$(CONTAINER_ENGINE) build -f Dockerfile.codegen -t "go-faster/tetragon-codegen:${DOCKER_IMAGE_TAG}" .
+	$(CONTAINER_ENGINE) build -f Dockerfile.codegen -t "ghcr.io/go-faster/tetragon-codegen:${DOCKER_IMAGE_TAG}" .
 	$(QUIET)echo "Push like this when ready:"
-	$(QUIET)echo "${CONTAINER_ENGINE} push go-faster/tetragon-codegen:$(DOCKER_IMAGE_TAG)"
+	$(QUIET)echo "${CONTAINER_ENGINE} push ghcr.io/go-faster/tetragon-codegen:$(DOCKER_IMAGE_TAG)"
 
 .PHONY: image-clang
 image-clang:
@@ -230,7 +230,7 @@ image-clang-arm:
 .PHONY: tarball tarball-release tarball-clean
 # Share same build environment as docker image
 tarball: tarball-clean image
-	$(CONTAINER_ENGINE) build --build-arg TETRAGON_VERSION=$(VERSION) --build-arg TARGET_ARCH=$(TARGET_ARCH) -f Dockerfile.tarball -t "go-faster/tetragon-tarball:${DOCKER_IMAGE_TAG}" .
+	$(CONTAINER_ENGINE) build --build-arg TETRAGON_VERSION=$(VERSION) --build-arg TARGET_ARCH=$(TARGET_ARCH) -f Dockerfile.tarball -t "ghcr.io/go-faster/tetragon-tarball:${DOCKER_IMAGE_TAG}" .
 	$(QUIET)mkdir -p $(BUILD_PKG_DIR)
 	$(CONTAINER_ENGINE) save go-faster/tetragon-tarball:$(DOCKER_IMAGE_TAG) -o $(BUILD_PKG_DIR)/tetragon-$(VERSION)-$(TARGET_ARCH).tmp.tar
 	$(QUIET)mkdir -p $(BUILD_PKG_DIR)/docker/
