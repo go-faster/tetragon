@@ -123,7 +123,7 @@ jobs:
           retention-days: 1
 
   image-digests:
-    if: ${{ github.repository == 'cilium/tetragon' }}
+    if: ${{ github.repository == 'go-faster/tetragon' }}
     name: Display Digests
     runs-on: ubuntu-20.04
     needs: build-and-push

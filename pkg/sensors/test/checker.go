@@ -8,11 +8,11 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/cilium/tetragon/api/v1/tetragon"
-	"github.com/cilium/tetragon/pkg/testutils"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/pkg/testutils"
 	"github.com/sirupsen/logrus"
 
-	ec "github.com/cilium/tetragon/api/v1/tetragon/codegen/eventchecker"
+	ec "github.com/go-faster/tetragon/api/v1/tetragon/codegen/eventchecker"
 )
 
 //revive:disable

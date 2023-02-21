@@ -1,4 +1,4 @@
-module github.com/cilium/tetragon/pkg/k8s
+module github.com/go-faster/tetragon/pkg/k8s
 
 go 1.18
 

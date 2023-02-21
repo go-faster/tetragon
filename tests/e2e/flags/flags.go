@@ -13,7 +13,7 @@ var Opts = Flags{
 	Helm: HelmOptions{
 		Wait:             true,
 		DaemonSetName:    "tetragon",
-		HelmChart:        "cilium/tetragon",
+		HelmChart:        "go-faster/tetragon",
 		HelmRepoUrl:      "https://helm.cilium.io",
 		HelmChartVersion: "9999.9999.9999-dev",
 		Namespace:        "kube-system",

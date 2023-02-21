@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/cilium/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
-	"github.com/cilium/tetragon/pkg/logger"
-	sttManager "github.com/cilium/tetragon/pkg/stt"
+	"github.com/go-faster/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
+	"github.com/go-faster/tetragon/pkg/logger"
+	sttManager "github.com/go-faster/tetragon/pkg/stt"
 )
 
 type SensorStatus struct {

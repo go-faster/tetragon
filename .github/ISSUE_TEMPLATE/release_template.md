@@ -34,8 +34,8 @@ assignees: ''
 
 - [ ] Go to [Image CI Releases workflow] and wait for the release image build to finish.
       - Get approval for your release build workflow from [a Tetragon maintainer]
-      - https://quay.io/repository/cilium/tetragon?tab=tags
-      - https://quay.io/repository/cilium/tetragon-operator?tab=tags
+      - https://quay.io/repository/go-faster/tetragon?tab=tags
+      - https://quay.io/repository/go-faster/tetragon-operator?tab=tags
 
 - [ ] When a tag is pushed, a GitHub Action job takes care of creating a new GitHub
       draft release, building artifacts and attaching them to the draft release. Once
@@ -48,9 +48,9 @@ assignees: ''
       - Once the pull request is merged and the chart is published, go to [cilium/charts GKE workflow] and wait for the
         CI run to pass.
 
-[release blockers]: https://github.com/cilium/tetragon/issues?q=is%3Aissue+is%3Aopen+label%3Arelease-blocker
-[Image CI Releases workflow]: https://github.com/cilium/tetragon/actions/workflows/build-images-releases.yml
+[release blockers]: https://github.com/go-faster/tetragon/issues?q=is%3Aissue+is%3Aopen+label%3Arelease-blocker
+[Image CI Releases workflow]: https://github.com/go-faster/tetragon/actions/workflows/build-images-releases.yml
 [cilium/charts RELEASE.md]: https://github.com/cilium/charts/blob/master/RELEASE.md
 [cilium/charts GKE workflow]: https://github.com/cilium/charts/actions/workflows/conformance-tetragon-gke.yaml
-[releases page]: https://github.com/cilium/tetragon/releases
+[releases page]: https://github.com/go-faster/tetragon/releases
 [a Tetragon maintainer]: https://github.com/orgs/cilium/teams/tetragon-maintainers/members
