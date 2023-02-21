@@ -8,13 +8,13 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/cilium/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/logger"
 	"google.golang.org/protobuf/compiler/protogen"
 	"google.golang.org/protobuf/reflect/protoreflect"
 )
 
 // TetragonPackageName is the import path for the Tetragon package
-var TetragonPackageName = "github.com/cilium/tetragon"
+var TetragonPackageName = "github.com/go-faster/tetragon"
 
 // TetragonApiPackageName is the import path for the code generated package
 var TetragonApiPackageName = "api/v1/tetragon"
@@ -82,41 +82,41 @@ func GeneratedIdent(g *protogen.GeneratedFile, importPath string, name string) s
 
 // Logger is a convenience helper that generates a call to logger.GetLogger()
 func Logger(g *protogen.GeneratedFile) string {
-	return fmt.Sprintf("%s()", GoIdent(g, "github.com/cilium/tetragon/pkg/logger", "GetLogger"))
+	return fmt.Sprintf("%s()", GoIdent(g, "github.com/go-faster/tetragon/pkg/logger", "GetLogger"))
 }
 
 func ProcessIdent(g *protogen.GeneratedFile) string {
-	importPath := filepath.Join("github.com/cilium/tetragon/api/v1/tetragon")
+	importPath := filepath.Join("github.com/go-faster/tetragon/api/v1/tetragon")
 	return GoIdent(g, importPath, "Process")
 }
 
 func ListMatcherIdent(g *protogen.GeneratedFile, name string) string {
-	importPath := filepath.Join("github.com/cilium/tetragon/pkg/matchers/listmatcher")
+	importPath := filepath.Join("github.com/go-faster/tetragon/pkg/matchers/listmatcher")
 	return GoIdent(g, importPath, name)
 }
 
 func StringMatcherIdent(g *protogen.GeneratedFile, name string) string {
-	importPath := filepath.Join("github.com/cilium/tetragon/pkg/matchers/stringmatcher")
+	importPath := filepath.Join("github.com/go-faster/tetragon/pkg/matchers/stringmatcher")
 	return GoIdent(g, importPath, name)
 }
 
 func BytesMatcherIdent(g *protogen.GeneratedFile, name string) string {
-	importPath := filepath.Join("github.com/cilium/tetragon/pkg/matchers/bytesmatcher")
+	importPath := filepath.Join("github.com/go-faster/tetragon/pkg/matchers/bytesmatcher")
 	return GoIdent(g, importPath, name)
 }
 
 func DurationMatcherIdent(g *protogen.GeneratedFile, name string) string {
-	importPath := filepath.Join("github.com/cilium/tetragon/pkg/matchers/durationmatcher")
+	importPath := filepath.Join("github.com/go-faster/tetragon/pkg/matchers/durationmatcher")
 	return GoIdent(g, importPath, name)
 }
 
 func TimestampMatcherIdent(g *protogen.GeneratedFile, name string) string {
-	importPath := filepath.Join("github.com/cilium/tetragon/pkg/matchers/timestampmatcher")
+	importPath := filepath.Join("github.com/go-faster/tetragon/pkg/matchers/timestampmatcher")
 	return GoIdent(g, importPath, name)
 }
 
 func PkgProcessIdent(g *protogen.GeneratedFile, name string) string {
-	importPath := filepath.Join("github.com/cilium/tetragon/pkg/process")
+	importPath := filepath.Join("github.com/go-faster/tetragon/pkg/process")
 	return GoIdent(g, importPath, name)
 }
 

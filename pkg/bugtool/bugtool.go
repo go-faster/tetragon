@@ -21,8 +21,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cilium/tetragon/pkg/defaults"
-	"github.com/cilium/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/defaults"
+	"github.com/go-faster/tetragon/pkg/logger"
 
 	"github.com/sirupsen/logrus"
 	"github.com/vishvananda/netlink"

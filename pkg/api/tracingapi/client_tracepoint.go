@@ -3,7 +3,7 @@
 
 package tracingapi
 
-import "github.com/cilium/tetragon/pkg/api/processapi"
+import "github.com/go-faster/tetragon/pkg/api/processapi"
 
 type MsgGenericTracepointArg interface{}
 

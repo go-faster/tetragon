@@ -18,9 +18,9 @@ BUILD_PKG_DIR ?= $(shell pwd)/build/$(TARGET_ARCH)
 
 VERSION ?= $(shell git describe --tags --always)
 GO_GCFLAGS ?= ""
-GO_LDFLAGS="-X 'github.com/cilium/tetragon/pkg/version.Version=$(VERSION)'"
-GO_IMAGE_LDFLAGS="-X 'github.com/cilium/tetragon/pkg/version.Version=$(VERSION)' -linkmode external -extldflags -static"
-GO_OPERATOR_IMAGE_LDFLAGS="-X 'github.com/cilium/tetragon/pkg/version.Version=$(VERSION)' -s -w"
+GO_LDFLAGS="-X 'github.com/go-faster/tetragon/pkg/version.Version=$(VERSION)'"
+GO_IMAGE_LDFLAGS="-X 'github.com/go-faster/tetragon/pkg/version.Version=$(VERSION)' -linkmode external -extldflags -static"
+GO_OPERATOR_IMAGE_LDFLAGS="-X 'github.com/go-faster/tetragon/pkg/version.Version=$(VERSION)' -s -w"
 
 
 GOLANGCILINT_WANT_VERSION = 1.50.1
@@ -144,9 +144,9 @@ test: tester-progs tetragon-bpf
 	$(SUDO) $(GO) test -p 1 -parallel 1 $(GOFLAGS) -gcflags=$(GO_GCFLAGS) -timeout 20m -failfast -cover ./pkg/... ./cmd/... ${EXTRA_TESTFLAGS}
 
 # Agent image to use for end-to-end tests
-E2E_AGENT ?= "cilium/tetragon:$(DOCKER_IMAGE_TAG)"
+E2E_AGENT ?= "go-faster/tetragon:$(DOCKER_IMAGE_TAG)"
 # Operator image to use for end-to-end tests
-E2E_OPERATOR ?= "cilium/tetragon-operator:$(DOCKER_IMAGE_TAG)"
+E2E_OPERATOR ?= "go-faster/tetragon-operator:$(DOCKER_IMAGE_TAG)"
 # BTF file to use in the E2E test. Set to nothing to use system BTF.
 E2E_BTF ?= ""
 # Actual flags to use for BTF file in e2e test. Use E2E_BTF instead.
@@ -172,7 +172,7 @@ TEST_COMPILE ?= ./...
 test-compile:
 	mkdir -p go-tests
 	for pkg in $$($(GO) list "$(TEST_COMPILE)"); do \
-		localpkg=$$(echo $$pkg | sed -e 's:github.com/cilium/tetragon/::'); \
+		localpkg=$$(echo $$pkg | sed -e 's:github.com/go-faster/tetragon/::'); \
 		localtestfile=$$(echo $$localpkg | sed -e 's:/:.:g'); \
 		numtests=$$(ls -l ./$$localpkg/*_test.go 2> /dev/null | wc -l); \
 		if [ $$numtests -le 0 ]; then \
@@ -198,24 +198,24 @@ lint:
 
 .PHONY: image image-operator image-test image-codegen
 image:
-	$(CONTAINER_ENGINE) build -t "cilium/tetragon:${DOCKER_IMAGE_TAG}" --build-arg TETRAGON_VERSION=$(VERSION) .
+	$(CONTAINER_ENGINE) build -t "ghcr.io/go-faster/tetragon:${DOCKER_IMAGE_TAG}" --build-arg TETRAGON_VERSION=$(VERSION) .
 	$(QUIET)echo "Push like this when ready:"
-	$(QUIET)echo "${CONTAINER_ENGINE} push cilium/tetragon:$(DOCKER_IMAGE_TAG)"
+	$(QUIET)echo "${CONTAINER_ENGINE} push ghcr.io/go-faster/tetragon:$(DOCKER_IMAGE_TAG)"
 
 image-operator:
-	$(CONTAINER_ENGINE) build -f operator.Dockerfile -t "cilium/tetragon-operator:${DOCKER_IMAGE_TAG}" .
+	$(CONTAINER_ENGINE) build -f operator.Dockerfile -t "ghcr.io/go-faster/tetragon-operator:${DOCKER_IMAGE_TAG}" .
 	$(QUIET)echo "Push like this when ready:"
-	$(QUIET)echo "${CONTAINER_ENGINE} push cilium/tetragon-operator:$(DOCKER_IMAGE_TAG)"
+	$(QUIET)echo "${CONTAINER_ENGINE} push ghcr.io/go-faster/tetragon-operator:$(DOCKER_IMAGE_TAG)"
 
 image-test: image-clang
-	$(CONTAINER_ENGINE) build -f Dockerfile.test -t "cilium/tetragon-test:${DOCKER_IMAGE_TAG}" .
+	$(CONTAINER_ENGINE) build -f Dockerfile.test -t "ghcr.io/go-faster/tetragon-test:${DOCKER_IMAGE_TAG}" .
 	$(QUIET)echo "Push like this when ready:"
-	$(QUIET)echo "${CONTAINER_ENGINE} push cilium/tetragon-test:$(DOCKER_IMAGE_TAG)"
+	$(QUIET)echo "${CONTAINER_ENGINE} push ghcr.io/go-faster/tetragon-test:$(DOCKER_IMAGE_TAG)"
 
 image-codegen:
-	$(CONTAINER_ENGINE) build -f Dockerfile.codegen -t "cilium/tetragon-codegen:${DOCKER_IMAGE_TAG}" .
+	$(CONTAINER_ENGINE) build -f Dockerfile.codegen -t "ghcr.io/go-faster/tetragon-codegen:${DOCKER_IMAGE_TAG}" .
 	$(QUIET)echo "Push like this when ready:"
-	$(QUIET)echo "${CONTAINER_ENGINE} push cilium/tetragon-codegen:$(DOCKER_IMAGE_TAG)"
+	$(QUIET)echo "${CONTAINER_ENGINE} push ghcr.io/go-faster/tetragon-codegen:$(DOCKER_IMAGE_TAG)"
 
 .PHONY: image-clang
 image-clang:
@@ -230,9 +230,9 @@ image-clang-arm:
 .PHONY: tarball tarball-release tarball-clean
 # Share same build environment as docker image
 tarball: tarball-clean image
-	$(CONTAINER_ENGINE) build --build-arg TETRAGON_VERSION=$(VERSION) --build-arg TARGET_ARCH=$(TARGET_ARCH) -f Dockerfile.tarball -t "cilium/tetragon-tarball:${DOCKER_IMAGE_TAG}" .
+	$(CONTAINER_ENGINE) build --build-arg TETRAGON_VERSION=$(VERSION) --build-arg TARGET_ARCH=$(TARGET_ARCH) -f Dockerfile.tarball -t "ghcr.io/go-faster/tetragon-tarball:${DOCKER_IMAGE_TAG}" .
 	$(QUIET)mkdir -p $(BUILD_PKG_DIR)
-	$(CONTAINER_ENGINE) save cilium/tetragon-tarball:$(DOCKER_IMAGE_TAG) -o $(BUILD_PKG_DIR)/tetragon-$(VERSION)-$(TARGET_ARCH).tmp.tar
+	$(CONTAINER_ENGINE) save go-faster/tetragon-tarball:$(DOCKER_IMAGE_TAG) -o $(BUILD_PKG_DIR)/tetragon-$(VERSION)-$(TARGET_ARCH).tmp.tar
 	$(QUIET)mkdir -p $(BUILD_PKG_DIR)/docker/
 	$(QUIET)mkdir -p $(BUILD_PKG_DIR)/linux-tarball/
 	tar xC $(BUILD_PKG_DIR)/docker/ -f $(BUILD_PKG_DIR)/tetragon-$(VERSION)-$(TARGET_ARCH).tmp.tar
@@ -250,7 +250,7 @@ tarball-clean:
 	rm -fr $(BUILD_PKG_DIR)
 
 fetch-testdata:
-	wget -nc -P testdata/btf 'https://github.com/cilium/tetragon-testdata/raw/main/btf/vmlinux-5.4.104+'
+	wget -nc -P testdata/btf 'https://github.com/go-faster/tetragon-testdata/raw/main/btf/vmlinux-5.4.104+'
 
 .PHONY: generate codegen protoc-gen-go-tetragon
 generate:

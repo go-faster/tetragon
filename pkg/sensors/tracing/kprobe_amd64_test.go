@@ -13,15 +13,15 @@ import (
 	"syscall"
 	"testing"
 
-	"github.com/cilium/tetragon/api/v1/tetragon"
-	ec "github.com/cilium/tetragon/api/v1/tetragon/codegen/eventchecker"
-	"github.com/cilium/tetragon/pkg/jsonchecker"
-	sm "github.com/cilium/tetragon/pkg/matchers/stringmatcher"
-	"github.com/cilium/tetragon/pkg/observer"
-	"github.com/cilium/tetragon/pkg/reader/caps"
-	tus "github.com/cilium/tetragon/pkg/testutils/sensors"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
+	ec "github.com/go-faster/tetragon/api/v1/tetragon/codegen/eventchecker"
+	"github.com/go-faster/tetragon/pkg/jsonchecker"
+	sm "github.com/go-faster/tetragon/pkg/matchers/stringmatcher"
+	"github.com/go-faster/tetragon/pkg/observer"
+	"github.com/go-faster/tetragon/pkg/reader/caps"
+	tus "github.com/go-faster/tetragon/pkg/testutils/sensors"
 
-	_ "github.com/cilium/tetragon/pkg/sensors/exec"
+	_ "github.com/go-faster/tetragon/pkg/sensors/exec"
 
 	"github.com/stretchr/testify/assert"
 	"golang.org/x/sys/unix"

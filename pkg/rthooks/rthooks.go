@@ -9,8 +9,8 @@ package rthooks
 import (
 	"context"
 
-	v1 "github.com/cilium/tetragon/api/v1/tetragon"
-	"github.com/cilium/tetragon/pkg/watcher"
+	v1 "github.com/go-faster/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/pkg/watcher"
 )
 
 var (

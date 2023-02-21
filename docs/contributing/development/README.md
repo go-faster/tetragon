@@ -26,25 +26,25 @@ Docs](https://docs.github.com/en/repositories/managing-your-repositorys-settings
    cd "${GOPATH}/src/github.com/cilium"
    git clone https://github.com/${YOUR_GITHUB_USERNAME_OR_ORG}/tetragon.git
    cd tetragon
-   git remote add upstream https://github.com/cilium/tetragon.git
+   git remote add upstream https://github.com/go-faster/tetragon.git
 ```
 
 5. Prepare your [Development Setup](#development-setup), see below.
 
 6. Check the GitHub issues for [good tasks to get
-started](https://github.com/cilium/tetragon/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
+started](https://github.com/go-faster/tetragon/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
 
 7. Follow the steps in [Making Changes](#making-changes) to start contributing :)
 
 ### Submitting a pull request
 
-Contributions must be submitted in the form of pull requests against the upstream GitHub repository at https://github.com/cilium/tetragon.
+Contributions must be submitted in the form of pull requests against the upstream GitHub repository at https://github.com/go-faster/tetragon.
 
 1. Fork the Tetragon repository.
 
 2. Push your changes to the topic branch in your fork of the repository.
 
-3. Submit a pull request on https://github.com/cilium/tetragon.
+3. Submit a pull request on https://github.com/go-faster/tetragon.
 
 Before hitting the submit button, please make sure that the following requirements have been met:
 
@@ -124,7 +124,7 @@ To build using the local clang, you can use:
 ```
 CONTAINER_ENGINE='sudo podman' LOCAL_CLANG=1 LOCAL_CLANG_FORMAT=1 make
 ```
-See [Dockerfile.clang](https://github.com/cilium/tetragon/blob/main/Dockerfile.clang) for the minimal required version of `clang`.
+See [Dockerfile.clang](https://github.com/go-faster/tetragon/blob/main/Dockerfile.clang) for the minimal required version of `clang`.
 
 You should now have a `./tetragon` binary, which can be run as follows:
 
@@ -176,7 +176,7 @@ docker run --name tetragon \
    --rm -it -d --pid=host \
    --cgroupns=host --privileged \
    -v /sys/kernel/btf/vmlinux:/var/lib/tetragon/btf \
-   cilium/tetragon:latest \
+   go-faster/tetragon:latest \
    bash -c "/usr/bin/tetragon"
 ```
 
@@ -211,7 +211,7 @@ make LOCAL_CLANG=0 image image-operator
 contrib/localdev/bootstrap-kind-cluster.sh
 
 # Install Tetragon
-contrib/localdev/install-tetragon.sh --image cilium/tetragon:latest --operator cilium/tetragon-operator:latest
+contrib/localdev/install-tetragon.sh --image go-faster/tetragon:latest --operator go-faster/tetragon-operator:latest
 ```
 
 Verify that Tetragon is installed by running:
@@ -266,4 +266,4 @@ If you are getting an error, you can try to run `sudo launchctl load /Library/La
 7. Build Tetragon with your changes included.
 
 ### Running Tests
-See <https://github.com/cilium/tetragon/blob/main/tests/vmtests/README.md>.
+See <https://github.com/go-faster/tetragon/blob/main/tests/vmtests/README.md>.

@@ -12,7 +12,7 @@ future, we are considering to add a high-level `RuntimeSecurityPolicy` which
 would take this complexity away.
 
 For the complete custom resource definition (CRD) refer to the YAML file
-[`cilium.io_tracingpolicies.yaml`](https://github.com/cilium/tetragon/blob/main/pkg/k8s/apis/cilium.io/client/crds/v1alpha1/cilium.io_tracingpolicies.yaml).
+[`cilium.io_tracingpolicies.yaml`](https://github.com/go-faster/tetragon/blob/main/pkg/k8s/apis/cilium.io/client/crds/v1alpha1/cilium.io_tracingpolicies.yaml).
 One practical way to explore the CRD is to use `kubectl explain` against a
 Kubernetes API server on which it is installed, for example `kubectl explain
 tracingpolicy.spec.kprobes` provides field-specific documentation and details
@@ -143,7 +143,7 @@ in the trace output. Indeed the BPF code that runs on the hook point requires
 information about the types of arguments of the function being traced to
 properly read, print and filter on its arguments. Currently, this information
 needs to be provided by the user under the `args` section. For the [available
-types](https://github.com/cilium/tetragon/blob/main/pkg/k8s/apis/cilium.io/client/crds/v1alpha1/cilium.io_tracingpolicies.yaml#L64-L88),
+types](https://github.com/go-faster/tetragon/blob/main/pkg/k8s/apis/cilium.io/client/crds/v1alpha1/cilium.io_tracingpolicies.yaml#L64-L88),
 see directly in the `TracingPolicy` CRD.
 
 Following our example, here is the part that defines the arguments:
@@ -657,7 +657,7 @@ matchNamespaceChanges:
 
 The `unshare` command, or executing in the host namespace using `nsenter` can
 be used to test this feature. See a
-[demonstration example](https://github.com/cilium/tetragon/blob/c511bf632ee58d401aa0f0cf1df50b33760515e3/crds/examples/match_namespace_changes.yaml)
+[demonstration example](https://github.com/go-faster/tetragon/blob/c511bf632ee58d401aa0f0cf1df50b33760515e3/crds/examples/match_namespace_changes.yaml)
 of this feature.
 
 #### Capability changes filter
@@ -679,7 +679,7 @@ matchCapabilityChanges:
   - "CAP_SETUID"
 ```
 
-See a [demonstration example](https://github.com/cilium/tetragon/blob/c511bf632ee58d401aa0f0cf1df50b33760515e3/crds/examples/match_capability_changes.yaml)
+See a [demonstration example](https://github.com/go-faster/tetragon/blob/c511bf632ee58d401aa0f0cf1df50b33760515e3/crds/examples/match_capability_changes.yaml)
 of this feature.
 
 #### Actions filter

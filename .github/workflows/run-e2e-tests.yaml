@@ -29,7 +29,7 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b
       with:
-        path: go/src/github.com/cilium/tetragon/
+        path: go/src/github.com/go-faster/tetragon/
 
     - name: Set Up Job Variables
       id: vars
@@ -44,8 +44,8 @@ jobs:
           SHA=${{ github.sha }}
         fi
         echo "sha=${SHA}" >> $GITHUB_OUTPUT
-        echo "agentImage=quay.io/cilium/tetragon-ci:${SHA}" >> $GITHUB_OUTPUT
-        echo "operatorImage=quay.io/cilium/tetragon-operator-ci:${SHA}" >> $GITHUB_OUTPUT
+        echo "agentImage=quay.io/go-faster/tetragon-ci:${SHA}" >> $GITHUB_OUTPUT
+        echo "operatorImage=quay.io/go-faster/tetragon-operator-ci:${SHA}" >> $GITHUB_OUTPUT
 
     - name: Pull Tetragon Images
       uses: nick-invision/retry@v2
@@ -91,7 +91,7 @@ jobs:
 
     - name: Run e2e Tests
       run: |
-        cd go/src/github.com/cilium/tetragon
+        cd go/src/github.com/go-faster/tetragon
 
         make e2e-test E2E_BUILD_IMAGES=0 E2E_AGENT=${{ steps.vars.outputs.agentImage }} E2E_OPERATOR=${{ steps.vars.outputs.operatorImage }} EXTRA_TESTFLAGS="-cluster-name=${{ env.clusterName }} -args -v=4"
 
