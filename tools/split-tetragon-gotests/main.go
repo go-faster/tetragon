@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"strconv"
 
-	"github.com/cilium/tetragon/pkg/vmtests"
+	"github.com/go-faster/tetragon/pkg/vmtests"
 )
 
 var (

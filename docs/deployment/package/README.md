@@ -60,7 +60,7 @@ TODO complete.
    ● tetragon.service - Tetragon eBPF-based Security Observability and Runtime Enforcement
      Loaded: loaded (/lib/systemd/system/tetragon.service; enabled; vendor preset: enabled)
      Active: active (running) since Mon 2023-01-23 20:08:16 CET; 5s ago
-       Docs: https://github.com/cilium/tetragon/
+       Docs: https://github.com/go-faster/tetragon/
    Main PID: 138819 (tetragon)
       Tasks: 17 (limit: 18985)
      Memory: 151.7M

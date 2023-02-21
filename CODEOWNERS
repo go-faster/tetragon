@@ -1,5 +1,5 @@
 # Request a review from the Tetragon team on any PR
-* @cilium/tetragon
+* @go-faster/tetragon
 
 # Request a review from William when codegen is edited
 cmd/protoc-gen-go-tetragon/ @willfindlay

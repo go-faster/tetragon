@@ -19,10 +19,10 @@ import (
 	"os"
 	"path/filepath"
 
-	operatorOption "github.com/cilium/tetragon/operator/option"
-	"github.com/cilium/tetragon/pkg/k8s/apis/cilium.io/client"
-	k8sversion "github.com/cilium/tetragon/pkg/k8s/version"
-	"github.com/cilium/tetragon/pkg/version"
+	operatorOption "github.com/go-faster/tetragon/operator/option"
+	"github.com/go-faster/tetragon/pkg/k8s/apis/cilium.io/client"
+	k8sversion "github.com/go-faster/tetragon/pkg/k8s/version"
+	"github.com/go-faster/tetragon/pkg/version"
 	"k8s.io/client-go/kubernetes"
 
 	"github.com/cilium/cilium/pkg/logging"

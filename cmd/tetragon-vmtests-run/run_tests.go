@@ -13,7 +13,7 @@ import (
 	"text/tabwriter"
 	"time"
 
-	"github.com/cilium/tetragon/pkg/vmtests"
+	"github.com/go-faster/tetragon/pkg/vmtests"
 	"golang.org/x/sys/unix"
 )
 

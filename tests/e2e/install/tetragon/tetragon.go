@@ -20,9 +20,9 @@ import (
 	"sigs.k8s.io/e2e-framework/pkg/envfuncs"
 	"sigs.k8s.io/e2e-framework/third_party/helm"
 
-	"github.com/cilium/tetragon/tests/e2e/flags"
-	"github.com/cilium/tetragon/tests/e2e/helpers"
-	"github.com/cilium/tetragon/tests/e2e/state"
+	"github.com/go-faster/tetragon/tests/e2e/flags"
+	"github.com/go-faster/tetragon/tests/e2e/helpers"
+	"github.com/go-faster/tetragon/tests/e2e/state"
 )
 
 var (

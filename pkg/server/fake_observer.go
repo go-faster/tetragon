@@ -6,8 +6,8 @@ package server
 import (
 	"context"
 
-	"github.com/cilium/tetragon/api/v1/tetragon"
-	"github.com/cilium/tetragon/pkg/sensors"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/pkg/sensors"
 )
 
 type FakeObserver struct{}

@@ -6,9 +6,9 @@ package sttManager
 import (
 	"fmt"
 
-	"github.com/cilium/tetragon/api/v1/tetragon"
-	"github.com/cilium/tetragon/pkg/logger"
-	stt "github.com/cilium/tetragon/pkg/stacktracetree"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/pkg/logger"
+	stt "github.com/go-faster/tetragon/pkg/stacktracetree"
 )
 
 // StackTrace Tree Manager

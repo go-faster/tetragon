@@ -10,8 +10,8 @@ import (
 	"path"
 
 	"github.com/cilium/ebpf/btf"
-	"github.com/cilium/tetragon/pkg/defaults"
-	"github.com/cilium/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/defaults"
+	"github.com/go-faster/tetragon/pkg/logger"
 
 	"golang.org/x/sys/unix"
 )
