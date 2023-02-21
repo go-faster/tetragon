@@ -10,7 +10,7 @@ grep -rl v0.0.0-00010101000000-000000000000 --exclude-dir=vendor --exclude-dir=.
 make vendor
 
 git add vendor api pkg
-git commit -a -m "vendor: update cilium/tetragon to go-faster/tetragon"
+git commit -a -m "vendor: go-faster/tetragon $VERSION"
 
 git tag $VERSION
 make image image-operator VERSION=$VERSION DOCKER_IMAGE_TAG=$VERSION
@@ -22,3 +22,5 @@ docker push ghcr.io/go-faster/tetragon:latest
 docker tag  ghcr.io/go-faster/tetragon-operator:$VERSION ghcr.io/go-faster/tetragon-operator:latest
 docker push ghcr.io/go-faster/tetragon-operator:$VERSION
 docker push ghcr.io/go-faster/tetragon-operator:latest
+
+git push fork $VERSION
