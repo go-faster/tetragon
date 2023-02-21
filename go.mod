@@ -139,8 +139,8 @@ require (
 // has to be in sync with both cilium and hubble overrides (mostly cilium).
 replace (
 	// Use local version of API
-	github.com/go-faster/tetragon/api => ./api
-	github.com/go-faster/tetragon/pkg/k8s => ./pkg/k8s
+	github.com/go-faster/tetragon/api v0.8.6 => ./api
+	github.com/go-faster/tetragon/pkg/k8s v0.8.6 => ./pkg/k8s
 
 	github.com/miekg/dns => github.com/cilium/dns v1.1.4-0.20190417235132-8e25ec9a0ff3
 	github.com/optiopay/kafka => github.com/cilium/kafka v0.0.0-20180809090225-01ce283b732b
