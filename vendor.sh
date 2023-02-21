@@ -10,5 +10,5 @@ make vendor
 git add vendor api pkg
 git commit -a -m "vendor: update cilium/tetragon to go-faster/tetragon"
 
-git tag -a $VERSION -m "v$VERSION"
+git tag $VERSION
 make image VERSION=$VERSION DOCKER_IMAGE_TAG=$VERSION
