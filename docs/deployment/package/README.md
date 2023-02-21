@@ -45,8 +45,8 @@ TODO complete.
 2. Install Tetragon
 
    ```bash
-   tar -xvf tetragon-v0.8.3-amd64.tar.gz
-   cd tetragon-v0.8.3-amd64/
+   tar -xvf tetragon-v0.8.10-amd64.tar.gz
+   cd tetragon-v0.8.10-amd64/
    sudo ./install.sh
    ```
 

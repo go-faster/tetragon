@@ -24,7 +24,7 @@ Helm chart for Tetragon
 | export.stdout.extraEnv | list | `[]` |  |
 | export.stdout.extraVolumeMounts | list | `[]` |  |
 | export.stdout.image.override | string | `nil` |  |
-| export.stdout.image.repository | string | `"quay.io/cilium/hubble-export-stdout"` |  |
+| export.stdout.image.repository | string | `"ghcr.io/cilium/hubble-export-stdout"` |  |
 | export.stdout.image.tag | string | `"v1.0.2"` |  |
 | exportDirectory | string | `"/var/run/go-faster/tetragon"` |  |
 | exportFileCreationInterval | string | `"120s"` |  |
@@ -67,8 +67,8 @@ Helm chart for Tetragon
 | tetragon.grpc.address | string | `"localhost:54321"` | The address at which to expose gRPC. Examples: localhost:54321, unix:///var/run/tetragon/tetragon.sock |
 | tetragon.grpc.enabled | bool | `true` | Whether to enable exposing Tetragon gRPC. |
 | tetragon.image.override | string | `nil` |  |
-| tetragon.image.repository | string | `"quay.io/go-faster/tetragon"` |  |
-| tetragon.image.tag | string | `"v0.8.3"` |  |
+| tetragon.image.repository | string | `"ghcr.io/go-faster/tetragon"` |  |
+| tetragon.image.tag | string | `"v0.8.10"` |  |
 | tetragon.processCacheSize | int | `65536` |  |
 | tetragon.prometheus.address | string | `""` | The address at which to expose metrics. Set it to "" to expose on all available interfaces. |
 | tetragon.prometheus.enabled | bool | `true` | Whether to enable exposing Tetragon metrics. |
@@ -78,7 +78,7 @@ Helm chart for Tetragon
 | tetragon.resources | object | `{}` |  |
 | tetragon.securityContext.privileged | bool | `true` |  |
 | tetragonOperator.enabled | bool | `true` | Enable the tetragon-operator component (required). |
-| tetragonOperator.image | object | `{"override":null,"repository":"quay.io/go-faster/tetragon-operator","suffix":"","tag":"v0.8.3"}` | tetragon-operator image. |
+| tetragonOperator.image | object | `{"override":null,"repository":"ghcr.io/go-faster/tetragon-operator","suffix":"","tag":"v0.8.10"}` | tetragon-operator image. |
 | tolerations[0].operator | string | `"Exists"` |  |
 | updateStrategy | object | `{}` |  |
 

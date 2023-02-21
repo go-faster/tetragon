@@ -1,11 +1,11 @@
-FROM quay.io/cilium/clang:7ea8dd5b610a8864ce7b56e10ffeb61030a0c50e@sha256:02ad7cc1d08d85c027557099b88856945be5124b5c31aeabce326e7983e3913b as bpf-builder
+FROM ghcr.io/cilium/clang:7ea8dd5b610a8864ce7b56e10ffeb61030a0c50e@sha256:02ad7cc1d08d85c027557099b88856945be5124b5c31aeabce326e7983e3913b as bpf-builder
 WORKDIR /go/src/github.com/go-faster/tetragon
 RUN apt-get update
 RUN apt-get install -y linux-libc-dev
 COPY . ./
 RUN make tetragon-bpf LOCAL_CLANG=1
 
-FROM quay.io/cilium/cilium-builder:a2dc3278c48e1593b1f6c8fd9e5c6a982d56a875@sha256:98c4e694805e9a9d410ed73d555e97e91d77e2ab4529b6b51f5243b33ab411b1 as hubble-builder
+FROM ghcr.io/cilium/cilium-builder:a2dc3278c48e1593b1f6c8fd9e5c6a982d56a875@sha256:98c4e694805e9a9d410ed73d555e97e91d77e2ab4529b6b51f5243b33ab411b1 as hubble-builder
 ARG TETRAGON_VERSION
 WORKDIR /go/src/github.com/go-faster/tetragon
 RUN apt-get update && apt-get install -y libelf-dev zlib1g-dev
@@ -21,7 +21,7 @@ RUN apk add --no-cache binutils git \
  && strip /go/bin/gops
 
 # Mostly copied from https://github.com/cilium/image-tools/blob/master/images/bpftool
-FROM quay.io/cilium/image-compilers:c1ba0665b6f9f012d014a642d9882f7c38bdf365@sha256:01c7c957e9b0fc200644996c6bedac297c98b81dea502a3bc3047837e67a7fcb as bpftool-builder
+FROM ghcr.io/cilium/image-compilers:c1ba0665b6f9f012d014a642d9882f7c38bdf365@sha256:01c7c957e9b0fc200644996c6bedac297c98b81dea502a3bc3047837e67a7fcb as bpftool-builder
 ENV REV "5e22dd18626726028a93ff1350a8a71a00fd843d"
 RUN curl --fail --show-error --silent --location "https://kernel.googlesource.com/pub/scm/linux/kernel/git/bpf/bpf-next/+archive/${REV}.tar.gz" --output /tmp/linux.tgz
 RUN mkdir -p /src/linux

@@ -34,8 +34,8 @@ assignees: ''
 
 - [ ] Go to [Image CI Releases workflow] and wait for the release image build to finish.
       - Get approval for your release build workflow from [a Tetragon maintainer]
-      - https://quay.io/repository/go-faster/tetragon?tab=tags
-      - https://quay.io/repository/go-faster/tetragon-operator?tab=tags
+      - https://ghcr.io/repository/go-faster/tetragon?tab=tags
+      - https://ghcr.io/repository/go-faster/tetragon-operator?tab=tags
 
 - [ ] When a tag is pushed, a GitHub Action job takes care of creating a new GitHub
       draft release, building artifacts and attaching them to the draft release. Once

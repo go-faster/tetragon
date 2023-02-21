@@ -17,8 +17,8 @@
                "id":"docker://86eb9e29a77d432afc7a15b424db1d24a382f3caae26f860ab22df8cb5e96054",
                "name":"elasticsearch",
                "image":{
-                  "id":"docker-pullable://quay.io/isovalent/jobs-app-elasticsearch@sha256:ff3aa5862fd17f8695984609743f4523188984adbcd25cf5ac4224b71084558c",
-                  "name":"quay.io/isovalent/jobs-app-elasticsearch:latest"
+                  "id":"docker-pullable://ghcr.io/isovalent/jobs-app-elasticsearch@sha256:ff3aa5862fd17f8695984609743f4523188984adbcd25cf5ac4224b71084558c",
+                  "name":"ghcr.io/isovalent/jobs-app-elasticsearch:latest"
                },
                "start_time":"2022-01-19T16:27:56Z",
                "pid":131
@@ -43,8 +43,8 @@
                "id":"docker://86eb9e29a77d432afc7a15b424db1d24a382f3caae26f860ab22df8cb5e96054",
                "name":"elasticsearch",
                "image":{
-                  "id":"docker-pullable://quay.io/isovalent/jobs-app-elasticsearch@sha256:ff3aa5862fd17f8695984609743f4523188984adbcd25cf5ac4224b71084558c",
-                  "name":"quay.io/isovalent/jobs-app-elasticsearch:latest"
+                  "id":"docker-pullable://ghcr.io/isovalent/jobs-app-elasticsearch@sha256:ff3aa5862fd17f8695984609743f4523188984adbcd25cf5ac4224b71084558c",
+                  "name":"ghcr.io/isovalent/jobs-app-elasticsearch:latest"
                },
                "start_time":"2022-01-19T16:27:56Z",
                "pid":111

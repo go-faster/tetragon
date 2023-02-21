@@ -3,7 +3,7 @@
 set -eu -o pipefail
 
 
-OCIORG=quay.io/lvh-images
+OCIORG=ghcr.io/lvh-images
 ROOTIMG=$OCIORG/root-images
 KERNIMG=$OCIORG/kernel-images
 CONTAINER_ENGINE=${CONTAINER_ENGINE:-docker}

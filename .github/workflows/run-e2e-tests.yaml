@@ -44,8 +44,8 @@ jobs:
           SHA=${{ github.sha }}
         fi
         echo "sha=${SHA}" >> $GITHUB_OUTPUT
-        echo "agentImage=quay.io/go-faster/tetragon-ci:${SHA}" >> $GITHUB_OUTPUT
-        echo "operatorImage=quay.io/go-faster/tetragon-operator-ci:${SHA}" >> $GITHUB_OUTPUT
+        echo "agentImage=ghcr.io/go-faster/tetragon-ci:${SHA}" >> $GITHUB_OUTPUT
+        echo "operatorImage=ghcr.io/go-faster/tetragon-operator-ci:${SHA}" >> $GITHUB_OUTPUT
 
     - name: Pull Tetragon Images
       uses: nick-invision/retry@v2

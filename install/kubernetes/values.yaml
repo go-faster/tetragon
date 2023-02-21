@@ -48,8 +48,8 @@ tetragon:
   enabled: true
   image:
     override: ~
-    repository: quay.io/go-faster/tetragon
-    tag: v0.8.3
+    repository: ghcr.io/go-faster/tetragon
+    tag: v0.8.10
   resources: {}
   extraArgs: {}
   extraEnv: []
@@ -147,8 +147,8 @@ tetragonOperator:
   # -- tetragon-operator image.
   image:
     override: ~
-    repository: quay.io/go-faster/tetragon-operator
-    tag: v0.8.3
+    repository: ghcr.io/go-faster/tetragon-operator
+    tag: v0.8.10
     # tetragon-operator image-digest
     suffix: ""
 export:
@@ -185,5 +185,5 @@ export:
     extraVolumeMounts: []
     image:
       override: ~
-      repository: quay.io/cilium/hubble-export-stdout
+      repository: ghcr.io/cilium/hubble-export-stdout
       tag: v1.0.2

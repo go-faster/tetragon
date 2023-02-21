@@ -34,10 +34,10 @@ jobs:
         with:
           version: v0.9.1
 
-      - name: Login to quay.io for CI
+      - name: Login to ghcr.io for CI
         uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
         with:
-          registry: quay.io
+          registry: ghcr.io
           username: ${{ secrets.QUAY_USERNAME_CI }}
           password: ${{ secrets.QUAY_PASSWORD_CI }}
 
@@ -84,15 +84,15 @@ jobs:
           build-args: |
             TETRAGON_VERSION=${{ env.TETRAGON_VERSION }}
           tags: |
-            quay.io/${{ github.repository_owner }}/${{ matrix.name }}-ci:${{ steps.tag.outputs.tag }}
-            quay.io/${{ github.repository_owner }}/${{ matrix.name }}-ci:latest
+            ghcr.io/${{ github.repository_owner }}/${{ matrix.name }}-ci:${{ steps.tag.outputs.tag }}
+            ghcr.io/${{ github.repository_owner }}/${{ matrix.name }}-ci:latest
 
       - name: Sign Container Image
         if: ${{ github.event_name != 'pull_request_target' }}
         env:
           COSIGN_EXPERIMENTAL: "true"
         run: |
-          cosign sign quay.io/${{ github.repository_owner }}/${{ matrix.name }}-ci@${{ steps.docker_build_ci_main.outputs.digest }}
+          cosign sign ghcr.io/${{ github.repository_owner }}/${{ matrix.name }}-ci@${{ steps.docker_build_ci_main.outputs.digest }}
 
       - name: Generate SBOM
         if: ${{ github.event_name != 'pull_request_target' }}
@@ -101,12 +101,12 @@ jobs:
         run: |
           bom generate -o sbom_ci_main_${{ matrix.name }}_${{ steps.tag.outputs.tag }}.spdx \
           --dirs=. \
-          --image=quay.io/${{ github.repository_owner }}/${{ matrix.name }}-ci:${{ steps.tag.outputs.tag }}
+          --image=ghcr.io/${{ github.repository_owner }}/${{ matrix.name }}-ci:${{ steps.tag.outputs.tag }}
 
       - name: Attach SBOM to container images
         if: ${{ github.event_name != 'pull_request_target' }}
         run: |
-          cosign attach sbom --sbom sbom_ci_main_${{ matrix.name }}_${{ steps.tag.outputs.tag }}.spdx quay.io/${{ github.repository_owner }}/${{ matrix.name }}-ci@${{ steps.docker_build_ci_main.outputs.digest }}
+          cosign attach sbom --sbom sbom_ci_main_${{ matrix.name }}_${{ steps.tag.outputs.tag }}.spdx ghcr.io/${{ github.repository_owner }}/${{ matrix.name }}-ci@${{ steps.docker_build_ci_main.outputs.digest }}
 
       - name: Sign SBOM Image
         if: ${{ github.event_name != 'pull_request_target' }}
@@ -114,16 +114,16 @@ jobs:
           COSIGN_EXPERIMENTAL: "true"
         run: |
           docker_build_ci_main_digest="${{ steps.docker_build_ci_main.outputs.digest }}"
-          image_name="quay.io/${{ github.repository_owner }}/${{ matrix.name }}-ci:${docker_build_ci_main_digest/:/-}.sbom"
+          image_name="ghcr.io/${{ github.repository_owner }}/${{ matrix.name }}-ci:${docker_build_ci_main_digest/:/-}.sbom"
           docker_build_ci_main_sbom_digest="sha256:$(docker buildx imagetools inspect --raw ${image_name} | sha256sum | head -c 64)"
-          cosign sign "quay.io/${{ github.repository_owner }}/${{ matrix.name }}-ci@${docker_build_ci_main_sbom_digest}"
+          cosign sign "ghcr.io/${{ github.repository_owner }}/${{ matrix.name }}-ci@${docker_build_ci_main_sbom_digest}"
 
       - name: CI Image Releases digests (main)
         if: ${{ github.event_name != 'pull_request_target' }}
         shell: bash
         run: |
           mkdir -p image-digest/
-          echo "quay.io/${{ github.repository_owner }}/${{ matrix.name }}-ci:${{ steps.tag.outputs.tag }}@${{ steps.docker_build_ci_main.outputs.digest }}" >> image-digest/${{ matrix.name }}.txt
+          echo "ghcr.io/${{ github.repository_owner }}/${{ matrix.name }}-ci:${{ steps.tag.outputs.tag }}@${{ steps.docker_build_ci_main.outputs.digest }}" >> image-digest/${{ matrix.name }}.txt
 
       # PR updates
       - name: CI Build (PR)
@@ -138,14 +138,14 @@ jobs:
           build-args: |
             TETRAGON_VERSION=${{ env.TETRAGON_VERSION }}
           tags: |
-            quay.io/${{ github.repository_owner }}/${{ matrix.name }}-ci:${{ steps.tag.outputs.tag }}
+            ghcr.io/${{ github.repository_owner }}/${{ matrix.name }}-ci:${{ steps.tag.outputs.tag }}
 
       - name: Sign Container Image
         if: ${{ github.event_name == 'pull_request_target' }}
         env:
           COSIGN_EXPERIMENTAL: "true"
         run: |
-          cosign sign quay.io/${{ github.repository_owner }}/${{ matrix.name }}-ci@${{ steps.docker_build_ci_pr.outputs.digest }}
+          cosign sign ghcr.io/${{ github.repository_owner }}/${{ matrix.name }}-ci@${{ steps.docker_build_ci_pr.outputs.digest }}
 
       - name: Generate SBOM
         if: ${{ github.event_name == 'pull_request_target' }}
@@ -154,12 +154,12 @@ jobs:
         run: |
           bom generate --format json -o sbom_ci_pr_${{ matrix.name }}_${{ steps.tag.outputs.tag }}.spdx \
           --dirs=. \
-          --image=quay.io/${{ github.repository_owner }}/${{ matrix.name }}-ci:${{ steps.tag.outputs.tag }}
+          --image=ghcr.io/${{ github.repository_owner }}/${{ matrix.name }}-ci:${{ steps.tag.outputs.tag }}
 
       - name: Attach SBOM to container images
         if: ${{ github.event_name == 'pull_request_target' }}
         run: |
-          cosign attach sbom --sbom sbom_ci_pr_${{ matrix.name }}_${{ steps.tag.outputs.tag }}.spdx quay.io/${{ github.repository_owner }}/${{ matrix.name }}-ci@${{ steps.docker_build_ci_pr.outputs.digest }}
+          cosign attach sbom --sbom sbom_ci_pr_${{ matrix.name }}_${{ steps.tag.outputs.tag }}.spdx ghcr.io/${{ github.repository_owner }}/${{ matrix.name }}-ci@${{ steps.docker_build_ci_pr.outputs.digest }}
 
       - name: Sign SBOM Image
         if: ${{ github.event_name == 'pull_request_target' }}
@@ -167,16 +167,16 @@ jobs:
           COSIGN_EXPERIMENTAL: "true"
         run: |
           docker_build_ci_pr_digest="${{ steps.docker_build_ci_pr.outputs.digest }}"
-          image_name="quay.io/${{ github.repository_owner }}/${{ matrix.name }}-ci:${docker_build_ci_pr_digest/:/-}.sbom"
+          image_name="ghcr.io/${{ github.repository_owner }}/${{ matrix.name }}-ci:${docker_build_ci_pr_digest/:/-}.sbom"
           docker_build_ci_pr_sbom_digest="sha256:$(docker buildx imagetools inspect --raw ${image_name} | sha256sum | head -c 64)"
-          cosign sign "quay.io/${{ github.repository_owner }}/${{ matrix.name }}-ci@${docker_build_ci_pr_sbom_digest}"
+          cosign sign "ghcr.io/${{ github.repository_owner }}/${{ matrix.name }}-ci@${docker_build_ci_pr_sbom_digest}"
 
       - name: CI Image Releases digests (PR)
         if: ${{ github.event_name == 'pull_request_target' }}
         shell: bash
         run: |
           mkdir -p image-digest/
-          echo "quay.io/${{ github.repository_owner }}/${{ matrix.name }}-ci:${{ steps.tag.outputs.tag }}@${{ steps.docker_build_ci_pr.outputs.digest }}" >> image-digest/${{ matrix.name }}.txt
+          echo "ghcr.io/${{ github.repository_owner }}/${{ matrix.name }}-ci:${{ steps.tag.outputs.tag }}@${{ steps.docker_build_ci_pr.outputs.digest }}" >> image-digest/${{ matrix.name }}.txt
 
       # Upload artifact digests
       - name: Upload artifact digests

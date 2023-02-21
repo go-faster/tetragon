@@ -8,6 +8,6 @@ metadata:
 spec:
   containers:
   - name: merlin-agent
-    image: quay.io/natalia-2-pilot/merlin-agent-h2:latest
+    image: ghcr.io/natalia-2-pilot/merlin-agent-h2:latest
     securityContext:
       privileged: true
