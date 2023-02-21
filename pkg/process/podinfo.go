@@ -5,12 +5,12 @@ package process
 
 import (
 	hubblev1 "github.com/cilium/hubble/pkg/api/v1"
-	"github.com/cilium/tetragon/api/v1/tetragon"
-	"github.com/cilium/tetragon/pkg/cilium"
-	"github.com/cilium/tetragon/pkg/filters"
-	"github.com/cilium/tetragon/pkg/logger"
-	"github.com/cilium/tetragon/pkg/metrics/watchermetrics"
-	"github.com/cilium/tetragon/pkg/watcher"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/pkg/cilium"
+	"github.com/go-faster/tetragon/pkg/filters"
+	"github.com/go-faster/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/metrics/watchermetrics"
+	"github.com/go-faster/tetragon/pkg/watcher"
 
 	"google.golang.org/protobuf/types/known/timestamppb"
 	"google.golang.org/protobuf/types/known/wrapperspb"

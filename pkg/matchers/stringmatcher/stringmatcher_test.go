@@ -6,7 +6,7 @@ package stringmatcher
 import (
 	"testing"
 
-	"github.com/cilium/tetragon/pkg/eventcheckertests/yamlhelpers"
+	"github.com/go-faster/tetragon/pkg/eventcheckertests/yamlhelpers"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -3,7 +3,7 @@ package main
 import (
 	"path/filepath"
 
-	"github.com/cilium/tetragon/pkg/vmtests"
+	"github.com/go-faster/tetragon/pkg/vmtests"
 )
 
 type RunConf struct {

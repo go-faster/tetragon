@@ -7,8 +7,8 @@ import (
 	"testing"
 
 	"github.com/cilium/ebpf"
-	"github.com/cilium/tetragon/pkg/sensors"
-	"github.com/cilium/tetragon/pkg/sensors/program"
+	"github.com/go-faster/tetragon/pkg/sensors"
+	"github.com/go-faster/tetragon/pkg/sensors/program"
 )
 
 type SensorProg struct {

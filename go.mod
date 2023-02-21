@@ -1,4 +1,4 @@
-module github.com/cilium/tetragon
+module github.com/go-faster/tetragon
 
 go 1.18
 
@@ -8,8 +8,6 @@ require (
 	github.com/cilium/hubble v0.5.3-0.20220311154618-3e44df066567
 	github.com/cilium/little-vm-helper v0.0.0-20220812055014-101c3e342e13
 	github.com/cilium/lumberjack/v2 v2.3.0
-	github.com/cilium/tetragon/api v0.0.0-00010101000000-000000000000
-	github.com/cilium/tetragon/pkg/k8s v0.0.0-00010101000000-000000000000
 	github.com/fatih/color v1.13.0
 	github.com/google/go-cmp v0.5.8
 	github.com/google/gops v0.3.25
@@ -45,6 +43,8 @@ require (
 	sigs.k8s.io/yaml v1.3.0
 )
 
+require github.com/blang/semver v3.5.1+incompatible
+
 require (
 	cloud.google.com/go/compute v1.6.1 // indirect
 	github.com/Azure/go-autorest v14.2.0+incompatible // indirect
@@ -55,7 +55,6 @@ require (
 	github.com/Azure/go-autorest/tracing v0.6.0 // indirect
 	github.com/asaskevich/govalidator v0.0.0-20210307081110-f21760c49a8d // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
-	github.com/blang/semver v3.5.1+incompatible // indirect
 	github.com/cespare/xxhash/v2 v2.1.2 // indirect
 	github.com/cpuguy83/go-md2man/v2 v2.0.2 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
@@ -139,8 +138,6 @@ require (
 // has to be in sync with both cilium and hubble overrides (mostly cilium).
 replace (
 	// Use local version of API
-	github.com/cilium/tetragon/api => ./api
-	github.com/cilium/tetragon/pkg/k8s => ./pkg/k8s
 
 	github.com/miekg/dns => github.com/cilium/dns v1.1.4-0.20190417235132-8e25ec9a0ff3
 	github.com/optiopay/kafka => github.com/cilium/kafka v0.0.0-20180809090225-01ce283b732b

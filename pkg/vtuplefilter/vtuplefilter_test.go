@@ -6,7 +6,7 @@ package vtuplefilter
 import (
 	"testing"
 
-	"github.com/cilium/tetragon/pkg/vtuple"
+	"github.com/go-faster/tetragon/pkg/vtuple"
 )
 
 type VTRes struct {

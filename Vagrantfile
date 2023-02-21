@@ -3,8 +3,8 @@ Vagrant.configure("2") do |config|
   config.vm.disk :disk, size: "50GB"
   config.vm.provision :docker
   config.vm.network "private_network", ip: "192.168.56.11"
-  config.vm.synced_folder ".", "/home/vagrant/go/src/github.com/cilium/tetragon", create: true
-  config.ssh.extra_args = ["-t", "cd /home/vagrant/go/src/github.com/cilium/tetragon; bash --login"]
+  config.vm.synced_folder ".", "/home/vagrant/go/src/github.com/go-faster/tetragon", create: true
+  config.ssh.extra_args = ["-t", "cd /home/vagrant/go/src/github.com/go-faster/tetragon; bash --login"]
   config.vm.provider "virtualbox" do |v|
     v.memory = 8192
     v.cpus = 2
@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
 
   # Mostly copied from .github/workflows/gotests.yml to install dependencies
   config.vm.provision "shell", inline: <<-SHELL
-      cd /home/vagrant/go/src/github.com/cilium/tetragon
+      cd /home/vagrant/go/src/github.com/go-faster/tetragon
       apt-get update
       apt-get install -y build-essential clang conntrack libcap-dev libelf-dev net-tools
       snap install go --channel=1.18/stable --classic
