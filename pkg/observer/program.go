@@ -6,7 +6,7 @@ package observer
 import (
 	"os"
 
-	"github.com/cilium/tetragon/pkg/sensors"
+	"github.com/go-faster/tetragon/pkg/sensors"
 )
 
 func RemovePrograms(bpfDir, mapDir string) {

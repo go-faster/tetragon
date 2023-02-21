@@ -6,8 +6,8 @@
 package main
 
 import (
-	"github.com/cilium/tetragon/cmd/tetra/getevents"
-	"github.com/cilium/tetragon/cmd/tetra/version"
+	"github.com/go-faster/tetragon/cmd/tetra/getevents"
+	"github.com/go-faster/tetragon/cmd/tetra/version"
 	"github.com/spf13/cobra"
 )
 

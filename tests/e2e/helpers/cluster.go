@@ -12,8 +12,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cilium/tetragon/pkg/kernels"
-	"github.com/cilium/tetragon/tests/e2e/state"
+	"github.com/go-faster/tetragon/pkg/kernels"
+	"github.com/go-faster/tetragon/tests/e2e/state"
 	"github.com/stretchr/testify/assert"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/klog/v2"

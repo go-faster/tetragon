@@ -22,8 +22,8 @@ import (
 
 	v1 "github.com/cilium/hubble/pkg/api/v1"
 	hubbleFilters "github.com/cilium/hubble/pkg/filters"
-	"github.com/cilium/tetragon/api/v1/tetragon"
-	"github.com/cilium/tetragon/api/v1/tetragon/codegen/helpers"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/api/v1/tetragon/codegen/helpers"
 )
 
 // ParseFilterList parses a list of process filters in JSON format into protobuf messages.

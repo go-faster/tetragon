@@ -1,5 +1,5 @@
 FROM quay.io/cilium/clang:7ea8dd5b610a8864ce7b56e10ffeb61030a0c50e@sha256:02ad7cc1d08d85c027557099b88856945be5124b5c31aeabce326e7983e3913b as bpf-builder
-WORKDIR /go/src/github.com/cilium/tetragon
+WORKDIR /go/src/github.com/go-faster/tetragon
 RUN apt-get update
 RUN apt-get install -y linux-libc-dev
 COPY . ./
@@ -7,7 +7,7 @@ RUN make tetragon-bpf LOCAL_CLANG=1
 
 FROM quay.io/cilium/cilium-builder:a2dc3278c48e1593b1f6c8fd9e5c6a982d56a875@sha256:98c4e694805e9a9d410ed73d555e97e91d77e2ab4529b6b51f5243b33ab411b1 as hubble-builder
 ARG TETRAGON_VERSION
-WORKDIR /go/src/github.com/cilium/tetragon
+WORKDIR /go/src/github.com/go-faster/tetragon
 RUN apt-get update && apt-get install -y libelf-dev zlib1g-dev
 COPY . ./
 RUN make tetragon-image LOCAL_CLANG=1 VERSION=$TETRAGON_VERSION
@@ -36,7 +36,7 @@ RUN apk add iproute2
 RUN mkdir /var/lib/tetragon/ && \
     apk add --no-cache --update bash
 COPY --from=bpftool-builder /src/linux/tools/bpf/bpftool/bpftool /usr/bin/bpftool
-COPY --from=hubble-builder /go/src/github.com/cilium/tetragon/tetragon /usr/bin/
-COPY --from=hubble-builder /go/src/github.com/cilium/tetragon/tetra /usr/bin/
+COPY --from=hubble-builder /go/src/github.com/go-faster/tetragon/tetragon /usr/bin/
+COPY --from=hubble-builder /go/src/github.com/go-faster/tetragon/tetra /usr/bin/
 COPY --from=gops /go/bin/gops /bin /usr/bin/
-COPY --from=bpf-builder /go/src/github.com/cilium/tetragon/bpf/objs/*.o /var/lib/tetragon/
+COPY --from=bpf-builder /go/src/github.com/go-faster/tetragon/bpf/objs/*.o /var/lib/tetragon/

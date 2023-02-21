@@ -6,9 +6,9 @@
 package fake
 
 import (
-	clientset "github.com/cilium/tetragon/pkg/k8s/client/clientset/versioned"
-	ciliumv1alpha1 "github.com/cilium/tetragon/pkg/k8s/client/clientset/versioned/typed/cilium.io/v1alpha1"
-	fakeciliumv1alpha1 "github.com/cilium/tetragon/pkg/k8s/client/clientset/versioned/typed/cilium.io/v1alpha1/fake"
+	clientset "github.com/go-faster/tetragon/pkg/k8s/client/clientset/versioned"
+	ciliumv1alpha1 "github.com/go-faster/tetragon/pkg/k8s/client/clientset/versioned/typed/cilium.io/v1alpha1"
+	fakeciliumv1alpha1 "github.com/go-faster/tetragon/pkg/k8s/client/clientset/versioned/typed/cilium.io/v1alpha1/fake"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/watch"
 	"k8s.io/client-go/discovery"

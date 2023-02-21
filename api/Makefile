@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 GO ?= go
-BUILDER_IMAGE=cilium/tetragon-codegen:latest
+BUILDER_IMAGE=go-faster/tetragon-codegen:latest
 
 .PHONY: all
 all: proto
