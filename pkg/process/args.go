@@ -6,7 +6,7 @@ import (
 	"bytes"
 	"strings"
 
-	"github.com/cilium/tetragon/pkg/api"
+	"github.com/go-faster/tetragon/pkg/api"
 )
 
 func argsDecoderTrim(r rune) bool {

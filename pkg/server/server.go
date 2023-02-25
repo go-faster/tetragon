@@ -11,17 +11,17 @@ import (
 
 	v1 "github.com/cilium/hubble/pkg/api/v1"
 	hubbleFilters "github.com/cilium/hubble/pkg/filters"
-	"github.com/cilium/tetragon/api/v1/tetragon"
-	"github.com/cilium/tetragon/pkg/aggregator"
-	"github.com/cilium/tetragon/pkg/config"
-	"github.com/cilium/tetragon/pkg/filters"
-	"github.com/cilium/tetragon/pkg/health"
-	"github.com/cilium/tetragon/pkg/logger"
-	"github.com/cilium/tetragon/pkg/metrics/eventmetrics"
-	"github.com/cilium/tetragon/pkg/option"
-	"github.com/cilium/tetragon/pkg/sensors"
-	"github.com/cilium/tetragon/pkg/tracingpolicy"
-	"github.com/cilium/tetragon/pkg/version"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/pkg/aggregator"
+	"github.com/go-faster/tetragon/pkg/config"
+	"github.com/go-faster/tetragon/pkg/filters"
+	"github.com/go-faster/tetragon/pkg/health"
+	"github.com/go-faster/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/metrics/eventmetrics"
+	"github.com/go-faster/tetragon/pkg/option"
+	"github.com/go-faster/tetragon/pkg/sensors"
+	"github.com/go-faster/tetragon/pkg/tracingpolicy"
+	"github.com/go-faster/tetragon/pkg/version"
 )
 
 type Listener interface {

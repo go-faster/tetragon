@@ -13,9 +13,9 @@ import (
 	"testing"
 	"text/template"
 
-	"github.com/cilium/tetragon/api/v1/tetragon/codegen/eventchecker/yaml"
-	"github.com/cilium/tetragon/pkg/eventcheckertests/yamlhelpers"
-	"github.com/cilium/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/api/v1/tetragon/codegen/eventchecker/yaml"
+	"github.com/go-faster/tetragon/pkg/eventcheckertests/yamlhelpers"
+	"github.com/go-faster/tetragon/pkg/logger"
 	"github.com/stretchr/testify/assert"
 )
 

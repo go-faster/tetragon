@@ -6,7 +6,7 @@ import (
 	"fmt"
 
 	"github.com/cilium/ebpf"
-	"github.com/cilium/tetragon/pkg/sensors/unloader"
+	"github.com/go-faster/tetragon/pkg/sensors/unloader"
 )
 
 func Builder(

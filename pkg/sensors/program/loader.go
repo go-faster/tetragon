@@ -10,9 +10,9 @@ import (
 	"github.com/cilium/ebpf"
 	"github.com/cilium/ebpf/btf"
 	"github.com/cilium/ebpf/link"
-	cachedbtf "github.com/cilium/tetragon/pkg/btf"
-	"github.com/cilium/tetragon/pkg/logger"
-	"github.com/cilium/tetragon/pkg/sensors/unloader"
+	cachedbtf "github.com/go-faster/tetragon/pkg/btf"
+	"github.com/go-faster/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/sensors/unloader"
 	"golang.org/x/sys/unix"
 )
 

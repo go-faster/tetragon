@@ -3,15 +3,15 @@
 package test
 
 import (
-	"github.com/cilium/tetragon/api/v1/tetragon"
-	"github.com/cilium/tetragon/pkg/api/ops"
-	"github.com/cilium/tetragon/pkg/api/testapi"
-	"github.com/cilium/tetragon/pkg/eventcache"
-	"github.com/cilium/tetragon/pkg/ktime"
-	"github.com/cilium/tetragon/pkg/logger"
-	"github.com/cilium/tetragon/pkg/process"
-	"github.com/cilium/tetragon/pkg/reader/node"
-	"github.com/cilium/tetragon/pkg/reader/notify"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/pkg/api/ops"
+	"github.com/go-faster/tetragon/pkg/api/testapi"
+	"github.com/go-faster/tetragon/pkg/eventcache"
+	"github.com/go-faster/tetragon/pkg/ktime"
+	"github.com/go-faster/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/process"
+	"github.com/go-faster/tetragon/pkg/reader/node"
+	"github.com/go-faster/tetragon/pkg/reader/notify"
 )
 
 var (

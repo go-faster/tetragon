@@ -6,8 +6,8 @@
 package cilium
 
 import (
-	v1alpha1 "github.com/cilium/tetragon/pkg/k8s/client/informers/externalversions/cilium.io/v1alpha1"
-	internalinterfaces "github.com/cilium/tetragon/pkg/k8s/client/informers/externalversions/internalinterfaces"
+	v1alpha1 "github.com/go-faster/tetragon/pkg/k8s/client/informers/externalversions/cilium.io/v1alpha1"
+	internalinterfaces "github.com/go-faster/tetragon/pkg/k8s/client/informers/externalversions/internalinterfaces"
 )
 
 // Interface provides access to each of this group's versions.

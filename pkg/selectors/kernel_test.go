@@ -9,9 +9,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cilium/tetragon/pkg/idtable"
-	"github.com/cilium/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
-	"github.com/cilium/tetragon/pkg/kernels"
+	"github.com/go-faster/tetragon/pkg/idtable"
+	"github.com/go-faster/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
+	"github.com/go-faster/tetragon/pkg/kernels"
 )
 
 func TestWriteSelectorUint32(t *testing.T) {
