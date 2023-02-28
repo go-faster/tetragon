@@ -18,7 +18,7 @@ $ ls /sys/kernel/btf/
 
 ### Stable versions
 
-To run a stable version, please check [Tetragon quay repository](https://quay.io/cilium/tetragon?tab=tags)
+To run a stable version, please check [Tetragon quay repository](https://quay.io/go-faster/tetragon?tab=tags)
 and select which version you want.
 
 Example:
@@ -28,7 +28,7 @@ docker run --name tetragon \
    --rm -it -d --pid=host \
    --cgroupns=host --privileged \
    -v /sys/kernel/btf/vmlinux:/var/lib/tetragon/btf \
-   quay.io/cilium/tetragon:v0.8.0 \
+   quay.io/go-faster/tetragon:v0.8.0 \
    bash -c "/usr/bin/tetragon"
 ```
 
@@ -36,7 +36,7 @@ docker run --name tetragon \
 
 To run unstable development versions of Tetragon, use the
 `latest` tag from [Tetragon-CI quay
-repository](https://quay.io/repository/cilium/tetragon-ci?tab=tags).
+repository](https://quay.io/repository/go-faster/tetragon-ci?tab=tags).
 
 Example:
 
@@ -45,7 +45,7 @@ docker run --name tetragon \
    --rm -it -d --pid=host \
    --cgroupns=host --privileged \
    -v /sys/kernel/btf/vmlinux:/var/lib/tetragon/btf \
-   quay.io/cilium/tetragon-ci:latest \
+   quay.io/go-faster/tetragon-ci:latest \
    bash -c "/usr/bin/tetragon"
 ```
 

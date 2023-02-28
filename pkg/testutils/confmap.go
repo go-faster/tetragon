@@ -8,11 +8,11 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/cilium/tetragon/pkg/bpf"
-	"github.com/cilium/tetragon/pkg/cgroups"
-	"github.com/cilium/tetragon/pkg/logger"
-	"github.com/cilium/tetragon/pkg/sensors/base"
-	"github.com/cilium/tetragon/pkg/sensors/config/confmap"
+	"github.com/go-faster/tetragon/pkg/bpf"
+	"github.com/go-faster/tetragon/pkg/cgroups"
+	"github.com/go-faster/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/sensors/base"
+	"github.com/go-faster/tetragon/pkg/sensors/config/confmap"
 	"github.com/sirupsen/logrus"
 )
 

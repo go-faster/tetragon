@@ -17,7 +17,7 @@ package main
 import (
 	"strings"
 
-	operatorOption "github.com/cilium/tetragon/operator/option"
+	operatorOption "github.com/go-faster/tetragon/operator/option"
 
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"

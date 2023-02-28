@@ -9,7 +9,7 @@ import (
 	"io"
 	"strings"
 
-	"github.com/cilium/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
 	"github.com/mennanov/fmutils"
 	"google.golang.org/protobuf/reflect/protoreflect"
 )

@@ -8,10 +8,10 @@ import (
 	"path/filepath"
 
 	"github.com/cilium/ebpf"
-	"github.com/cilium/tetragon/pkg/bpf"
-	"github.com/cilium/tetragon/pkg/selectors"
-	"github.com/cilium/tetragon/pkg/sensors"
-	"github.com/cilium/tetragon/pkg/sensors/program"
+	"github.com/go-faster/tetragon/pkg/bpf"
+	"github.com/go-faster/tetragon/pkg/selectors"
+	"github.com/go-faster/tetragon/pkg/sensors"
+	"github.com/go-faster/tetragon/pkg/sensors/program"
 )
 
 // internal functions for dealing with selectors that are common for kprobes/tracepoints

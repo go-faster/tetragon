@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cilium/tetragon/pkg/api"
+	"github.com/go-faster/tetragon/pkg/api"
 )
 
 func TestDecodeCommonFlags(t *testing.T) {

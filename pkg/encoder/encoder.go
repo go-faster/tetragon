@@ -9,9 +9,9 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/cilium/tetragon/api/v1/tetragon"
-	"github.com/cilium/tetragon/pkg/logger"
-	"github.com/cilium/tetragon/pkg/syscallinfo"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/syscallinfo"
 )
 
 const rfc3339Nano = "2006-01-02T15:04:05.000000000Z07:00"

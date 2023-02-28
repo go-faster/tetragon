@@ -8,9 +8,9 @@ import (
 	"strings"
 
 	"github.com/cilium/ebpf/btf"
-	"github.com/cilium/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
-	"github.com/cilium/tetragon/pkg/kernels"
-	"github.com/cilium/tetragon/pkg/syscallinfo"
+	"github.com/go-faster/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
+	"github.com/go-faster/tetragon/pkg/kernels"
+	"github.com/go-faster/tetragon/pkg/syscallinfo"
 )
 
 // ValidationWarn is used to mark that validation was not successful but it's not

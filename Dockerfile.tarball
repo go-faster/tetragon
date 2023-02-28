@@ -1,4 +1,4 @@
-FROM cilium/tetragon:latest as tetragon-release
+FROM go-faster/tetragon:latest as tetragon-release
 
 FROM scratch as linux-tarball-1
 

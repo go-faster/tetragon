@@ -7,7 +7,7 @@ import (
 	"io"
 	"testing"
 
-	tus "github.com/cilium/tetragon/pkg/testutils/sensors"
+	tus "github.com/go-faster/tetragon/pkg/testutils/sensors"
 
 	"github.com/sirupsen/logrus"
 )

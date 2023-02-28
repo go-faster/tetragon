@@ -4,7 +4,7 @@
 package tracingpolicy
 
 import (
-	"github.com/cilium/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
+	"github.com/go-faster/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
 )
 
 // TracingPolicy is an interface for a tracing policy

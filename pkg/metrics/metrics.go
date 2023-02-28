@@ -6,7 +6,7 @@ package metrics
 import (
 	"net/http"
 
-	"github.com/cilium/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/logger"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 )
 

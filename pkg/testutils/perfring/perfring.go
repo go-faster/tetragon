@@ -16,13 +16,13 @@ import (
 
 	"github.com/cilium/ebpf"
 	"github.com/cilium/ebpf/perf"
-	"github.com/cilium/tetragon/pkg/bpf"
-	testapi "github.com/cilium/tetragon/pkg/grpc/test"
-	"github.com/cilium/tetragon/pkg/logger"
-	"github.com/cilium/tetragon/pkg/observer"
-	"github.com/cilium/tetragon/pkg/reader/notify"
-	testsensor "github.com/cilium/tetragon/pkg/sensors/test"
-	"github.com/cilium/tetragon/pkg/testutils"
+	"github.com/go-faster/tetragon/pkg/bpf"
+	testapi "github.com/go-faster/tetragon/pkg/grpc/test"
+	"github.com/go-faster/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/observer"
+	"github.com/go-faster/tetragon/pkg/reader/notify"
+	testsensor "github.com/go-faster/tetragon/pkg/sensors/test"
+	"github.com/go-faster/tetragon/pkg/testutils"
 	"github.com/sirupsen/logrus"
 )
 
@@ -53,8 +53,8 @@ func loopEvents(events []observer.Event, eventFn EventFn, complChecker *testsens
 //
 // Example code to load the test sensor:
 //
-//	import testsensor "github.com/cilium/tetragon/pkg/sensors/test"
-//	import tus "github.com/cilium/tetragon/pkg/testutils/sensors"
+//	import testsensor "github.com/go-faster/tetragon/pkg/sensors/test"
+//	import tus "github.com/go-faster/tetragon/pkg/testutils/sensors"
 //	tus.LoadSensor(ctx, t, testsensor.GetTestSensor())
 //
 // If the test sensor is loaded, users can use TestCheckerMarkEnd to generate

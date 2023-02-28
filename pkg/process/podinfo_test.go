@@ -8,9 +8,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cilium/tetragon/api/v1/tetragon"
-	"github.com/cilium/tetragon/pkg/cilium"
-	"github.com/cilium/tetragon/pkg/watcher"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/pkg/cilium"
+	"github.com/go-faster/tetragon/pkg/watcher"
 	"github.com/stretchr/testify/assert"
 	"google.golang.org/protobuf/proto"
 	"google.golang.org/protobuf/types/known/wrapperspb"
