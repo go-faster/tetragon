@@ -8,10 +8,10 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/cilium/tetragon/pkg/cgroups"
-	"github.com/cilium/tetragon/pkg/logger"
-	"github.com/cilium/tetragon/pkg/policyfilter"
-	"github.com/cilium/tetragon/pkg/rthooks"
+	"github.com/go-faster/tetragon/pkg/cgroups"
+	"github.com/go-faster/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/policyfilter"
+	"github.com/go-faster/tetragon/pkg/rthooks"
 	"github.com/google/uuid"
 	"github.com/sirupsen/logrus"
 

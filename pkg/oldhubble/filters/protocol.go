@@ -19,8 +19,8 @@ import (
 	"fmt"
 	"strings"
 
-	v1 "github.com/cilium/tetragon/pkg/oldhubble/api/v1"
-	pb "github.com/cilium/tetragon/pkg/oldhubbleapi/v1/flow"
+	v1 "github.com/go-faster/tetragon/pkg/oldhubble/api/v1"
+	pb "github.com/go-faster/tetragon/pkg/oldhubbleapi/v1/flow"
 )
 
 func filterByProtocol(protocols []string) (FilterFunc, error) {

@@ -4,9 +4,9 @@
 package base
 
 import (
-	"github.com/cilium/tetragon/pkg/kernels"
-	"github.com/cilium/tetragon/pkg/sensors"
-	"github.com/cilium/tetragon/pkg/sensors/program"
+	"github.com/go-faster/tetragon/pkg/kernels"
+	"github.com/go-faster/tetragon/pkg/sensors"
+	"github.com/go-faster/tetragon/pkg/sensors/program"
 )
 
 var (

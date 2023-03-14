@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"sync/atomic"
 
-	"github.com/cilium/tetragon/pkg/policyfilter"
-	"github.com/cilium/tetragon/pkg/sensors"
-	"github.com/cilium/tetragon/pkg/tracingpolicy"
+	"github.com/go-faster/tetragon/pkg/policyfilter"
+	"github.com/go-faster/tetragon/pkg/sensors"
+	"github.com/go-faster/tetragon/pkg/tracingpolicy"
 )
 
 type policyHandler struct{}

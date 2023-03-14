@@ -9,9 +9,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/cilium/tetragon/pkg/defaults"
-	"github.com/cilium/tetragon/pkg/logger"
-	"github.com/cilium/tetragon/pkg/policyfilter"
+	"github.com/go-faster/tetragon/pkg/defaults"
+	"github.com/go-faster/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/policyfilter"
 	"github.com/spf13/cobra"
 )
 

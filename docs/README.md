@@ -14,4 +14,4 @@ hugo server
 ## Content
 
 Shortcut to the content:
-[content/en/docs](https://github.com/cilium/tetragon/tree/main/docs/content/en/docs).
+[content/en/docs](https://github.com/go-faster/tetragon/tree/main/docs/content/en/docs).

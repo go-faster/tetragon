@@ -18,8 +18,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/cilium/tetragon/api/v1/tetragon"
-	v1 "github.com/cilium/tetragon/pkg/oldhubble/api/v1"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
+	v1 "github.com/go-faster/tetragon/pkg/oldhubble/api/v1"
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 	"github.com/stretchr/testify/assert"

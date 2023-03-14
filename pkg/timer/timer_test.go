@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cilium/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/logger"
 	"github.com/stretchr/testify/assert"
 )
 

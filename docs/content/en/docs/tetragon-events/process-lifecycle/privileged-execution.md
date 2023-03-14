@@ -37,7 +37,7 @@ kubectl logs -n kube-system -l app.kubernetes.io/name=tetragon -c export-stdout 
 
 In another terminal let's apply the privileged PodSpec:
 ```bash
-kubectl apply -f https://raw.githubusercontent.com/cilium/tetragon/main/testdata/specs/testpod.yaml
+kubectl apply -f https://raw.githubusercontent.com/go-faster/tetragon/main/testdata/specs/testpod.yaml
 ```
 
 If you observe the output in the first terminal, you can see the container start with `CAP_SYS_ADMIN`:

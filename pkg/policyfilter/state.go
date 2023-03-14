@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/cilium/tetragon/pkg/cgroups"
-	"github.com/cilium/tetragon/pkg/cgroups/fsscan"
-	"github.com/cilium/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/cgroups"
+	"github.com/go-faster/tetragon/pkg/cgroups/fsscan"
+	"github.com/go-faster/tetragon/pkg/logger"
 	"github.com/google/uuid"
 	"github.com/sirupsen/logrus"
 	v1 "k8s.io/api/core/v1"

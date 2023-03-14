@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/cilium/tetragon/pkg/option"
+	"github.com/go-faster/tetragon/pkg/option"
 
 	"golang.org/x/sys/unix"
 )

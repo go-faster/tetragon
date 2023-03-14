@@ -5,8 +5,8 @@ package policyfilter
 import (
 	"sync"
 
-	"github.com/cilium/tetragon/pkg/logger"
-	"github.com/cilium/tetragon/pkg/option"
+	"github.com/go-faster/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/option"
 	"k8s.io/client-go/tools/cache"
 )
 

@@ -4,7 +4,7 @@
 package conf
 
 import (
-	"github.com/cilium/tetragon/pkg/option"
+	"github.com/go-faster/tetragon/pkg/option"
 	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/clientcmd"
 )

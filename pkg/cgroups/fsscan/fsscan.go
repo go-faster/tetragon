@@ -11,8 +11,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/cilium/tetragon/pkg/cgroups"
-	"github.com/cilium/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/cgroups"
+	"github.com/go-faster/tetragon/pkg/logger"
 	"github.com/google/uuid"
 )
 

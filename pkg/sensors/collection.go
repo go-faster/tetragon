@@ -6,7 +6,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/cilium/tetragon/pkg/tracingpolicy"
+	"github.com/go-faster/tetragon/pkg/tracingpolicy"
 	"go.uber.org/multierr"
 )
 

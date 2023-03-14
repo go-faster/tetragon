@@ -20,7 +20,7 @@ import (
 
 	"github.com/cilium/cilium/api/v1/models"
 	"github.com/cilium/cilium/pkg/proxy/accesslog"
-	"github.com/cilium/tetragon/pkg/oldhubble/parser/getters"
+	"github.com/go-faster/tetragon/pkg/oldhubble/parser/getters"
 )
 
 const (

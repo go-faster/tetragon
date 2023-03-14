@@ -15,7 +15,7 @@ Since version 0.8.4, all Tetragon container images are signed using cosign.
 Let's verify a Tetragon image's signature using the `cosign verify` command:
 
 ```shell
-COSIGN_EXPERIMENTAL=1 cosign verify --certificate-github-workflow-repository cilium/tetragon --certificate-oidc-issuer https://token.actions.githubusercontent.com <Image URL> | jq
+COSIGN_EXPERIMENTAL=1 cosign verify --certificate-github-workflow-repository go-faster/tetragon --certificate-oidc-issuer https://token.actions.githubusercontent.com <Image URL> | jq
 ```
 
 **Note**

@@ -1,12 +1,12 @@
 ---
 title: "Running tests"
 weight: 3
-manualLink: "https://github.com/cilium/tetragon/tree/main/tests/vmtests"
+manualLink: "https://github.com/go-faster/tetragon/tree/main/tests/vmtests"
 manualLinkTarget: "_blank"
 description: "Learn how to run the tests of the project"
 ---
 
-See https://github.com/cilium/tetragon/tree/main/tests/vmtests.
+See https://github.com/go-faster/tetragon/tree/main/tests/vmtests.
 
 ### What's next
 

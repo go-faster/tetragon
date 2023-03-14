@@ -10,13 +10,13 @@ import (
 	"fmt"
 	"time"
 
-	k8sversion "github.com/cilium/tetragon/pkg/k8s/version"
+	k8sversion "github.com/go-faster/tetragon/pkg/k8s/version"
 
 	"github.com/cilium/cilium/pkg/logging"
 	"github.com/cilium/cilium/pkg/logging/logfields"
 	"github.com/cilium/cilium/pkg/versioncheck"
-	ciliumio "github.com/cilium/tetragon/pkg/k8s/apis/cilium.io"
-	"github.com/cilium/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
+	ciliumio "github.com/go-faster/tetragon/pkg/k8s/apis/cilium.io"
+	"github.com/go-faster/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
 	"github.com/sirupsen/logrus"
 	"golang.org/x/sync/errgroup"
 	apiextensionsv1 "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1"

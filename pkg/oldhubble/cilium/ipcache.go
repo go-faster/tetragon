@@ -21,9 +21,9 @@ import (
 
 	"github.com/cilium/cilium/pkg/identity"
 	monitorAPI "github.com/cilium/cilium/pkg/monitor/api"
-	"github.com/cilium/tetragon/pkg/oldhubble/cilium/client"
-	"github.com/cilium/tetragon/pkg/oldhubble/ipcache"
-	"github.com/cilium/tetragon/pkg/oldhubble/parser/getters"
+	"github.com/go-faster/tetragon/pkg/oldhubble/cilium/client"
+	"github.com/go-faster/tetragon/pkg/oldhubble/ipcache"
+	"github.com/go-faster/tetragon/pkg/oldhubble/parser/getters"
 	"github.com/sirupsen/logrus"
 )
 

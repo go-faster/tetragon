@@ -21,8 +21,8 @@ import (
 
 	"github.com/cilium/cilium/api/v1/models"
 	monitorAPI "github.com/cilium/cilium/pkg/monitor/api"
-	v1 "github.com/cilium/tetragon/pkg/oldhubble/api/v1"
-	"github.com/cilium/tetragon/pkg/oldhubble/parser/endpoint"
+	v1 "github.com/go-faster/tetragon/pkg/oldhubble/api/v1"
+	"github.com/go-faster/tetragon/pkg/oldhubble/parser/endpoint"
 	"github.com/sirupsen/logrus"
 )
 

@@ -7,13 +7,13 @@ description: "Learn how to submit a pull request to the project"
 ### Submitting a pull request
 
 Contributions must be submitted in the form of pull requests against the
-upstream GitHub repository at https://github.com/cilium/tetragon.
+upstream GitHub repository at https://github.com/go-faster/tetragon.
 
 1. Fork the Tetragon repository.
 
 2. Push your changes to the topic branch in your fork of the repository.
 
-3. Submit a pull request on https://github.com/cilium/tetragon.
+3. Submit a pull request on https://github.com/go-faster/tetragon.
 
 Before hitting the submit button, please make sure that the following
 requirements have been met:

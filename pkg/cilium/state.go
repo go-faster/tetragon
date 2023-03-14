@@ -19,13 +19,13 @@ import (
 	"fmt"
 
 	"github.com/cilium/cilium/api/v1/models"
-	"github.com/cilium/tetragon/pkg/logger"
-	v1 "github.com/cilium/tetragon/pkg/oldhubble/api/v1"
-	"github.com/cilium/tetragon/pkg/oldhubble/cilium"
-	"github.com/cilium/tetragon/pkg/oldhubble/cilium/client"
-	"github.com/cilium/tetragon/pkg/oldhubble/fqdncache"
-	"github.com/cilium/tetragon/pkg/oldhubble/ipcache"
-	"github.com/cilium/tetragon/pkg/oldhubble/servicecache"
+	"github.com/go-faster/tetragon/pkg/logger"
+	v1 "github.com/go-faster/tetragon/pkg/oldhubble/api/v1"
+	"github.com/go-faster/tetragon/pkg/oldhubble/cilium"
+	"github.com/go-faster/tetragon/pkg/oldhubble/cilium/client"
+	"github.com/go-faster/tetragon/pkg/oldhubble/fqdncache"
+	"github.com/go-faster/tetragon/pkg/oldhubble/ipcache"
+	"github.com/go-faster/tetragon/pkg/oldhubble/servicecache"
 )
 
 var (

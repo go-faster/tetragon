@@ -26,7 +26,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
       with:
-        path: go/src/github.com/cilium/tetragon/
+        path: go/src/github.com/go-faster/tetragon/
 
     - name: Install build dependencies
       run: |
@@ -38,14 +38,14 @@ jobs:
       env:
         GOPATH: /home/runner/work/tetragon/tetragon/go
       run: |
-        cd go/src/github.com/cilium/tetragon/
+        cd go/src/github.com/go-faster/tetragon/
         make tetragon-bpf tester-progs test-compile
         make -C tests/vmtests
 
     - name: Split tests
       run: |
         #  see testfile below
-        cd go/src/github.com/cilium/tetragon/
+        cd go/src/github.com/go-faster/tetragon/
         go run ./tools/split-tetragon-gotests -ci-run 1
 
     - name: tar build
@@ -102,7 +102,7 @@ jobs:
     - name: test kernel ${{ matrix.kernel }}
       if: ${{ matrix.kernel  != '4.19' }}
       run: |
-        cd go/src/github.com/cilium/tetragon
+        cd go/src/github.com/go-faster/tetragon
         ./tests/vmtests/fetch-data.sh ${{ matrix.kernel }}
         sudo ./tests/vmtests/tetragon-vmtests-run \
                 --kernel tests/vmtests/test-data/kernels/${{ matrix.kernel }}/boot/vmlinuz* \
@@ -112,7 +112,7 @@ jobs:
     - name: test kernel ${{ matrix.kernel }} with btf file
       if: ${{ matrix.kernel  == '4.19' }}
       run: |
-        cd go/src/github.com/cilium/tetragon
+        cd go/src/github.com/go-faster/tetragon
         ./tests/vmtests/fetch-data.sh ${{ matrix.kernel }}
         sudo ./tests/vmtests/tetragon-vmtests-run \
                 --kernel tests/vmtests/test-data/kernels/${{ matrix.kernel }}/boot/vmlinuz* \
@@ -123,14 +123,14 @@ jobs:
     - name: Chmod test results on failure or cancelation
       if: failure() || cancelled()
       run: |
-        sudo chmod -R go+rX go/src/github.com/cilium/tetragon/tests/vmtests/vmtests-results-*
+        sudo chmod -R go+rX go/src/github.com/go-faster/tetragon/tests/vmtests/vmtests-results-*
 
     - name: Upload test results on failure or cancelation
       if: failure() || cancelled()
       uses: actions/upload-artifact@3cea5372237819ed00197afe530f5a7ea3e805c8
       with:
         name: tetragon-vmtests-${{ matrix.kernel }}-${{ matrix.group }}-results
-        path: go/src/github.com/cilium/tetragon/tests/vmtests/vmtests-results-*
+        path: go/src/github.com/go-faster/tetragon/tests/vmtests/vmtests-results-*
         retention-days: 5
   post-test:
     runs-on: ubuntu-latest

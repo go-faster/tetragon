@@ -1,4 +1,4 @@
-module github.com/cilium/tetragon.io
+module github.com/go-faster/tetragon.io
 
 go 1.19
 

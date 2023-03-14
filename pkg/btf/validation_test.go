@@ -12,7 +12,7 @@ import (
 	"testing"
 
 	"github.com/cilium/ebpf/btf"
-	"github.com/cilium/tetragon/pkg/config"
+	"github.com/go-faster/tetragon/pkg/config"
 )
 
 func expectError(t *testing.T, err error) error {

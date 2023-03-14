@@ -17,10 +17,10 @@ package cilium
 import (
 	"github.com/cilium/cilium/pkg/monitor"
 	monitorAPI "github.com/cilium/cilium/pkg/monitor/api"
-	v1 "github.com/cilium/tetragon/pkg/oldhubble/api/v1"
-	"github.com/cilium/tetragon/pkg/oldhubble/cilium/client"
-	"github.com/cilium/tetragon/pkg/oldhubble/ipcache"
-	"github.com/cilium/tetragon/pkg/oldhubble/servicecache"
+	v1 "github.com/go-faster/tetragon/pkg/oldhubble/api/v1"
+	"github.com/go-faster/tetragon/pkg/oldhubble/cilium/client"
+	"github.com/go-faster/tetragon/pkg/oldhubble/ipcache"
+	"github.com/go-faster/tetragon/pkg/oldhubble/servicecache"
 	"github.com/sirupsen/logrus"
 )
 

@@ -8,8 +8,8 @@ package v1alpha1
 import (
 	"net/http"
 
-	v1alpha1 "github.com/cilium/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
-	"github.com/cilium/tetragon/pkg/k8s/client/clientset/versioned/scheme"
+	v1alpha1 "github.com/go-faster/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
+	"github.com/go-faster/tetragon/pkg/k8s/client/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 

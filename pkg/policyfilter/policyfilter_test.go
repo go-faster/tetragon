@@ -11,9 +11,9 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/cilium/tetragon/pkg/bpf"
-	"github.com/cilium/tetragon/pkg/defaults"
-	"github.com/cilium/tetragon/pkg/option"
+	"github.com/go-faster/tetragon/pkg/bpf"
+	"github.com/go-faster/tetragon/pkg/defaults"
+	"github.com/go-faster/tetragon/pkg/option"
 )
 
 var bpffsReady bool

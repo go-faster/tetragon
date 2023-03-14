@@ -6,10 +6,10 @@ package sensors
 import (
 	"fmt"
 
-	"github.com/cilium/tetragon/api/v1/tetragon"
-	"github.com/cilium/tetragon/pkg/logger"
-	"github.com/cilium/tetragon/pkg/policyfilter"
-	"github.com/cilium/tetragon/pkg/tracingpolicy"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/policyfilter"
+	"github.com/go-faster/tetragon/pkg/tracingpolicy"
 )
 
 type handler struct {

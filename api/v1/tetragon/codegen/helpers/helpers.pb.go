@@ -7,7 +7,7 @@ package helpers
 
 import (
 	fmt "fmt"
-	tetragon "github.com/cilium/tetragon/api/v1/tetragon"
+	tetragon "github.com/go-faster/tetragon/api/v1/tetragon"
 )
 
 // ResponseTypeString returns an event's type as a string

@@ -22,8 +22,8 @@ import (
 	"github.com/cilium/cilium/pkg/identity"
 	monitorAPI "github.com/cilium/cilium/pkg/monitor/api"
 
-	v1 "github.com/cilium/tetragon/pkg/oldhubble/api/v1"
-	"github.com/cilium/tetragon/pkg/oldhubble/k8s"
+	v1 "github.com/go-faster/tetragon/pkg/oldhubble/api/v1"
+	"github.com/go-faster/tetragon/pkg/oldhubble/k8s"
 )
 
 // ParseEndpointFromModel parses all elements from modelEP into a Endpoint.

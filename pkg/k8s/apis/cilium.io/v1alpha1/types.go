@@ -6,7 +6,7 @@ package v1alpha1
 import (
 	"fmt"
 
-	ciliumio "github.com/cilium/tetragon/pkg/k8s/apis/cilium.io"
+	ciliumio "github.com/go-faster/tetragon/pkg/k8s/apis/cilium.io"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 

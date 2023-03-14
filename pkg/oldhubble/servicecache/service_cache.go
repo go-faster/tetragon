@@ -20,7 +20,7 @@ import (
 	"strconv"
 	"sync"
 
-	pb "github.com/cilium/tetragon/pkg/oldhubbleapi/v1/flow"
+	pb "github.com/go-faster/tetragon/pkg/oldhubbleapi/v1/flow"
 
 	"github.com/cilium/cilium/api/v1/models"
 )

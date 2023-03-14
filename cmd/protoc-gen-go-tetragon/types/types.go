@@ -6,7 +6,7 @@ package types
 import (
 	"path/filepath"
 
-	"github.com/cilium/tetragon/cmd/protoc-gen-go-tetragon/common"
+	"github.com/go-faster/tetragon/cmd/protoc-gen-go-tetragon/common"
 	"google.golang.org/protobuf/compiler/protogen"
 )
 

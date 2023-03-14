@@ -10,10 +10,10 @@ import (
 	"io"
 	"os"
 
-	"github.com/cilium/tetragon/api/v1/tetragon"
-	"github.com/cilium/tetragon/pkg/filters"
-	hubbleV1 "github.com/cilium/tetragon/pkg/oldhubble/api/v1"
-	hubbleFilters "github.com/cilium/tetragon/pkg/oldhubble/filters"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/pkg/filters"
+	hubbleV1 "github.com/go-faster/tetragon/pkg/oldhubble/api/v1"
+	hubbleFilters "github.com/go-faster/tetragon/pkg/oldhubble/filters"
 	"google.golang.org/grpc"
 	"google.golang.org/protobuf/encoding/protojson"
 )

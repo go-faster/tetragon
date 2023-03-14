@@ -1,6 +1,6 @@
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/cilium/tetragon/releases/download/tetragon-cli/logo.png" width="400">
-  <img src="https://github.com/cilium/tetragon/releases/download/tetragon-cli/logo-dark.png" width="400">
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/go-faster/tetragon/releases/download/tetragon-cli/logo.png" width="400">
+  <img src="https://github.com/go-faster/tetragon/releases/download/tetragon-cli/logo-dark.png" width="400">
 </picture>
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
@@ -168,7 +168,7 @@ To install and deploy Tetragon, run the following commands:
 ```
 helm repo add cilium https://helm.cilium.io
 helm repo update
-helm install tetragon cilium/tetragon -n kube-system
+helm install tetragon go-faster/tetragon -n kube-system
 kubectl rollout status -n kube-system ds/tetragon -w
 ```
 
@@ -217,7 +217,7 @@ time.
 #### `tetra` CLI
 
 A second way is to pretty print the events using the
-[`tetra` CLI](https://github.com/cilium/tetragon/releases/latest).
+[`tetra` CLI](https://github.com/go-faster/tetragon/releases/latest).
 The tool also allows filtering by process, pod, and other fields.
 
 If you are using `homebrew`, you can install the latest release with:
@@ -230,13 +230,13 @@ Or you can download and install the latest release with the following commands:
 ```
 GOOS=$(go env GOOS)
 GOARCH=$(go env GOARCH)
-curl -L --remote-name-all https://github.com/cilium/tetragon/releases/latest/download/tetra-${GOOS}-${GOARCH}.tar.gz{,.sha256sum}
+curl -L --remote-name-all https://github.com/go-faster/tetragon/releases/latest/download/tetra-${GOOS}-${GOARCH}.tar.gz{,.sha256sum}
 sha256sum --check tetra-${GOOS}-${GOARCH}.tar.gz.sha256sum
 sudo tar -C /usr/local/bin -xzvf tetra-${GOOS}-${GOARCH}.tar.gz
 rm tetra-${GOOS}-${GOARCH}.tar.gz{,.sha256sum}
 ```
 
-(see https://github.com/cilium/tetragon/releases/latest for supported `GOOS`/`GOARCH` binary releases)
+(see https://github.com/go-faster/tetragon/releases/latest for supported `GOOS`/`GOARCH` binary releases)
 
 To start printing events run:
 
@@ -511,7 +511,7 @@ kubectl logs -n kube-system -l app.kubernetes.io/name=tetragon -c export-stdout 
 
 In another terminal let's apply the privileged PodSpec:
 ```bash
-kubectl apply -f https://raw.githubusercontent.com/cilium/tetragon/main/testdata/specs/testpod.yaml
+kubectl apply -f https://raw.githubusercontent.com/go-faster/tetragon/main/testdata/specs/testpod.yaml
 ```
 
 If you observe the output in the first terminal, you can see the container start with `CAP_SYS_ADMIN`:
@@ -554,7 +554,7 @@ specify additional directories or specific files if needed.
 As a first step, let's apply the following `TracingPolicy`:
 
 ```bash
-kubectl apply -f https://raw.githubusercontent.com/cilium/tetragon/main/examples/tracingpolicy/sys_write_follow_fd_prefix.yaml
+kubectl apply -f https://raw.githubusercontent.com/go-faster/tetragon/main/examples/tracingpolicy/sys_write_follow_fd_prefix.yaml
 ```
 
 As a second step, let's start monitoring the events from the `xwing` pod:
@@ -660,7 +660,7 @@ the arguments of the observed system call. In the above case they are
 To disable the `TracingPolicy` run:
 
 ```bash
-kubectl delete -f https://raw.githubusercontent.com/cilium/tetragon/main/examples/tracingpolicy/sys_write_follow_fd_prefix.yaml
+kubectl delete -f https://raw.githubusercontent.com/go-faster/tetragon/main/examples/tracingpolicy/sys_write_follow_fd_prefix.yaml
 ```
 
 #### Use case 2: Network Observability
@@ -668,7 +668,7 @@ kubectl delete -f https://raw.githubusercontent.com/cilium/tetragon/main/example
 To view TCP connect events, apply the example TCP connect `TracingPolicy`:
 
 ```bash
-kubectl apply -f https://raw.githubusercontent.com/cilium/tetragon/main/examples/tracingpolicy/tcp-connect.yaml
+kubectl apply -f https://raw.githubusercontent.com/go-faster/tetragon/main/examples/tracingpolicy/tcp-connect.yaml
 ```
 
 To start monitoring events in the `xwing` pod run the Tetragon CLI:
@@ -693,7 +693,7 @@ The output in the first terminal will capture the new connect and write,
 
 To disable the TracingPolicy run:
 ```bash
-kubectl delete -f https://raw.githubusercontent.com/cilium/tetragon/main/examples/tracingpolicy/tcp-connect.yaml
+kubectl delete -f https://raw.githubusercontent.com/go-faster/tetragon/main/examples/tracingpolicy/tcp-connect.yaml
 ```
 
 
@@ -733,7 +733,7 @@ Since version 0.8.4, all Tetragon container images are signed using cosign.
 Let's verify a Tetragon image's signature using the `cosign verify` command:
 
 ```bash
-$ COSIGN_EXPERIMENTAL=1 cosign verify --certificate-github-workflow-repository cilium/tetragon --certificate-oidc-issuer https://token.actions.githubusercontent.com <Image URL> | jq
+$ COSIGN_EXPERIMENTAL=1 cosign verify --certificate-github-workflow-repository go-faster/tetragon --certificate-oidc-issuer https://token.actions.githubusercontent.com <Image URL> | jq
 ```
 
 **Note**
@@ -764,7 +764,7 @@ To ensure the SBOM is tamper-proof, its signature can be verified using the
 `cosign verify` command.
 
 ```bash
-$ COSIGN_EXPERIMENTAL=1 cosign verify --certificate-github-workflow-repository cilium/tetragon --certificate-oidc-issuer https://token.actions.githubusercontent.com --attachment sbom <Image URL> | jq
+$ COSIGN_EXPERIMENTAL=1 cosign verify --certificate-github-workflow-repository go-faster/tetragon --certificate-oidc-issuer https://token.actions.githubusercontent.com --attachment sbom <Image URL> | jq
 ```
 It can be validated that the SBOM image was signed using Github Actions in the Cilium
 repository from the `Issuer` and `Subject` fields of the output.

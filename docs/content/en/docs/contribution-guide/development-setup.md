@@ -35,7 +35,7 @@ CONTAINER_ENGINE='sudo podman' LOCAL_CLANG=1 LOCAL_CLANG_FORMAT=1 make
 ```
 
 See
-[Dockerfile.clang](https://github.com/cilium/tetragon/blob/main/Dockerfile.clang)
+[Dockerfile.clang](https://github.com/go-faster/tetragon/blob/main/Dockerfile.clang)
 for the minimal required version of `clang`.
 
 You should now have a `./tetragon` binary, which can be run as follows:
@@ -93,7 +93,7 @@ docker run --name tetragon \
    --rm -it -d --pid=host \
    --cgroupns=host --privileged \
    -v /sys/kernel/btf/vmlinux:/var/lib/tetragon/btf \
-   cilium/tetragon:latest \
+   go-faster/tetragon:latest \
    bash -c "/usr/bin/tetragon"
 ```
 
@@ -130,7 +130,7 @@ make LOCAL_CLANG=0 image image-operator
 contrib/localdev/bootstrap-kind-cluster.sh
 
 # Install Tetragon
-contrib/localdev/install-tetragon.sh --image cilium/tetragon:latest --operator cilium/tetragon-operator:latest
+contrib/localdev/install-tetragon.sh --image go-faster/tetragon:latest --operator go-faster/tetragon-operator:latest
 ```
 
 Verify that Tetragon is installed by running:
@@ -162,8 +162,8 @@ minikube start --driver=kvm2
 minikube mount $HOME:$HOME # so that we can use .kube/config
 ./tetragon-operator --kube-config ~/.kube/config
 make STATIC=1 tetragon
-minikube ssh --  'sudo mkdir -p /var/run/cilium/tetragon'
-minikube ssh sudo "sh -c 'NODE_NAME=minikube /home/kkourt/src/tetragon/tetragon --bpf-lib /home/kkourt/src/tetragon/bpf/objs --server-address unix:///var/run/cilium/tetragon/tetragon.sock --enable-k8s-api --k8s-kubeconfig-path /home/kkourt/.kube/config'"
+minikube ssh --  'sudo mkdir -p /var/run/go-faster/tetragon'
+minikube ssh sudo "sh -c 'NODE_NAME=minikube /home/kkourt/src/tetragon/tetragon --bpf-lib /home/kkourt/src/tetragon/bpf/objs --server-address unix:///var/run/go-faster/tetragon/tetragon.sock --enable-k8s-api --k8s-kubeconfig-path /home/kkourt/.kube/config'"
 ```
 
 ### What's next

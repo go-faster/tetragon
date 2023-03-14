@@ -19,7 +19,7 @@ import (
 	"sync"
 
 	"github.com/cilium/cilium/pkg/identity"
-	pb "github.com/cilium/tetragon/pkg/oldhubbleapi/v1/flow"
+	pb "github.com/go-faster/tetragon/pkg/oldhubbleapi/v1/flow"
 	"github.com/gogo/protobuf/types"
 )
 

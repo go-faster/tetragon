@@ -32,14 +32,14 @@ merged upstream.
    cd "${GOPATH}/src/github.com/cilium"
    git clone https://github.com/${YOUR_GITHUB_USERNAME_OR_ORG}/tetragon.git
    cd tetragon
-   git remote add upstream https://github.com/cilium/tetragon.git
+   git remote add upstream https://github.com/go-faster/tetragon.git
    ```
 
 5. Prepare your [Development setup](/docs/contribution-guide/development-setup),
    see section below.
 
 6. Check the GitHub issues for [good tasks to get
-   started](https://github.com/cilium/tetragon/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
+   started](https://github.com/go-faster/tetragon/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
 
 7. Follow the steps in [Making changes](/docs/contribution-guide/making-changes) to start contributing. Welcome :)!
 

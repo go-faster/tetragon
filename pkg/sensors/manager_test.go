@@ -9,8 +9,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cilium/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
-	"github.com/cilium/tetragon/pkg/sensors/program"
+	"github.com/go-faster/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
+	"github.com/go-faster/tetragon/pkg/sensors/program"
 
 	"github.com/stretchr/testify/assert"
 )

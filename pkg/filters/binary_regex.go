@@ -19,9 +19,9 @@ import (
 	"fmt"
 	"regexp"
 
-	"github.com/cilium/tetragon/api/v1/tetragon"
-	v1 "github.com/cilium/tetragon/pkg/oldhubble/api/v1"
-	hubbleFilters "github.com/cilium/tetragon/pkg/oldhubble/filters"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
+	v1 "github.com/go-faster/tetragon/pkg/oldhubble/api/v1"
+	hubbleFilters "github.com/go-faster/tetragon/pkg/oldhubble/filters"
 )
 
 func filterByBinaryRegex(binaryPatterns []string) (hubbleFilters.FilterFunc, error) {

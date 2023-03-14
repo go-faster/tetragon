@@ -9,9 +9,9 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"github.com/cilium/tetragon/pkg/api/processapi"
-	"github.com/cilium/tetragon/pkg/bpf"
-	"github.com/cilium/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/api/processapi"
+	"github.com/go-faster/tetragon/pkg/bpf"
+	"github.com/go-faster/tetragon/pkg/logger"
 )
 
 type CgrpTrackingKey struct {

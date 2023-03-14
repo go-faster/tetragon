@@ -4,7 +4,7 @@ import (
 	"path/filepath"
 
 	"github.com/cilium/little-vm-helper/pkg/runner"
-	"github.com/cilium/tetragon/pkg/vmtests"
+	"github.com/go-faster/tetragon/pkg/vmtests"
 )
 
 // NB: we should use lvh's RunConf to avoid duplicating code

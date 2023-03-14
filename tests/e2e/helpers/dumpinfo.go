@@ -16,10 +16,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cilium/tetragon/tests/e2e/checker"
-	"github.com/cilium/tetragon/tests/e2e/flags"
-	"github.com/cilium/tetragon/tests/e2e/helpers/gops"
-	"github.com/cilium/tetragon/tests/e2e/state"
+	"github.com/go-faster/tetragon/tests/e2e/checker"
+	"github.com/go-faster/tetragon/tests/e2e/flags"
+	"github.com/go-faster/tetragon/tests/e2e/helpers/gops"
+	"github.com/go-faster/tetragon/tests/e2e/state"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/klog/v2"
 	"sigs.k8s.io/e2e-framework/klient"
@@ -29,7 +29,7 @@ import (
 
 var (
 	TetragonContainerName = "tetragon"
-	TetragonJsonPathname  = "/var/run/cilium/tetragon/tetragon.log"
+	TetragonJsonPathname  = "/var/run/go-faster/tetragon/tetragon.log"
 )
 
 type TestEnvFunc = func(ctx context.Context, cfg *envconf.Config, t *testing.T) (context.Context, error)

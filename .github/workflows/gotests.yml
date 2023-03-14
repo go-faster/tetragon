@@ -24,7 +24,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
       with:
-        path: go/src/github.com/cilium/tetragon/
+        path: go/src/github.com/go-faster/tetragon/
 
     - name: Install dependencies
       run: |
@@ -40,7 +40,7 @@ jobs:
 
     - name: Ensure BPF programs pass verifier
       run: |
-        cd go/src/github.com/cilium/tetragon/
+        cd go/src/github.com/go-faster/tetragon/
         make verify
 
     - name: Run go tests
@@ -48,7 +48,7 @@ jobs:
         GOPATH: /home/runner/work/tetragon/tetragon/go
         SUDO: sudo -E
       run: |
-        cd go/src/github.com/cilium/tetragon/
+        cd go/src/github.com/go-faster/tetragon/
         make check-copyright
         sudo -E echo "run go tests: " `uname -a`
         sudo -E go mod verify

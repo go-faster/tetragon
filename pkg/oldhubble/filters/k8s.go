@@ -19,9 +19,9 @@ import (
 	"fmt"
 	"strings"
 
-	v1 "github.com/cilium/tetragon/pkg/oldhubble/api/v1"
-	"github.com/cilium/tetragon/pkg/oldhubble/k8s"
-	pb "github.com/cilium/tetragon/pkg/oldhubbleapi/v1/flow"
+	v1 "github.com/go-faster/tetragon/pkg/oldhubble/api/v1"
+	"github.com/go-faster/tetragon/pkg/oldhubble/k8s"
+	pb "github.com/go-faster/tetragon/pkg/oldhubbleapi/v1/flow"
 )
 
 func sourcePod(ev *v1.Event) (ns, pod string) {

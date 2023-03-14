@@ -10,8 +10,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/cilium/tetragon/pkg/metrics/kprobemetrics"
-	"github.com/cilium/tetragon/pkg/metrics/ringbufmetrics"
+	"github.com/go-faster/tetragon/pkg/metrics/kprobemetrics"
+	"github.com/go-faster/tetragon/pkg/metrics/ringbufmetrics"
 	"github.com/fatih/color"
 	"github.com/prometheus/client_golang/prometheus"
 	dto "github.com/prometheus/client_model/go"

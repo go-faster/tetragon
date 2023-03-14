@@ -134,7 +134,7 @@ jobs:
           retention-days: 1
 
   image-digests:
-    if: ${{ github.repository == 'cilium/tetragon' }}
+    if: ${{ github.repository == 'go-faster/tetragon' }}
     name: Display Digests
     runs-on: ubuntu-20.04
     needs: build-and-push
@@ -157,7 +157,7 @@ jobs:
 
   draft-github-release:
     name: Create Release
-    if: github.repository == 'cilium/tetragon'
+    if: github.repository == 'go-faster/tetragon'
     environment: release
     runs-on: ubuntu-20.04
     steps:
