@@ -8,7 +8,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/cilium/tetragon/pkg/cri"
+	"github.com/go-faster/tetragon/pkg/cri"
 	"github.com/spf13/cobra"
 	criapi "k8s.io/cri-api/pkg/apis/runtime/v1"
 )

@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 
 	"github.com/cilium/little-vm-helper/pkg/runner"
-	"github.com/cilium/tetragon/pkg/vmtests"
+	"github.com/go-faster/tetragon/pkg/vmtests"
 )
 
 type RunConf struct {

@@ -8,8 +8,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/cilium/tetragon/pkg/metrics"
-	"github.com/cilium/tetragon/pkg/option"
+	"github.com/go-faster/tetragon/pkg/metrics"
+	"github.com/go-faster/tetragon/pkg/option"
 )
 
 func TestProcessLabels(t *testing.T) {

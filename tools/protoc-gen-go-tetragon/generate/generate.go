@@ -6,9 +6,9 @@ package generate
 import (
 	"fmt"
 
-	"github.com/cilium/tetragon/tools/protoc-gen-go-tetragon/eventchecker"
-	"github.com/cilium/tetragon/tools/protoc-gen-go-tetragon/helpers"
-	"github.com/cilium/tetragon/tools/protoc-gen-go-tetragon/types"
+	"github.com/go-faster/tetragon/tools/protoc-gen-go-tetragon/eventchecker"
+	"github.com/go-faster/tetragon/tools/protoc-gen-go-tetragon/helpers"
+	"github.com/go-faster/tetragon/tools/protoc-gen-go-tetragon/types"
 	"google.golang.org/protobuf/compiler/protogen"
 )
 

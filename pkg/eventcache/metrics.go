@@ -7,9 +7,9 @@ import (
 	"maps"
 	"slices"
 
-	"github.com/cilium/tetragon/api/v1/tetragon"
-	"github.com/cilium/tetragon/pkg/metrics"
-	"github.com/cilium/tetragon/pkg/metrics/consts"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/pkg/metrics"
+	"github.com/go-faster/tetragon/pkg/metrics/consts"
 	"github.com/prometheus/client_golang/prometheus"
 )
 

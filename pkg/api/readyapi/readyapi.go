@@ -6,9 +6,9 @@ package readyapi
 import (
 	"fmt"
 
-	"github.com/cilium/tetragon/api/v1/tetragon"
-	"github.com/cilium/tetragon/pkg/process"
-	"github.com/cilium/tetragon/pkg/reader/notify"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/pkg/process"
+	"github.com/go-faster/tetragon/pkg/reader/notify"
 )
 
 type MsgTetragonReady struct{}

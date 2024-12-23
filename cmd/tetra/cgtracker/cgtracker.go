@@ -8,9 +8,9 @@ import (
 	"log"
 	"path/filepath"
 
-	"github.com/cilium/tetragon/pkg/cgidarg"
-	"github.com/cilium/tetragon/pkg/cgtracker"
-	"github.com/cilium/tetragon/pkg/defaults"
+	"github.com/go-faster/tetragon/pkg/cgidarg"
+	"github.com/go-faster/tetragon/pkg/cgtracker"
+	"github.com/go-faster/tetragon/pkg/defaults"
 	"github.com/spf13/cobra"
 )
 

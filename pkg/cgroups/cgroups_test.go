@@ -11,8 +11,8 @@ import (
 	"syscall"
 	"testing"
 
-	"github.com/cilium/tetragon/pkg/defaults"
-	"github.com/cilium/tetragon/pkg/mountinfo"
+	"github.com/go-faster/tetragon/pkg/defaults"
+	"github.com/go-faster/tetragon/pkg/mountinfo"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"golang.org/x/sys/unix"

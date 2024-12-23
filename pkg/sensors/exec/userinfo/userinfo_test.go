@@ -6,8 +6,8 @@ package userinfo
 import (
 	"testing"
 
-	"github.com/cilium/tetragon/pkg/api/processapi"
-	"github.com/cilium/tetragon/pkg/reader/namespace"
+	"github.com/go-faster/tetragon/pkg/api/processapi"
+	"github.com/go-faster/tetragon/pkg/reader/namespace"
 	"github.com/stretchr/testify/require"
 )
 

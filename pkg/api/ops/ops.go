@@ -6,7 +6,7 @@ package ops
 import (
 	"fmt"
 
-	"github.com/cilium/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/logger"
 )
 
 type OpCode int

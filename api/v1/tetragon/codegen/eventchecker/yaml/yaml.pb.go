@@ -9,7 +9,7 @@ import (
 	bytes "bytes"
 	json "encoding/json"
 	fmt "fmt"
-	eventchecker "github.com/cilium/tetragon/api/v1/tetragon/codegen/eventchecker"
+	eventchecker "github.com/go-faster/tetragon/api/v1/tetragon/codegen/eventchecker"
 	os "os"
 	yaml "sigs.k8s.io/yaml"
 	template "text/template"

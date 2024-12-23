@@ -11,8 +11,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/cilium/tetragon/tests/e2e/flags"
-	"github.com/cilium/tetragon/tests/e2e/state"
+	"github.com/go-faster/tetragon/tests/e2e/flags"
+	"github.com/go-faster/tetragon/tests/e2e/state"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"

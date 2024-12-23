@@ -9,10 +9,10 @@ import (
 	"log"
 	"os"
 
-	"github.com/cilium/tetragon/pkg/btf"
-	"github.com/cilium/tetragon/pkg/ftrace"
-	"github.com/cilium/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
-	"github.com/cilium/tetragon/pkg/tracingpolicy/generate"
+	"github.com/go-faster/tetragon/pkg/btf"
+	"github.com/go-faster/tetragon/pkg/ftrace"
+	"github.com/go-faster/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
+	"github.com/go-faster/tetragon/pkg/tracingpolicy/generate"
 	"github.com/spf13/cobra"
 	"sigs.k8s.io/yaml"
 )

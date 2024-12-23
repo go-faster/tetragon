@@ -1,5 +1,5 @@
 FROM quay.io/cilium/clang:b97f5b3d5c38da62fb009f21a53cd42aefd54a2f@sha256:e1c8ed0acd2e24ed05377f2861d8174af28e09bef3bbc79649c8eba165207df0 AS bpf-builder
-WORKDIR /go/src/github.com/cilium/tetragon
+WORKDIR /go/src/github.com/go-faster/tetragon
 RUN apt-get update
 RUN apt-get install -y linux-libc-dev
 COPY . ./
@@ -31,13 +31,13 @@ RUN apt-get update -y &&    \
 	less
 RUN mkdir -p /etc/tetragon/tetragon.conf.d/ && \
     mkdir -p /etc/tetragon/tetragon.tp.d/
-COPY --from=bpf-builder /go/src/github.com/cilium/tetragon/bpf/objs/*.o /var/lib/tetragon/
+COPY --from=bpf-builder /go/src/github.com/go-faster/tetragon/bpf/objs/*.o /var/lib/tetragon/
 COPY --from=bpftool  /bin/bpftool /usr/bin/
-WORKDIR /go/src/github.com/cilium/tetragon
+WORKDIR /go/src/github.com/go-faster/tetragon
 COPY . ./
 RUN make tetragon tetra test-compile contrib-progs
 
 
 ENV TETRAGON_PROCFS=/procRoot/
-# CMD ["sh", "-c", "/go/src/github.com/cilium/tetragon/tetragon --procfs=/procRoot/ --export-filename=/tmp/tetragon.log --metrics-server :2112 --verbose 4"]
-CMD ["sh", "-c", "/go/src/github.com/cilium/tetragon/tetragon --procfs=/procRoot/"]
+# CMD ["sh", "-c", "/go/src/github.com/go-faster/tetragon/tetragon --procfs=/procRoot/ --export-filename=/tmp/tetragon.log --metrics-server :2112 --verbose 4"]
+CMD ["sh", "-c", "/go/src/github.com/go-faster/tetragon/tetragon --procfs=/procRoot/"]

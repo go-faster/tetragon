@@ -10,12 +10,12 @@ import (
 	"testing"
 	"time"
 
-	ec "github.com/cilium/tetragon/api/v1/tetragon/codegen/eventchecker"
-	"github.com/cilium/tetragon/pkg/defaults"
-	"github.com/cilium/tetragon/pkg/jsonchecker"
-	"github.com/cilium/tetragon/pkg/option"
-	"github.com/cilium/tetragon/pkg/testutils"
-	tus "github.com/cilium/tetragon/pkg/testutils/sensors"
+	ec "github.com/go-faster/tetragon/api/v1/tetragon/codegen/eventchecker"
+	"github.com/go-faster/tetragon/pkg/defaults"
+	"github.com/go-faster/tetragon/pkg/jsonchecker"
+	"github.com/go-faster/tetragon/pkg/option"
+	"github.com/go-faster/tetragon/pkg/testutils"
+	tus "github.com/go-faster/tetragon/pkg/testutils/sensors"
 	"github.com/stretchr/testify/assert"
 )
 

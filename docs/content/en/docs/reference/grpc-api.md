@@ -7,14 +7,14 @@ weight: 3
 ---
 
 {{< comment >}}
-This page was generated with github.io/cilium/tetragon/api/export-doc.sh,
+This page was generated with github.io/go-faster/tetragon/api/export-doc.sh,
 please do not edit directly.
 {{< /comment >}}
 
 The Tetragon API is an independant Go module that can be found in the Tetragon
-repository under [api](https://github.com/cilium/tetragon/tree/main/api). The
+repository under [api](https://github.com/go-faster/tetragon/tree/main/api). The
 version 1 of this API is defined in
-[github.com/cilium/tetragon/api/v1/tetragon](https://github.com/cilium/tetragon/tree/main/api/v1/tetragon).
+[github.com/go-faster/tetragon/api/v1/tetragon](https://github.com/go-faster/tetragon/tree/main/api/v1/tetragon).
 
 ## tetragon/capabilities.proto
 

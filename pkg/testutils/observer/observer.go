@@ -6,12 +6,12 @@ package observer
 import (
 	"testing"
 
-	"github.com/cilium/tetragon/pkg/bpf"
-	"github.com/cilium/tetragon/pkg/observer"
-	"github.com/cilium/tetragon/pkg/policyfilter"
-	"github.com/cilium/tetragon/pkg/sensors"
-	tupf "github.com/cilium/tetragon/pkg/testutils/policyfilter"
-	tus "github.com/cilium/tetragon/pkg/testutils/sensors"
+	"github.com/go-faster/tetragon/pkg/bpf"
+	"github.com/go-faster/tetragon/pkg/observer"
+	"github.com/go-faster/tetragon/pkg/policyfilter"
+	"github.com/go-faster/tetragon/pkg/sensors"
+	tupf "github.com/go-faster/tetragon/pkg/testutils/policyfilter"
+	tus "github.com/go-faster/tetragon/pkg/testutils/sensors"
 )
 
 // GetTestSensorManager returns a new test sensor manager.

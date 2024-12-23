@@ -14,7 +14,7 @@ Those tests are running in the Tetragon CI on various kernels[^1] and various
 architectures (amd64 and arm64).
 
 [^1]: For the detailed list, search for `jobs.test.strategy.matrix.kernel` in
-[github.com/cilium/tetragon/.github/workflows/vmtests.yml](https://github.com/cilium/tetragon/blob/main/.github/workflows/vmtests.yml)
+[github.com/go-faster/tetragon/.github/workflows/vmtests.yml](https://github.com/go-faster/tetragon/blob/main/.github/workflows/vmtests.yml)
 
 ## Go tests
 
@@ -31,7 +31,7 @@ Use `EXTRA_TESTFLAGS` to add flags to the `go test` command.
 To run the Go tests on various kernel versions, we use vmtests with
 [cilium/little-vm-helper](https://github.com/cilium/little-vm-helper) in the
 CI, you can also use it locally for testing specific kernels. See documentation
-[github.com/cilium/tetragon/tests/vmtests](https://github.com/cilium/tetragon/tree/main/tests/vmtests).
+[github.com/go-faster/tetragon/tests/vmtests](https://github.com/go-faster/tetragon/tree/main/tests/vmtests).
 
 ## BPF unit tests
 
@@ -42,7 +42,7 @@ make bpf-test
 ```
 
 Those tests can be found under
-[github.com/cilium/tetragon/bpf/tests](https://github.com/cilium/tetragon/tree/main/bpf/tests).
+[github.com/go-faster/tetragon/bpf/tests](https://github.com/go-faster/tetragon/tree/main/bpf/tests).
 The framework uses Go tests with `cilium/ebpf` to run those tests, you can use
 `BPFGOTESTFLAGS` to add `go test` flags, like `make BPFGOTESTFLAGS="-v"
 bpf-test`.

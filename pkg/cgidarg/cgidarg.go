@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/cilium/tetragon/pkg/cgroups"
+	"github.com/go-faster/tetragon/pkg/cgroups"
 )
 
 // Parse parses a string and returns a cgroup id

@@ -10,7 +10,7 @@ import (
 
 	hubbleV1 "github.com/cilium/cilium/pkg/hubble/api/v1"
 	hubbleFilters "github.com/cilium/cilium/pkg/hubble/filters"
-	"github.com/cilium/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
 )
 
 func filterByArgumentsRegex(argumentsPatterns []string, parent bool) (hubbleFilters.FilterFunc, error) {

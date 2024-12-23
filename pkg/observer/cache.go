@@ -6,7 +6,7 @@ package observer
 import (
 	"fmt"
 
-	"github.com/cilium/tetragon/pkg/api/dataapi"
+	"github.com/go-faster/tetragon/pkg/api/dataapi"
 	lru "github.com/hashicorp/golang-lru/v2"
 )
 

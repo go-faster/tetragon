@@ -9,8 +9,8 @@ import (
 
 	"github.com/prometheus/client_golang/prometheus"
 
-	"github.com/cilium/tetragon/cmd/tetragon-metrics-docs/metricsmd"
-	"github.com/cilium/tetragon/pkg/metricsconfig"
+	"github.com/go-faster/tetragon/cmd/tetragon-metrics-docs/metricsmd"
+	"github.com/go-faster/tetragon/pkg/metricsconfig"
 )
 
 func main() {

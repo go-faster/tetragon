@@ -1,11 +1,11 @@
 FROM quay.io/cilium/clang:b97f5b3d5c38da62fb009f21a53cd42aefd54a2f@sha256:e1c8ed0acd2e24ed05377f2861d8174af28e09bef3bbc79649c8eba165207df0 AS bpf-builder
-WORKDIR /go/src/github.com/cilium/tetragon
+WORKDIR /go/src/github.com/go-faster/tetragon
 RUN apt-get update
 RUN apt-get install -y linux-libc-dev
 COPY . ./
 RUN make tetragon-bpf LOCAL_CLANG=1
 
-WORKDIR /go/src/github.com/cilium/tetragon
+WORKDIR /go/src/github.com/go-faster/tetragon
 RUN apt-get update
 RUN apt-get install -y linux-libc-dev
 COPY . ./
@@ -14,8 +14,8 @@ RUN make tetragon-bpf && pwd
 FROM docker.io/library/golang:1.23.4@sha256:70031844b8c225351d0bb63e2c383f80db85d92ba894e3da7e13bcf80efa9a37
 RUN apt-get update
 RUN apt-get install -y linux-libc-dev rpm2cpio cpio git flex bison autoconf libelf-dev bc netcat-traditional
-WORKDIR /go/src/github.com/cilium/tetragon
-COPY --from=bpf-builder /go/src/github.com/cilium/tetragon/bpf/objs/*.o /var/lib/tetragon/
+WORKDIR /go/src/github.com/go-faster/tetragon
+COPY --from=bpf-builder /go/src/github.com/go-faster/tetragon/bpf/objs/*.o /var/lib/tetragon/
 CMD LD_LIBRARY_PATH=/usr/local/lib/ go test ./pkg/observer/
 
 ENV TETRAGON_BTF=/var/lib/tetragon/btf

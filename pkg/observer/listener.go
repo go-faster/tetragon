@@ -8,7 +8,7 @@ import (
 	"io"
 	"net"
 
-	"github.com/cilium/tetragon/pkg/reader/notify"
+	"github.com/go-faster/tetragon/pkg/reader/notify"
 )
 
 // Listener defines the interface to receive events from Observer. Listeners

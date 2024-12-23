@@ -8,13 +8,13 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/cilium/tetragon/pkg/errmetrics"
-	"github.com/cilium/tetragon/pkg/ksyms"
-	"github.com/cilium/tetragon/pkg/logger"
-	"github.com/cilium/tetragon/pkg/mbset"
-	"github.com/cilium/tetragon/pkg/sensors"
-	"github.com/cilium/tetragon/pkg/sensors/exec/config"
-	"github.com/cilium/tetragon/pkg/sensors/program"
+	"github.com/go-faster/tetragon/pkg/errmetrics"
+	"github.com/go-faster/tetragon/pkg/ksyms"
+	"github.com/go-faster/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/mbset"
+	"github.com/go-faster/tetragon/pkg/sensors"
+	"github.com/go-faster/tetragon/pkg/sensors/exec/config"
+	"github.com/go-faster/tetragon/pkg/sensors/program"
 )
 
 var (

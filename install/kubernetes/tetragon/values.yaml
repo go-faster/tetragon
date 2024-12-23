@@ -29,7 +29,7 @@ serviceLabelsOverride: {}
 # https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#pod-s-dns-policy
 dnsPolicy: Default
 # -- Directory to put Tetragon JSON export files.
-exportDirectory: "/var/run/cilium/tetragon"
+exportDirectory: "/var/run/go-faster/tetragon"
 # -- Configures whether Tetragon pods run on the host network.
 #
 # IMPORTANT: Tetragon must be on the host network for the process visibility to
@@ -39,7 +39,7 @@ tetragon:
   enabled: true
   image:
     override: ~
-    repository: quay.io/cilium/tetragon
+    repository: quay.io/go-faster/tetragon
     tag: v1.3.0
   resources: {}
   extraArgs: {}
@@ -280,7 +280,7 @@ tetragonOperator:
   # -- tetragon-operator image.
   image:
     override: ~
-    repository: quay.io/cilium/tetragon-operator
+    repository: quay.io/go-faster/tetragon-operator
     tag: v1.3.0
     pullPolicy: IfNotPresent
   # -- Extra volumes for the Tetragon Operator Deployment.
@@ -404,7 +404,7 @@ rthooks:
   # -- image for the Tetragon rthooks pod
   image:
     override: ~
-    repository: quay.io/cilium/tetragon-rthooks
+    repository: quay.io/go-faster/tetragon-rthooks
     tag: v0.4
   # -- rthooks service account.
   serviceAccount:

@@ -8,11 +8,11 @@ import (
 	"path/filepath"
 	"strconv"
 
-	"github.com/cilium/tetragon/cmd/tetra/debug"
-	"github.com/cilium/tetragon/pkg/cgroups"
-	"github.com/cilium/tetragon/pkg/defaults"
-	"github.com/cilium/tetragon/pkg/logger"
-	"github.com/cilium/tetragon/pkg/policyfilter"
+	"github.com/go-faster/tetragon/cmd/tetra/debug"
+	"github.com/go-faster/tetragon/pkg/cgroups"
+	"github.com/go-faster/tetragon/pkg/defaults"
+	"github.com/go-faster/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/policyfilter"
 	"github.com/spf13/cobra"
 )
 

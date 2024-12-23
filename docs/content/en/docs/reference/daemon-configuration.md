@@ -68,11 +68,11 @@ default installed configuration.
 
 ## Configuration examples
 
-The [examples/configuration/tetragon.yaml](https://github.com/cilium/tetragon/blob/main/examples/configuration/tetragon.yaml)
+The [examples/configuration/tetragon.yaml](https://github.com/go-faster/tetragon/blob/main/examples/configuration/tetragon.yaml)
 file contains example entries showing the defaults as a guide to the
 administrator. Local overrides can be created by editing and copying this file
 into `/etc/tetragon/tetragon.yaml`, or by editing and copying "drop-ins" from
-the [examples/configuration/tetragon.conf.d](https://github.com/cilium/tetragon/tree/main/examples/configuration/tetragon.conf.d)
+the [examples/configuration/tetragon.conf.d](https://github.com/go-faster/tetragon/tree/main/examples/configuration/tetragon.conf.d)
 directory into the `/etc/tetragon/tetragon.conf.d/` subdirectory. The latter is
 generally recommended.
 

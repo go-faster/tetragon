@@ -14,20 +14,20 @@ Build images and load them to minikube:
 
 ```shell-session
 make image image-operator
-minikube image load cilium/tetragon:latest
-minikube image load cilium/tetragon-operator:latest
+minikube image load go-faster/tetragon:latest
+minikube image load go-faster/tetragon-operator:latest
 minikube image list | grep tetragon
-localhost/cilium/tetragon:latest
-localhost/cilium/tetragon-operator:latest
+localhost/go-faster/tetragon:latest
+localhost/go-faster/tetragon-operator:latest
 ```
 
 Install the image enabling the init container:
 
 ```
 helm install --namespace kube-system \
-        --set tetragonOperator.image.override=localhost/cilium/tetragon-operator:latest \
-        --set tetragon.image.override=localhost/cilium/tetragon:latest  \
-        --set tetragon.grpc.address="unix:///var/run/cilium/tetragon/tetragon.sock" \
+        --set tetragonOperator.image.override=localhost/go-faster/tetragon-operator:latest \
+        --set tetragon.image.override=localhost/go-faster/tetragon:latest  \
+        --set tetragon.grpc.address="unix:///var/run/go-faster/tetragon/tetragon.sock" \
         --set tetragon.ociHookSetup.enabled=true \
         tetragon ./install/kubernetes/tetragon
 ...

@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cilium/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
 	"github.com/stretchr/testify/assert"
 	"golang.org/x/time/rate"
 	"google.golang.org/protobuf/encoding/protojson"

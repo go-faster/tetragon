@@ -24,10 +24,10 @@ success could be:
   [user list of the Cilium project](https://github.com/cilium/cilium/blob/main/USERS.md)
   as a Tetragon user.
 - Raise an issue on the repository about a bug, enhancement, or something else.
-  See [open a new issue](https://github.com/cilium/tetragon/issues/new/choose).
+  See [open a new issue](https://github.com/go-faster/tetragon/issues/new/choose).
 - Review a patch on the repository, this might look intimidading but some
   simple pull requests would benefit from a fresh pair of eyes. See [open pull
-  requests](https://github.com/cilium/tetragon/pulls).
+  requests](https://github.com/go-faster/tetragon/pulls).
 - Submit a patch to the Tetragon project, for code and documentation
   contribution. See the [next section](#guide-for-code-and-docs-contribution)
   for a how-to guide.
@@ -43,7 +43,7 @@ merged upstream.
 
 2. [Fork the Tetragon repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo)
    to your GitHub user or organization. The repository is available under
-   [github.com/cilium/tetragon](https://github.com/cilium/tetragon).
+   [github.com/go-faster/tetragon](https://github.com/go-faster/tetragon).
 
 3. (Optional) [Turn off GitHub actions](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#about-github-actions-permissions-for-your-repository)
    for your fork. This is recommended to avoid unnecessary CI notification
@@ -55,12 +55,12 @@ merged upstream.
    ```shell
    git clone https://github.com/${YOUR_GITHUB_USERNAME_OR_ORG}/tetragon.git
    cd tetragon
-   git remote add upstream https://github.com/cilium/tetragon.git
+   git remote add upstream https://github.com/go-faster/tetragon.git
    ```
 
 5. Prepare your [development setup]({{< ref "/docs/contribution-guide/development-setup" >}}).
 
-6. Check out GitHub [good first issues](https://github.com/cilium/tetragon/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
+6. Check out GitHub [good first issues](https://github.com/go-faster/tetragon/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
    to find something to work on. If this is your first Tetragon issue, try to
    start with something small that you think you can do without too much
    external help. Also avoid assigning too many issues to yourself (see [Don't

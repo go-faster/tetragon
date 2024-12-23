@@ -183,7 +183,7 @@ best-practice to identify when privileges are raised.
 
 ### Policy
 
-The [privileges-raise.yaml](https://raw.githubusercontent.com/cilium/tetragon/main/examples/policylibrary/privileges/privileges-raise.yaml) monitors the various interfaces of `setuid()` and `setgid()` to root.
+The [privileges-raise.yaml](https://raw.githubusercontent.com/go-faster/tetragon/main/examples/policylibrary/privileges/privileges-raise.yaml) monitors the various interfaces of `setuid()` and `setgid()` to root.
 
 ### Example jq Filter
 
@@ -233,7 +233,7 @@ namespaces by unprivileged is a common best-practice to identify such cases.
 
 ### Policy
 
-The [privileges-raise.yaml](https://raw.githubusercontent.com/cilium/tetragon/main/examples/policylibrary/privileges/privileges-raise.yaml)
+The [privileges-raise.yaml](https://raw.githubusercontent.com/go-faster/tetragon/main/examples/policylibrary/privileges/privileges-raise.yaml)
 monitors the creation of user namespaces by unprivileged.
 
 ### Example jq Filter
@@ -267,7 +267,7 @@ privileges.
 
 ### Policy
 
-The [privileges-raise.yaml](https://raw.githubusercontent.com/cilium/tetragon/main/examples/policylibrary/privileges/privileges-raise.yaml)
+The [privileges-raise.yaml](https://raw.githubusercontent.com/go-faster/tetragon/main/examples/policylibrary/privileges/privileges-raise.yaml)
 monitors `capset()` calls that do not drop capabilities.
 
 ### Example jq Filter
@@ -314,7 +314,7 @@ sufficient.
 
 ### Demo to reproduce
 
-You can use the [exec-memfd.py](https://raw.githubusercontent.com/cilium/tetragon/main/testdata/demos/tools/exec-memfd.py)
+You can use the [exec-memfd.py](https://raw.githubusercontent.com/go-faster/tetragon/main/testdata/demos/tools/exec-memfd.py)
 python script as an example which will copy the binary `/bin/true` into
 an anonymous memory then execute it. The binary will not be linked on the
 file system.
@@ -390,7 +390,7 @@ and programs can identify bugs and malicious or unexpected BPF activity.
 
 ### Policy
 
-[bpf.yaml](https://raw.githubusercontent.com/cilium/tetragon/main/examples/policylibrary/bpf.yaml)
+[bpf.yaml](https://raw.githubusercontent.com/go-faster/tetragon/main/examples/policylibrary/bpf.yaml)
 
 ### Example jq Filter
 
@@ -416,7 +416,7 @@ Understanding exactly what kernel modules are running in the cluster is crucial 
 
 ### Policy
 
-[modules.yaml](https://raw.githubusercontent.com/cilium/tetragon/main/examples/policylibrary/modules.yaml)
+[modules.yaml](https://raw.githubusercontent.com/go-faster/tetragon/main/examples/policylibrary/modules.yaml)
 
 ### Example jq Filter
 
@@ -442,7 +442,7 @@ Understanding the exact versions of shared libraries that binaries load and use 
 
 ### Policy
 
-[library.yaml](https://raw.githubusercontent.com/cilium/tetragon/main/examples/policylibrary/library.yaml)
+[library.yaml](https://raw.githubusercontent.com/go-faster/tetragon/main/examples/policylibrary/library.yaml)
 
 ### Example jq Filter
 
@@ -468,7 +468,7 @@ It is best practice to audit remote connections into a shell server.
 
 ### Policy
 
-[sshd.yaml](https://raw.githubusercontent.com/cilium/tetragon/main/examples/policylibrary/sshd.yaml)
+[sshd.yaml](https://raw.githubusercontent.com/go-faster/tetragon/main/examples/policylibrary/sshd.yaml)
 
 ### Example jq Filter
 
@@ -513,7 +513,7 @@ SERVICECIDR=$(kubectl describe pod -n kube-system kube-apiserver-kind-control-pl
 
 ### Policy
 
-[egress.yaml](https://raw.githubusercontent.com/cilium/tetragon/main/examples/policylibrary/egress.yaml)
+[egress.yaml](https://raw.githubusercontent.com/go-faster/tetragon/main/examples/policylibrary/egress.yaml)
 
 ### Example jq Filter
 

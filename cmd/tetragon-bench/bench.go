@@ -9,7 +9,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/cilium/tetragon/pkg/bench"
+	"github.com/go-faster/tetragon/pkg/bench"
 	"github.com/spf13/viper"
 	"golang.org/x/sys/unix"
 )

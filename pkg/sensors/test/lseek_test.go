@@ -9,12 +9,12 @@ import (
 	"sync"
 	"testing"
 
-	ec "github.com/cilium/tetragon/api/v1/tetragon/codegen/eventchecker"
-	"github.com/cilium/tetragon/pkg/jsonchecker"
-	"github.com/cilium/tetragon/pkg/observer/observertesthelper"
-	_ "github.com/cilium/tetragon/pkg/sensors/exec"
-	tuo "github.com/cilium/tetragon/pkg/testutils/observer"
-	tus "github.com/cilium/tetragon/pkg/testutils/sensors"
+	ec "github.com/go-faster/tetragon/api/v1/tetragon/codegen/eventchecker"
+	"github.com/go-faster/tetragon/pkg/jsonchecker"
+	"github.com/go-faster/tetragon/pkg/observer/observertesthelper"
+	_ "github.com/go-faster/tetragon/pkg/sensors/exec"
+	tuo "github.com/go-faster/tetragon/pkg/testutils/observer"
+	tus "github.com/go-faster/tetragon/pkg/testutils/sensors"
 	"github.com/stretchr/testify/assert"
 	"golang.org/x/sys/unix"
 )

@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/cilium/tetragon/api/v1/tetragon"
-	"github.com/cilium/tetragon/pkg/tracingpolicy"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/pkg/tracingpolicy"
 	"go.uber.org/multierr"
 )
 

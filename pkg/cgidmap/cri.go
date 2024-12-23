@@ -9,11 +9,11 @@ import (
 	"path/filepath"
 	"sync"
 
-	"github.com/cilium/tetragon/pkg/cgroups"
-	"github.com/cilium/tetragon/pkg/cgtracker"
-	"github.com/cilium/tetragon/pkg/cri"
-	"github.com/cilium/tetragon/pkg/logger"
-	"github.com/cilium/tetragon/pkg/option"
+	"github.com/go-faster/tetragon/pkg/cgroups"
+	"github.com/go-faster/tetragon/pkg/cgtracker"
+	"github.com/go-faster/tetragon/pkg/cri"
+	"github.com/go-faster/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/option"
 )
 
 // code for resolving missing cgroup ids by quering the CRI

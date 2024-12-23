@@ -9,9 +9,9 @@ import (
 	"strings"
 	"text/tabwriter"
 
-	"github.com/cilium/tetragon/api/v1/tetragon"
-	"github.com/cilium/tetragon/cmd/tetra/common"
-	"github.com/cilium/tetragon/cmd/tetra/tracingpolicy/generate"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/cmd/tetra/common"
+	"github.com/go-faster/tetragon/cmd/tetra/tracingpolicy/generate"
 	"github.com/spf13/cobra"
 )
 

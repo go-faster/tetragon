@@ -4,7 +4,7 @@
 package main
 
 import (
-	"github.com/cilium/tetragon/tools/protoc-gen-go-tetragon/generate"
+	"github.com/go-faster/tetragon/tools/protoc-gen-go-tetragon/generate"
 )
 
 func main() {

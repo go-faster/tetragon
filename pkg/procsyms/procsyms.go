@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/cilium/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/logger"
 	lru "github.com/hashicorp/golang-lru/v2"
 	"github.com/prometheus/procfs"
 )

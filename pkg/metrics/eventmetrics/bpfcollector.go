@@ -8,9 +8,9 @@ import (
 	"strconv"
 
 	"github.com/cilium/ebpf"
-	"github.com/cilium/tetragon/pkg/api/processapi"
-	"github.com/cilium/tetragon/pkg/metrics"
-	"github.com/cilium/tetragon/pkg/option"
+	"github.com/go-faster/tetragon/pkg/api/processapi"
+	"github.com/go-faster/tetragon/pkg/metrics"
+	"github.com/go-faster/tetragon/pkg/option"
 	"github.com/prometheus/client_golang/prometheus"
 )
 

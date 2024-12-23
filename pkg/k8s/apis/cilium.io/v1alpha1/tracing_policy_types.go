@@ -7,7 +7,7 @@ import (
 	"fmt"
 
 	slimv1 "github.com/cilium/cilium/pkg/k8s/slim/k8s/apis/meta/v1"
-	ciliumio "github.com/cilium/tetragon/pkg/k8s/apis/cilium.io"
+	ciliumio "github.com/go-faster/tetragon/pkg/k8s/apis/cilium.io"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 

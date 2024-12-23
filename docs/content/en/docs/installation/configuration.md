@@ -27,7 +27,7 @@ docker run --name tetragon --rm -d \
   -v /etc/tetragon:/etc/tetragon \
   -v /sys/kernel:/sys/kernel \
   -v /var/log/tetragon:/var/log/tetragon \
-  quay.io/cilium/tetragon:{{< latest-version >}} \
+  quay.io/go-faster/tetragon:{{< latest-version >}} \
   /usr/bin/tetragon
 {{< /tab >}}
 {{< tab systemd >}}
@@ -69,7 +69,7 @@ docker run --name tetragon --rm -d \
   -v /etc/tetragon:/etc/tetragon \
   -v /sys/kernel:/sys/kernel \
   -v /var/log/tetragon:/var/log/tetragon \
-  quay.io/cilium/tetragon:{{< latest-version >}} \
+  quay.io/go-faster/tetragon:{{< latest-version >}} \
   /usr/bin/tetragon
 {{< /tab >}}
 {{< tab systemd >}}

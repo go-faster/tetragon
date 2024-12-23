@@ -286,9 +286,9 @@ arguments to include in the trace output. Tetragon's BPF code requires
 information about the types of arguments to properly read, print and
 filter on its arguments. This information needs to be provided by the user under the
 `args` section. For the [available
-types](https://github.com/cilium/tetragon/blob/main/pkg/k8s/apis/cilium.io/client/crds/v1alpha1/cilium.io_tracingpolicies.yaml#L64-L88),
+types](https://github.com/go-faster/tetragon/blob/main/pkg/k8s/apis/cilium.io/client/crds/v1alpha1/cilium.io_tracingpolicies.yaml#L64-L88),
 check the [`TracingPolicy`
-CRD](https://github.com/cilium/tetragon/blob/main/pkg/k8s/apis/cilium.io/client/crds/v1alpha1/cilium.io_tracingpolicies.yaml).
+CRD](https://github.com/go-faster/tetragon/blob/main/pkg/k8s/apis/cilium.io/client/crds/v1alpha1/cilium.io_tracingpolicies.yaml).
 
 Following our example, here is the part that defines the arguments:
 ```yaml

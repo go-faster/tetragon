@@ -7,10 +7,10 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/cilium/tetragon/pkg/btf"
-	"github.com/cilium/tetragon/pkg/ftrace"
-	gt "github.com/cilium/tetragon/pkg/generictypes"
-	"github.com/cilium/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
+	"github.com/go-faster/tetragon/pkg/btf"
+	"github.com/go-faster/tetragon/pkg/ftrace"
+	gt "github.com/go-faster/tetragon/pkg/generictypes"
+	"github.com/go-faster/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
 )
 
 // isList checks if a value specifies a list, and if so it returns it (or nil if list does not exist)

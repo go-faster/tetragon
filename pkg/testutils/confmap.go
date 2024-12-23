@@ -6,9 +6,9 @@ package testutils
 import (
 	"os"
 
-	"github.com/cilium/tetragon/pkg/cgroups"
-	"github.com/cilium/tetragon/pkg/logger"
-	"github.com/cilium/tetragon/pkg/sensors/config/confmap"
+	"github.com/go-faster/tetragon/pkg/cgroups"
+	"github.com/go-faster/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/sensors/config/confmap"
 )
 
 func GetTgRuntimeConf() (*confmap.TetragonConfValue, error) {

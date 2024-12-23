@@ -10,10 +10,10 @@ import (
 
 	"github.com/cilium/cilium/pkg/logging"
 	"github.com/cilium/cilium/pkg/logging/logfields"
-	"github.com/cilium/tetragon/operator/cmd/common"
-	"github.com/cilium/tetragon/operator/cmd/serve"
-	operatorOption "github.com/cilium/tetragon/operator/option"
-	"github.com/cilium/tetragon/pkg/option"
+	"github.com/go-faster/tetragon/operator/cmd/common"
+	"github.com/go-faster/tetragon/operator/cmd/serve"
+	operatorOption "github.com/go-faster/tetragon/operator/option"
+	"github.com/go-faster/tetragon/pkg/option"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )

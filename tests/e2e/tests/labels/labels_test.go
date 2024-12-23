@@ -11,11 +11,11 @@ import (
 	"testing"
 	"time"
 
-	ec "github.com/cilium/tetragon/api/v1/tetragon/codegen/eventchecker"
-	sm "github.com/cilium/tetragon/pkg/matchers/stringmatcher"
-	"github.com/cilium/tetragon/tests/e2e/checker"
-	"github.com/cilium/tetragon/tests/e2e/helpers"
-	"github.com/cilium/tetragon/tests/e2e/runners"
+	ec "github.com/go-faster/tetragon/api/v1/tetragon/codegen/eventchecker"
+	sm "github.com/go-faster/tetragon/pkg/matchers/stringmatcher"
+	"github.com/go-faster/tetragon/tests/e2e/checker"
+	"github.com/go-faster/tetragon/tests/e2e/helpers"
+	"github.com/go-faster/tetragon/tests/e2e/runners"
 	"sigs.k8s.io/e2e-framework/pkg/envconf"
 	"sigs.k8s.io/e2e-framework/pkg/features"
 	"sigs.k8s.io/e2e-framework/third_party/helm"
@@ -97,7 +97,7 @@ func TestMain(m *testing.M) {
 
 func TestLabelsDemoApp(t *testing.T) {
 	if os.Getenv("GHA_OS") == "ubuntu-22.04-arm64" {
-		t.Skip("Skipping, see: ://github.com/cilium/tetragon/issues/3060")
+		t.Skip("Skipping, see: ://github.com/go-faster/tetragon/issues/3060")
 	}
 
 	// Must be called at the beginning of every test

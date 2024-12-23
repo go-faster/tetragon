@@ -51,8 +51,8 @@ jobs:
         else
           SHA=${{ github.sha }}
         fi
-        echo "agentImage=quay.io/cilium/tetragon-ci:${SHA}" >> $GITHUB_OUTPUT
-        echo "operatorImage=quay.io/cilium/tetragon-operator-ci:${SHA}" >> $GITHUB_OUTPUT
+        echo "agentImage=quay.io/go-faster/tetragon-ci:${SHA}" >> $GITHUB_OUTPUT
+        echo "operatorImage=quay.io/go-faster/tetragon-operator-ci:${SHA}" >> $GITHUB_OUTPUT
 
     - name: Wait Tetragon Images
       uses: nick-fields/retry@7152eba30c6575329ac0576536151aca5a72780e # v3.0.0
@@ -81,7 +81,7 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
       with:
-        path: go/src/github.com/cilium/tetragon/
+        path: go/src/github.com/go-faster/tetragon/
 
     - name: Install Go
       uses: actions/setup-go@0a12ed9d6a96ab950c8f026ed9f722fe0da7ef32 # v5.0.2
@@ -114,7 +114,7 @@ jobs:
       env:
         GHA_OS: ${{matrix.os}}
       run: |
-        cd go/src/github.com/cilium/tetragon
+        cd go/src/github.com/go-faster/tetragon
         make e2e-test E2E_TESTS=${{matrix.package.f}} E2E_BUILD_IMAGES=0 E2E_AGENT=${{ needs.prepare.outputs.agentImage }} E2E_OPERATOR=${{ needs.prepare.outputs.operatorImage }} EXTRA_TESTFLAGS="-cluster-name=${{ env.clusterName }} -args -v=4"
 
     - name: Upload Tetragon Logs

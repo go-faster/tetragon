@@ -11,7 +11,7 @@
 
 # First builder (cross-)compile the BPF programs
 FROM --platform=$BUILDPLATFORM quay.io/cilium/clang:b97f5b3d5c38da62fb009f21a53cd42aefd54a2f@sha256:e1c8ed0acd2e24ed05377f2861d8174af28e09bef3bbc79649c8eba165207df0 AS bpf-builder
-WORKDIR /go/src/github.com/cilium/tetragon
+WORKDIR /go/src/github.com/go-faster/tetragon
 RUN apt-get update && apt-get install -y linux-libc-dev
 COPY . ./
 ARG TARGETARCH
@@ -19,7 +19,7 @@ RUN make tetragon-bpf LOCAL_CLANG=1 TARGET_ARCH=$TARGETARCH
 
 # Second builder (cross-)compile tetragon and tetra
 FROM --platform=$BUILDPLATFORM docker.io/library/golang:1.23.4@sha256:70031844b8c225351d0bb63e2c383f80db85d92ba894e3da7e13bcf80efa9a37 AS tetragon-builder
-WORKDIR /go/src/github.com/cilium/tetragon
+WORKDIR /go/src/github.com/go-faster/tetragon
 ARG TETRAGON_VERSION TARGETARCH
 COPY . .
 RUN make VERSION=$TETRAGON_VERSION TARGET_ARCH=$TARGETARCH tetragon tetra tetragon-oci-hook tetragon-oci-hook-setup
@@ -83,7 +83,7 @@ RUN curl -L https://github.com/libbpf/bpftool/releases/download/${BPFTOOL_TAG}/b
 # Get bash-completion manifests and generate tetra CLI bash
 # autocompletions (we don't want all bash-completions in the base-build)
 FROM docker.io/library/alpine:3.21.0@sha256:21dc6063fd678b478f57c0e13f47560d0ea4eeba26dfc947b2a4f81f686b9f45 AS cli-autocomplete
-COPY --from=tetragon-builder /go/src/github.com/cilium/tetragon/tetra /usr/bin/
+COPY --from=tetragon-builder /go/src/github.com/go-faster/tetragon/tetra /usr/bin/
 RUN apk add --no-cache bash-completion && \
     tetra completion bash > /etc/bash_completion.d/tetra && \
     chmod a+r /etc/bash_completion.d/tetra
@@ -96,12 +96,12 @@ RUN mkdir /var/lib/tetragon/ && \
     mkdir -p /etc/tetragon/tetragon.conf.d/ && \
     mkdir -p /etc/tetragon/tetragon.tp.d/ && \
     apk add --no-cache --update bash
-COPY --from=tetragon-builder /go/src/github.com/cilium/tetragon/tetragon /usr/bin/
-COPY --from=tetragon-builder /go/src/github.com/cilium/tetragon/tetra /usr/bin/
-COPY --from=tetragon-builder /go/src/github.com/cilium/tetragon/contrib/tetragon-rthooks/tetragon-oci-hook /usr/bin/
-COPY --from=tetragon-builder /go/src/github.com/cilium/tetragon/contrib/tetragon-rthooks/tetragon-oci-hook-setup /usr/bin/
+COPY --from=tetragon-builder /go/src/github.com/go-faster/tetragon/tetragon /usr/bin/
+COPY --from=tetragon-builder /go/src/github.com/go-faster/tetragon/tetra /usr/bin/
+COPY --from=tetragon-builder /go/src/github.com/go-faster/tetragon/contrib/tetragon-rthooks/tetragon-oci-hook /usr/bin/
+COPY --from=tetragon-builder /go/src/github.com/go-faster/tetragon/contrib/tetragon-rthooks/tetragon-oci-hook-setup /usr/bin/
 COPY --from=gops /gops/gops /usr/bin/
-COPY --from=bpf-builder /go/src/github.com/cilium/tetragon/bpf/objs/*.o /var/lib/tetragon/
+COPY --from=bpf-builder /go/src/github.com/go-faster/tetragon/bpf/objs/*.o /var/lib/tetragon/
 COPY --from=cli-autocomplete /etc/bash/bash_completion.sh /etc/bash/bash_completion.sh
 COPY --from=cli-autocomplete /etc/bash_completion.d/000_bash_completion_compat.bash /etc/bash_completion.d/000_bash_completion_compat.bash
 COPY --from=cli-autocomplete /etc/bash_completion.d/tetra /etc/bash_completion.d/tetra

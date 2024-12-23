@@ -10,16 +10,16 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/cilium/tetragon/pkg/api/dataapi"
-	processapi "github.com/cilium/tetragon/pkg/api/processapi"
-	api "github.com/cilium/tetragon/pkg/api/tracingapi"
-	gt "github.com/cilium/tetragon/pkg/generictypes"
-	"github.com/cilium/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
-	"github.com/cilium/tetragon/pkg/kernels"
-	"github.com/cilium/tetragon/pkg/logger"
-	"github.com/cilium/tetragon/pkg/observer"
-	"github.com/cilium/tetragon/pkg/reader/network"
-	"github.com/cilium/tetragon/pkg/strutils"
+	"github.com/go-faster/tetragon/pkg/api/dataapi"
+	processapi "github.com/go-faster/tetragon/pkg/api/processapi"
+	api "github.com/go-faster/tetragon/pkg/api/tracingapi"
+	gt "github.com/go-faster/tetragon/pkg/generictypes"
+	"github.com/go-faster/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
+	"github.com/go-faster/tetragon/pkg/kernels"
+	"github.com/go-faster/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/observer"
+	"github.com/go-faster/tetragon/pkg/reader/network"
+	"github.com/go-faster/tetragon/pkg/strutils"
 )
 
 type argPrinter struct {

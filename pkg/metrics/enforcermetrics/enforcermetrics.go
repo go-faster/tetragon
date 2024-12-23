@@ -7,10 +7,10 @@ import (
 	"sync"
 
 	"github.com/cilium/ebpf"
-	"github.com/cilium/tetragon/pkg/bpf"
-	"github.com/cilium/tetragon/pkg/metrics"
-	"github.com/cilium/tetragon/pkg/metrics/consts"
-	"github.com/cilium/tetragon/pkg/sensors/program"
+	"github.com/go-faster/tetragon/pkg/bpf"
+	"github.com/go-faster/tetragon/pkg/metrics"
+	"github.com/go-faster/tetragon/pkg/metrics/consts"
+	"github.com/go-faster/tetragon/pkg/sensors/program"
 	"github.com/prometheus/client_golang/prometheus"
 )
 

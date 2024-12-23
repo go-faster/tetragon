@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"text/tabwriter"
 
-	"github.com/cilium/tetragon/cmd/tetra/common"
-	"github.com/cilium/tetragon/pkg/bugtool"
+	"github.com/go-faster/tetragon/cmd/tetra/common"
+	"github.com/go-faster/tetragon/pkg/bugtool"
 	"github.com/spf13/cobra"
 )
 

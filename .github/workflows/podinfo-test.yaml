@@ -33,7 +33,7 @@ jobs:
           SHA=${{ github.sha }}
         fi
         echo "sha=${SHA}" >> $GITHUB_OUTPUT
-        echo "operatorImage=quay.io/cilium/tetragon-operator-ci:${SHA}" >> $GITHUB_OUTPUT
+        echo "operatorImage=quay.io/go-faster/tetragon-operator-ci:${SHA}" >> $GITHUB_OUTPUT
 
     - name: Install Go
       uses: actions/setup-go@0a12ed9d6a96ab950c8f026ed9f722fe0da7ef32 # v5.0.2

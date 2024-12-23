@@ -25,7 +25,7 @@ it understands Kubernetes identities such as namespaces, pods and so on - so
 that security event detection can be configured in relation to individual
 workloads.
 
-[![Tetragon Overview Diagram](https://github.com/cilium/tetragon/blob/main/docs/static/images/smart_observability.png)](https://tetragon.io/docs/overview/)
+[![Tetragon Overview Diagram](https://github.com/go-faster/tetragon/blob/main/docs/static/images/smart_observability.png)](https://tetragon.io/docs/overview/)
 
 See more about [how Tetragon is using eBPF](https://tetragon.io/docs/overview#functionality-overview).
 

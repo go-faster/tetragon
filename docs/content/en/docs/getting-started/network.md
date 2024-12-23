@@ -49,7 +49,7 @@ variables. Use `envsubst` to do this, and then apply the policy to your
 Kubernetes cluster with `kubectl apply`:
 
 ```shell
-wget https://raw.githubusercontent.com/cilium/tetragon/main/examples/quickstart/network_egress_cluster.yaml
+wget https://raw.githubusercontent.com/go-faster/tetragon/main/examples/quickstart/network_egress_cluster.yaml
 envsubst < network_egress_cluster.yaml | kubectl apply -f -
 ```
 
@@ -121,7 +121,7 @@ export SERVICECIDR="127.0.0.1/32"
 Next, customize the policy using `envsubst`.
 
 ```shell
-wget https://raw.githubusercontent.com/cilium/tetragon/main/examples/quickstart/network_egress_cluster.yaml
+wget https://raw.githubusercontent.com/go-faster/tetragon/main/examples/quickstart/network_egress_cluster.yaml
 envsubst < network_egress_cluster.yaml > network_egress_cluster_subst.yaml
 ```
 
@@ -133,7 +133,7 @@ docker run -d --name tetragon --rm --pull always \
   --pid=host --cgroupns=host --privileged               \
   -v ${PWD}/network_egress_cluster_subst.yaml:/etc/tetragon/tetragon.tp.d/network_egress_cluster_subst.yaml \
   -v /sys/kernel/btf/vmlinux:/var/lib/tetragon/btf      \
-  quay.io/cilium/tetragon:{{< latest-version >}}
+  quay.io/go-faster/tetragon:{{< latest-version >}}
 ```
 
 Once Tetragon is running, use `docker exec` to run the `tetra getevents` command

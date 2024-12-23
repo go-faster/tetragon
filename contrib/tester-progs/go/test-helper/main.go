@@ -4,7 +4,7 @@
 package main
 
 import (
-	"github.com/cilium/tetragon/pkg/testutils/progs"
+	"github.com/go-faster/tetragon/pkg/testutils/progs"
 )
 
 func main() {

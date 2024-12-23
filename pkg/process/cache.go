@@ -10,10 +10,10 @@ import (
 	"time"
 
 	"github.com/cilium/ebpf"
-	"github.com/cilium/tetragon/api/v1/tetragon"
-	"github.com/cilium/tetragon/pkg/defaults"
-	"github.com/cilium/tetragon/pkg/logger"
-	"github.com/cilium/tetragon/pkg/sensors/exec/execvemap"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/pkg/defaults"
+	"github.com/go-faster/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/sensors/exec/execvemap"
 	lru "github.com/hashicorp/golang-lru/v2"
 	"google.golang.org/protobuf/types/known/wrapperspb"
 )

@@ -10,15 +10,15 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/cilium/tetragon/pkg/bpf"
-	"github.com/cilium/tetragon/pkg/logger"
-	"github.com/cilium/tetragon/pkg/policyfilter"
-	"github.com/cilium/tetragon/pkg/sensors/program"
-	"github.com/cilium/tetragon/pkg/sensors/program/cgroup"
-	"github.com/cilium/tetragon/pkg/tracingpolicy"
+	"github.com/go-faster/tetragon/pkg/bpf"
+	"github.com/go-faster/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/policyfilter"
+	"github.com/go-faster/tetragon/pkg/sensors/program"
+	"github.com/go-faster/tetragon/pkg/sensors/program/cgroup"
+	"github.com/go-faster/tetragon/pkg/tracingpolicy"
 
 	// load rthooks for policy filter
-	_ "github.com/cilium/tetragon/pkg/policyfilter/rthooks"
+	_ "github.com/go-faster/tetragon/pkg/policyfilter/rthooks"
 )
 
 var (

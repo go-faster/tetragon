@@ -21,7 +21,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
       with:
-        path: go/src/github.com/cilium/tetragon/
+        path: go/src/github.com/go-faster/tetragon/
 
     - name: Install Go
       uses: actions/setup-go@0a12ed9d6a96ab950c8f026ed9f722fe0da7ef32 # v5.0.2
@@ -33,12 +33,12 @@ jobs:
       env:
         GOPATH: /home/runner/work/tetragon/tetragon/go
       run: |
-        cd go/src/github.com/cilium/tetragon/contrib/tetragon-rthooks
+        cd go/src/github.com/go-faster/tetragon/contrib/tetragon-rthooks
         make
 
     - name: tar build
       run: |
-        cd go/src/github.com/cilium/tetragon/contrib
+        cd go/src/github.com/go-faster/tetragon/contrib
         tar cz -f /tmp/tetragon-rthooks.tar ./tetragon-rthooks
 
     - name: upload build

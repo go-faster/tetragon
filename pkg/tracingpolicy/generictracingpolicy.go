@@ -8,8 +8,8 @@ import (
 	"os"
 	"sync"
 
-	"github.com/cilium/tetragon/pkg/k8s/apis/cilium.io/client"
-	"github.com/cilium/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
+	"github.com/go-faster/tetragon/pkg/k8s/apis/cilium.io/client"
+	"github.com/go-faster/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
 
 	ext "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions"
 	extv1 "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1"

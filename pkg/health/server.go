@@ -8,8 +8,8 @@ import (
 	"net"
 	"time"
 
-	"github.com/cilium/tetragon/api/v1/tetragon"
-	"github.com/cilium/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/pkg/logger"
 	"google.golang.org/grpc"
 	gh "google.golang.org/grpc/health"
 	"google.golang.org/grpc/health/grpc_health_v1"

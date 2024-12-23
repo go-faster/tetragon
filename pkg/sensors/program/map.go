@@ -68,7 +68,7 @@ import (
 	"sync"
 
 	"github.com/cilium/ebpf"
-	"github.com/cilium/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/logger"
 	"github.com/sirupsen/logrus"
 )
 

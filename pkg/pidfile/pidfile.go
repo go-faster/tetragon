@@ -10,9 +10,9 @@ import (
 	"path/filepath"
 	"strconv"
 
-	"github.com/cilium/tetragon/pkg/defaults"
-	"github.com/cilium/tetragon/pkg/option"
-	"github.com/cilium/tetragon/pkg/reader/proc"
+	"github.com/go-faster/tetragon/pkg/defaults"
+	"github.com/go-faster/tetragon/pkg/option"
+	"github.com/go-faster/tetragon/pkg/reader/proc"
 )
 
 var (

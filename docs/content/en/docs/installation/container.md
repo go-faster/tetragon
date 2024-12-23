@@ -9,7 +9,7 @@ description: "Install and manage Tetragon as a container without a Kubernetes cl
 
 ### Stable versions
 
-To run a stable version, please check [Tetragon quay repository](https://quay.io/cilium/tetragon?tab=tags)
+To run a stable version, please check [Tetragon quay repository](https://quay.io/go-faster/tetragon?tab=tags)
 and select which version you want. For example if you want to run the latest
 version which is `{{< latest-version >}}` currently.
 
@@ -17,13 +17,13 @@ version which is `{{< latest-version >}}` currently.
 docker run --name tetragon --rm -d                   \
     --pid=host --cgroupns=host --privileged          \
     -v /sys/kernel/btf/vmlinux:/var/lib/tetragon/btf \
-    quay.io/cilium/tetragon:{{< latest-version >}}
+    quay.io/go-faster/tetragon:{{< latest-version >}}
 ```
 
 ### Unstable-development versions
 
 To run unstable development versions of Tetragon, use the
-`latest` tag from [Tetragon-CI quay repository](https://quay.io/repository/cilium/tetragon-ci?tab=tags).
+`latest` tag from [Tetragon-CI quay repository](https://quay.io/repository/go-faster/tetragon-ci?tab=tags).
 This will run the image that was built from the latest commit available on the
 Tetragon main branch.
 
@@ -31,7 +31,7 @@ Tetragon main branch.
 docker run --name tetragon --rm -d                  \
    --pid=host --cgroupns=host --privileged          \
    -v /sys/kernel/btf/vmlinux:/var/lib/tetragon/btf \
-   quay.io/cilium/tetragon-ci:latest
+   quay.io/go-faster/tetragon-ci:latest
 ```
 
 {{< note >}}
@@ -51,7 +51,7 @@ There are multiple ways to set configuration options:
     docker run --name tetragon --rm -d \
         --pid=host --cgroupns=host --privileged \
         -v /sys/kernel:/sys/kernel \
-        quay.io/cilium/tetragon:{{< latest-version >}} \
+        quay.io/go-faster/tetragon:{{< latest-version >}} \
         /usr/bin/tetragon --export-filename /var/log/tetragon/tetragon.log
     ```
 
@@ -65,7 +65,7 @@ There are multiple ways to set configuration options:
         --pid=host --cgroupns=host --privileged \
         --env "TETRAGON_EXPORT_FILENAME=/var/log/tetragon/tetragon.log" \
         -v /sys/kernel:/sys/kernel \
-        quay.io/cilium/tetragon:{{< latest-version >}}
+        quay.io/go-faster/tetragon:{{< latest-version >}}
     ```
 
     Every controlling setting can be set using environment variables. Prefix it with the key word `TETRAGON_` then upper case the controlling setting. As an example to set where to export JSON events: `--export-filename` will be `TETRAGON_EXPORT_FILENAME`.
@@ -81,7 +81,7 @@ There are multiple ways to set configuration options:
         --pid=host --cgroupns=host --privileged \
         -v /sys/kernel:/sys/kernel \
         -v /etc/tetragon/tetragon.conf.d/:/etc/tetragon/tetragon.conf.d/ \
-        quay.io/cilium/tetragon:{{< latest-version >}}
+        quay.io/go-faster/tetragon:{{< latest-version >}}
     ```
 
     This will map the `/etc/tetragon/tetragon.conf.d/` drop-in directory from the host into the container.

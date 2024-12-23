@@ -6,9 +6,9 @@ package common
 import (
 	"os"
 
-	"github.com/cilium/tetragon/operator/crd"
-	operatorOption "github.com/cilium/tetragon/operator/option"
-	"github.com/cilium/tetragon/pkg/cmdref"
+	"github.com/go-faster/tetragon/operator/crd"
+	operatorOption "github.com/go-faster/tetragon/operator/option"
+	"github.com/go-faster/tetragon/pkg/cmdref"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )

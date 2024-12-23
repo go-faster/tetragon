@@ -6,9 +6,9 @@ package cgidmap
 import (
 	"errors"
 
-	"github.com/cilium/tetragon/pkg/logger"
-	"github.com/cilium/tetragon/pkg/podhelpers"
-	"github.com/cilium/tetragon/pkg/podhooks"
+	"github.com/go-faster/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/podhelpers"
+	"github.com/go-faster/tetragon/pkg/podhooks"
 
 	"github.com/google/uuid"
 	corev1 "k8s.io/api/core/v1"

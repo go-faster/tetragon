@@ -7,8 +7,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/cilium/tetragon/api/v1/tetragon"
-	"github.com/cilium/tetragon/pkg/option"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/pkg/option"
 	"github.com/stretchr/testify/assert"
 )
 

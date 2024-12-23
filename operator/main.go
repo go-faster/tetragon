@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/cilium/tetragon/operator/cmd"
+	"github.com/go-faster/tetragon/operator/cmd"
 )
 
 func main() {

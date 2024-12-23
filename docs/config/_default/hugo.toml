@@ -62,7 +62,7 @@ weight = 1
 [[menu.main]]
     name = "GitHub"
     weight = 50
-    url = "https://github.com/cilium/tetragon/"
+    url = "https://github.com/go-faster/tetragon/"
     pre = "<i class=\"fa-brands fa-github\"></i>"
 
 
@@ -109,9 +109,9 @@ url_latest_version = "https://example.com"
 # url = "https://v1-25.docs.kubernetes.io"
 
 # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
-github_repo = "https://github.com/cilium/tetragon"
+github_repo = "https://github.com/go-faster/tetragon"
 # An optional link to a related project repo. For example, the sibling repository where your product code lives.
-github_project_repo = "https://github.com/cilium/tetragon"
+github_project_repo = "https://github.com/go-faster/tetragon"
 
 # Specify a value here if your content directory is not in your repo's root directory
 github_subdir = "docs"
@@ -122,7 +122,7 @@ demo_app_url = "https://raw.githubusercontent.com/cilium/cilium/v1.15.3/examples
 # The version number for the version of the docs represented in this doc set.
 # Used in the "version-banner" partial to display a version number for the
 # current doc set.
-# renovate: datasource=docker depName=quay.io/cilium/tetragon
+# renovate: datasource=docker depName=quay.io/go-faster/tetragon
 version = "v1.3.0"
 
 [params.search.algolia]
@@ -150,7 +150,7 @@ sidebar_search_disable = false
 [params.links]
 [[params.links.developer]]
   name = "GitHub"
-  url = "https://github.com/cilium/tetragon"
+  url = "https://github.com/go-faster/tetragon"
   icon = "fab fa-github"
   desc = "Development takes place here!"
 [[params.links.developer]]

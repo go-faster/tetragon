@@ -24,9 +24,9 @@ import (
 	"k8s.io/apimachinery/pkg/util/wait"
 	"sigs.k8s.io/yaml"
 
-	ciliumio "github.com/cilium/tetragon/pkg/k8s/apis/cilium.io"
-	"github.com/cilium/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
-	k8sversion "github.com/cilium/tetragon/pkg/k8s/version"
+	ciliumio "github.com/go-faster/tetragon/pkg/k8s/apis/cilium.io"
+	"github.com/go-faster/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
+	k8sversion "github.com/go-faster/tetragon/pkg/k8s/version"
 	"github.com/sirupsen/logrus"
 )
 

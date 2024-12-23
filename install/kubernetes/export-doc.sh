@@ -43,19 +43,19 @@ weight: 2
 ---
 
 {{< comment >}}
-This page was generated with github.io/cilium/tetragon/install/kubernetes/tetragon/export-doc.sh,
+This page was generated with github.io/go-faster/tetragon/install/kubernetes/tetragon/export-doc.sh,
 please do not edit directly.
 {{< /comment >}}
 
 The Tetragon Helm chart source is available under
-[github.io/cilium/tetragon/install/kubernetes/tetragon](https://github.com/cilium/tetragon/tree/main/install/kubernetes/tetragon)
+[github.io/go-faster/tetragon/install/kubernetes/tetragon](https://github.com/go-faster/tetragon/tree/main/install/kubernetes/tetragon)
 and is distributed from the Cilium helm charts repository [helm.cilium.io](https://helm.cilium.io).
 
 To deploy Tetragon using this Helm chart you can run the following commands:
 ```shell
 helm repo add cilium https://helm.cilium.io
 helm repo update
-helm install tetragon cilium/tetragon -n kube-system
+helm install tetragon go-faster/tetragon -n kube-system
 ```
 
 To use [the values available](#values), with `helm install` or `helm upgrade`, use `--set key=value`.' | cat - $TMP_FILE > $1

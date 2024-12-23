@@ -12,7 +12,7 @@ remains low even on busy systems.
 
 The instructions below extend the example from [Execution Monitoring]({{< ref "/docs/getting-started/execution" >}})
 with a policy to monitor sensitive files in Linux. The policy used is
-[`file_monitoring.yaml`](https://github.com/cilium/tetragon/blob/main/examples/quickstart/file_monitoring.yaml),
+[`file_monitoring.yaml`](https://github.com/go-faster/tetragon/blob/main/examples/quickstart/file_monitoring.yaml),
 which you can review and extend as needed. Files monitored here serve as a good
 base set of files.
 
@@ -31,19 +31,19 @@ section.
 {{< tabpane lang=shell >}}
 
 {{< tab "Kubernetes (single node)" >}}
-kubectl apply -f https://raw.githubusercontent.com/cilium/tetragon/main/examples/quickstart/file_monitoring.yaml
+kubectl apply -f https://raw.githubusercontent.com/go-faster/tetragon/main/examples/quickstart/file_monitoring.yaml
 {{< /tab >}}
 {{< tab "Kubernetes (multiple nodes)" >}}
-kubectl apply -f https://raw.githubusercontent.com/cilium/tetragon/main/examples/quickstart/file_monitoring.yaml
+kubectl apply -f https://raw.githubusercontent.com/go-faster/tetragon/main/examples/quickstart/file_monitoring.yaml
 {{< /tab >}}
 {{< tab Docker >}}
-wget https://raw.githubusercontent.com/cilium/tetragon/main/examples/quickstart/file_monitoring.yaml
+wget https://raw.githubusercontent.com/go-faster/tetragon/main/examples/quickstart/file_monitoring.yaml
 docker stop tetragon
 docker run -d --name tetragon --rm --pull always \
   --pid=host --cgroupns=host --privileged \
   -v ${PWD}/file_monitoring.yaml:/etc/tetragon/tetragon.tp.d/file_monitoring.yaml \
   -v /sys/kernel/btf/vmlinux:/var/lib/tetragon/btf \
-  quay.io/cilium/tetragon:{{< latest-version >}}
+  quay.io/go-faster/tetragon:{{< latest-version >}}
 {{< /tab >}}
 {{< /tabpane >}}
 

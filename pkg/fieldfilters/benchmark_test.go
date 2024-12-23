@@ -10,9 +10,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/cilium/tetragon/api/v1/tetragon"
-	"github.com/cilium/tetragon/api/v1/tetragon/codegen/helpers"
-	"github.com/cilium/tetragon/pkg/encoder"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/api/v1/tetragon/codegen/helpers"
+	"github.com/go-faster/tetragon/pkg/encoder"
 	"github.com/sryoya/protorand"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

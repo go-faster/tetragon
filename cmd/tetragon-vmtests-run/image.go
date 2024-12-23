@@ -12,7 +12,7 @@ import (
 
 	"github.com/cilium/little-vm-helper/pkg/images"
 	"github.com/cilium/little-vm-helper/pkg/step"
-	"github.com/cilium/tetragon/pkg/vmtests"
+	"github.com/go-faster/tetragon/pkg/vmtests"
 	"github.com/sirupsen/logrus"
 )
 

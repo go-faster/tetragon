@@ -10,9 +10,9 @@ import (
 	"path/filepath"
 
 	"github.com/cilium/ebpf"
-	"github.com/cilium/tetragon/pkg/bpf"
-	"github.com/cilium/tetragon/pkg/option"
-	"github.com/cilium/tetragon/pkg/sensors/exec/config"
+	"github.com/go-faster/tetragon/pkg/bpf"
+	"github.com/go-faster/tetragon/pkg/option"
+	"github.com/go-faster/tetragon/pkg/sensors/exec/config"
 	lru "github.com/hashicorp/golang-lru/v2"
 )
 

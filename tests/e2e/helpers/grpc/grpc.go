@@ -10,9 +10,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/cilium/tetragon/api/v1/tetragon"
-	"github.com/cilium/tetragon/cmd/tetra/common"
-	"github.com/cilium/tetragon/tests/e2e/state"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/cmd/tetra/common"
+	"github.com/go-faster/tetragon/tests/e2e/state"
 )
 
 // WaitForTracingPolicy checks that a tracing policy exists in all tetragon pods.

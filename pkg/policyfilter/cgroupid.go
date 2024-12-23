@@ -6,8 +6,8 @@ package policyfilter
 import (
 	"errors"
 
-	"github.com/cilium/tetragon/pkg/cgroups"
-	"github.com/cilium/tetragon/pkg/cgroups/fsscan"
+	"github.com/go-faster/tetragon/pkg/cgroups"
+	"github.com/go-faster/tetragon/pkg/cgroups/fsscan"
 	"github.com/google/uuid"
 	"github.com/sirupsen/logrus"
 )

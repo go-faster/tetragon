@@ -4,8 +4,8 @@
 package mapmetrics
 
 import (
-	"github.com/cilium/tetragon/pkg/metrics"
-	"github.com/cilium/tetragon/pkg/metrics/consts"
+	"github.com/go-faster/tetragon/pkg/metrics"
+	"github.com/go-faster/tetragon/pkg/metrics/consts"
 )
 
 var MapLabel = metrics.ConstrainedLabel{

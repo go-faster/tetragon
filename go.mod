@@ -1,4 +1,4 @@
-module github.com/cilium/tetragon
+module github.com/go-faster/tetragon
 
 // renovate: datasource=golang-version depName=go
 go 1.23.0
@@ -12,8 +12,6 @@ require (
 	github.com/cilium/ebpf v0.16.1-0.20241205185900-f0eec7efba9d
 	github.com/cilium/little-vm-helper v0.0.19
 	github.com/cilium/lumberjack/v2 v2.4.1
-	github.com/cilium/tetragon/api v0.0.0-00010101000000-000000000000
-	github.com/cilium/tetragon/pkg/k8s v0.0.0-00010101000000-000000000000
 	github.com/containerd/cgroups v1.1.0
 	github.com/deckarep/golang-set/v2 v2.7.0
 	github.com/fatih/color v1.18.0
@@ -64,6 +62,8 @@ require (
 	sigs.k8s.io/yaml v1.4.0
 )
 
+require github.com/blang/semver/v4 v4.0.0
+
 require (
 	cel.dev/expr v0.18.0 // indirect
 	github.com/Azure/go-ansiterm v0.0.0-20230124172434-306776ec8161 // indirect
@@ -71,7 +71,6 @@ require (
 	github.com/antlr4-go/antlr/v4 v4.13.0 // indirect
 	github.com/asaskevich/govalidator v0.0.0-20230301143203-a9d515a09cc2 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
-	github.com/blang/semver/v4 v4.0.0 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
 	github.com/coreos/go-systemd/v22 v22.5.0 // indirect
 	github.com/cpuguy83/go-md2man/v2 v2.0.4 // indirect
@@ -171,12 +170,6 @@ require (
 	k8s.io/utils v0.0.0-20241104163129-6fe5fd82f078 // indirect
 	sigs.k8s.io/json v0.0.0-20241010143419-9aa6b5e7a4b3 // indirect
 	sigs.k8s.io/structured-merge-diff/v4 v4.4.2 // indirect
-)
-
-replace (
-	// Use local version of API
-	github.com/cilium/tetragon/api => ./api
-	github.com/cilium/tetragon/pkg/k8s => ./pkg/k8s
 )
 
 // This replace directive has to be in sync with with github.com/cilium/cilium

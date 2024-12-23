@@ -6,8 +6,8 @@ package metricsconfig
 import (
 	"regexp"
 
-	"github.com/cilium/tetragon/pkg/metrics/eventmetrics"
-	"github.com/cilium/tetragon/pkg/metrics/syscallmetrics"
+	"github.com/go-faster/tetragon/pkg/metrics/eventmetrics"
+	"github.com/go-faster/tetragon/pkg/metrics/syscallmetrics"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/collectors"
 )

@@ -4,7 +4,7 @@
 package bugtool
 
 import (
-	"github.com/cilium/tetragon/pkg/bugtool"
+	"github.com/go-faster/tetragon/pkg/bugtool"
 
 	"github.com/spf13/cobra"
 )

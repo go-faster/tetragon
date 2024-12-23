@@ -6,7 +6,7 @@ package main
 import (
 	"strings"
 
-	"github.com/cilium/tetragon/pkg/option"
+	"github.com/go-faster/tetragon/pkg/option"
 
 	"github.com/spf13/viper"
 )

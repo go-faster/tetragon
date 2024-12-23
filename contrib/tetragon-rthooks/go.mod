@@ -1,4 +1,4 @@
-module github.com/cilium/tetragon/contrib/rthooks/tetragon-oci-hook
+module github.com/go-faster/tetragon/contrib/rthooks/tetragon-oci-hook
 
 // renovate: datasource=golang-version depName=go
 go 1.23.0
@@ -8,7 +8,7 @@ toolchain go1.23.1
 require (
 	github.com/alecthomas/kong v1.6.0
 	github.com/cilium/lumberjack/v2 v2.4.1
-	github.com/cilium/tetragon/api v0.0.0-00010101000000-000000000000
+	github.com/go-faster/tetragon/api v1.3.1
 	github.com/containerd/containerd v1.7.24
 	github.com/containerd/nri v0.9.0
 	github.com/containers/common v0.61.0
@@ -59,4 +59,4 @@ require (
 	k8s.io/cri-api v0.31.2 // indirect
 )
 
-replace github.com/cilium/tetragon/api => ../../api
+replace github.com/go-faster/tetragon/api => ../../api

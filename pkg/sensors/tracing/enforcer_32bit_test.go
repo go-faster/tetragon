@@ -8,13 +8,13 @@ import (
 	"syscall"
 	"testing"
 
-	"github.com/cilium/tetragon/api/v1/tetragon"
-	ec "github.com/cilium/tetragon/api/v1/tetragon/codegen/eventchecker"
-	lc "github.com/cilium/tetragon/pkg/matchers/listmatcher"
-	sm "github.com/cilium/tetragon/pkg/matchers/stringmatcher"
-	"github.com/cilium/tetragon/pkg/syscallinfo/arm32"
-	"github.com/cilium/tetragon/pkg/syscallinfo/i386"
-	"github.com/cilium/tetragon/pkg/testutils"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
+	ec "github.com/go-faster/tetragon/api/v1/tetragon/codegen/eventchecker"
+	lc "github.com/go-faster/tetragon/pkg/matchers/listmatcher"
+	sm "github.com/go-faster/tetragon/pkg/matchers/stringmatcher"
+	"github.com/go-faster/tetragon/pkg/syscallinfo/arm32"
+	"github.com/go-faster/tetragon/pkg/syscallinfo/i386"
+	"github.com/go-faster/tetragon/pkg/testutils"
 )
 
 func TestEnforcerOverride32(t *testing.T) {

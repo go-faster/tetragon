@@ -10,9 +10,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cilium/tetragon/pkg/logger"
-	"github.com/cilium/tetragon/pkg/podhooks"
-	"github.com/cilium/tetragon/pkg/reader/node"
+	"github.com/go-faster/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/podhooks"
+	"github.com/go-faster/tetragon/pkg/reader/node"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/util/wait"

@@ -20,12 +20,12 @@ can be used to answer the following questions:
 
 ### Kubernetes Environments
 
-After deploying Tetragon, use the [monitor-kernel-modules](https://raw.githubusercontent.com/cilium/tetragon/main/examples/tracingpolicy/host-changes/monitor-kernel-modules.yaml) tracing policy which generates [ProcessKprobe]({{< ref "/docs/reference/grpc-api#processkprobe" >}}) events
+After deploying Tetragon, use the [monitor-kernel-modules](https://raw.githubusercontent.com/go-faster/tetragon/main/examples/tracingpolicy/host-changes/monitor-kernel-modules.yaml) tracing policy which generates [ProcessKprobe]({{< ref "/docs/reference/grpc-api#processkprobe" >}}) events
 to trace kernel module operations.
 
-Apply the [monitor-kernel-modules](https://raw.githubusercontent.com/cilium/tetragon/main/examples/tracingpolicy/host-changes/monitor-kernel-modules.yaml) tracing policy:
+Apply the [monitor-kernel-modules](https://raw.githubusercontent.com/go-faster/tetragon/main/examples/tracingpolicy/host-changes/monitor-kernel-modules.yaml) tracing policy:
 ```shell
-kubectl apply -f https://raw.githubusercontent.com/cilium/tetragon/main/examples/tracingpolicy/host-changes/monitor-kernel-modules.yaml
+kubectl apply -f https://raw.githubusercontent.com/go-faster/tetragon/main/examples/tracingpolicy/host-changes/monitor-kernel-modules.yaml
 ```
 
 Then start monitoring for events with `tetra` CLI:
@@ -176,15 +176,15 @@ deny loading such modules if the signature verification fails.
 
 ### Kubernetes Environments
 
-After deploying Tetragon, use the [monitor-signed-kernel-modules](https://raw.githubusercontent.com/cilium/tetragon/main/examples/tracingpolicy/host-changes/monitor-signed-kernel-modules.yaml) tracing policy which generates [ProcessKprobe]({{< ref "/docs/reference/grpc-api#processkprobe" >}}) events
+After deploying Tetragon, use the [monitor-signed-kernel-modules](https://raw.githubusercontent.com/go-faster/tetragon/main/examples/tracingpolicy/host-changes/monitor-signed-kernel-modules.yaml) tracing policy which generates [ProcessKprobe]({{< ref "/docs/reference/grpc-api#processkprobe" >}}) events
 to identify if kernel modules are signed or not.
 
-Apply the [monitor-signed-kernel-modules](https://raw.githubusercontent.com/cilium/tetragon/main/examples/tracingpolicy/host-changes/monitor-signed-kernel-modules.yaml) tracing policy:
+Apply the [monitor-signed-kernel-modules](https://raw.githubusercontent.com/go-faster/tetragon/main/examples/tracingpolicy/host-changes/monitor-signed-kernel-modules.yaml) tracing policy:
 ```shell
-kubectl apply -f https://raw.githubusercontent.com/cilium/tetragon/main/examples/tracingpolicy/host-changes/monitor-signed-kernel-modules.yaml
+kubectl apply -f https://raw.githubusercontent.com/go-faster/tetragon/main/examples/tracingpolicy/host-changes/monitor-signed-kernel-modules.yaml
 ```
 
-Before going forward, deploy the [`test-pod`](https://raw.githubusercontent.com/cilium/tetragon/main/testdata/specs/testpod.yaml) into the demo-app namespace, which has its security context set to privileged.
+Before going forward, deploy the [`test-pod`](https://raw.githubusercontent.com/go-faster/tetragon/main/testdata/specs/testpod.yaml) into the demo-app namespace, which has its security context set to privileged.
 This allows to run the demo by mountig an `xfs` file system inside the `test-pod` which requires privileges,
 but will also trigger an automatic `xfs` module loading operation.
 
@@ -195,7 +195,7 @@ This was tested on an Ubuntu host.
 
 ```shell
 kubectl create namespace demo-app
-kubectl apply -n demo-app -f https://raw.githubusercontent.com/cilium/tetragon/main/testdata/specs/testpod.yaml
+kubectl apply -n demo-app -f https://raw.githubusercontent.com/go-faster/tetragon/main/testdata/specs/testpod.yaml
 ```
 
 Start monitoring for events with `tetra` CLI:
@@ -490,7 +490,7 @@ This [ProcessKprobe]({{< ref "/docs/reference/grpc-api#processkprobe" >}}) event
 
 ## Monitor Unloading of kernel modules
 
-Using the same [monitor-kernel-modules](https://raw.githubusercontent.com/cilium/tetragon/main/examples/tracingpolicy/host-changes/monitor-kernel-modules.yaml) tracing policy allows to monitor unloading of kernel modules.
+Using the same [monitor-kernel-modules](https://raw.githubusercontent.com/go-faster/tetragon/main/examples/tracingpolicy/host-changes/monitor-kernel-modules.yaml) tracing policy allows to monitor unloading of kernel modules.
 
 The following [ProcessKprobe]({{< ref "/docs/reference/grpc-api#processkprobe" >}}) event will be generated:
 
@@ -555,8 +555,8 @@ entries from the kernel internal module lists while continuing to run in the bac
 Monitoring module load operations allows to detect such cases
 {{< /note >}}
 
-To disable the [monitor-kernel-modules](https://raw.githubusercontent.com/cilium/tetragon/main/examples/tracingpolicy/host-changes/monitor-kernel-modules.yaml) run:
+To disable the [monitor-kernel-modules](https://raw.githubusercontent.com/go-faster/tetragon/main/examples/tracingpolicy/host-changes/monitor-kernel-modules.yaml) run:
 
 ```shell
-kubectl delete -f https://raw.githubusercontent.com/cilium/tetragon/main/examples/tracingpolicy/host-changes/monitor-kernel-modules.yaml
+kubectl delete -f https://raw.githubusercontent.com/go-faster/tetragon/main/examples/tracingpolicy/host-changes/monitor-kernel-modules.yaml
 ```

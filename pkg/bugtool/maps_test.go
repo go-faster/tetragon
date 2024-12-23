@@ -7,11 +7,11 @@ import (
 	"os"
 	"testing"
 
-	tus "github.com/cilium/tetragon/pkg/testutils/sensors"
+	tus "github.com/go-faster/tetragon/pkg/testutils/sensors"
 	"github.com/stretchr/testify/assert"
 
 	// needed to register the probe type execve for the base sensor
-	_ "github.com/cilium/tetragon/pkg/sensors/exec"
+	_ "github.com/go-faster/tetragon/pkg/sensors/exec"
 )
 
 func TestMain(m *testing.M) {

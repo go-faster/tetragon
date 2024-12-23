@@ -6,8 +6,8 @@ package client
 import (
 	_ "embed"
 
-	"github.com/cilium/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
-	crdutils "github.com/cilium/tetragon/pkg/k8s/crdutils"
+	"github.com/go-faster/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
+	crdutils "github.com/go-faster/tetragon/pkg/k8s/crdutils"
 )
 
 var (

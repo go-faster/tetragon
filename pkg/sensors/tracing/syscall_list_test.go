@@ -8,7 +8,7 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/cilium/tetragon/pkg/syscallinfo"
+	"github.com/go-faster/tetragon/pkg/syscallinfo"
 	"github.com/stretchr/testify/require"
 )
 

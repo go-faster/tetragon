@@ -7,10 +7,10 @@ import (
 	"context"
 	"testing"
 
-	"github.com/cilium/tetragon/pkg/bpf"
-	"github.com/cilium/tetragon/pkg/sensors"
-	"github.com/cilium/tetragon/pkg/sensors/base"
-	"github.com/cilium/tetragon/pkg/sensors/exec/procevents"
+	"github.com/go-faster/tetragon/pkg/bpf"
+	"github.com/go-faster/tetragon/pkg/sensors"
+	"github.com/go-faster/tetragon/pkg/sensors/base"
+	"github.com/go-faster/tetragon/pkg/sensors/exec/procevents"
 )
 
 // LoadSensor is a helper for loading a sensor in tests

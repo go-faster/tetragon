@@ -11,7 +11,7 @@ import (
 	"testing"
 
 	"github.com/cilium/ebpf/btf"
-	"github.com/cilium/tetragon/pkg/tracingpolicy"
+	"github.com/go-faster/tetragon/pkg/tracingpolicy"
 	"github.com/stretchr/testify/require"
 )
 

@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/cilium/tetragon/pkg/defaults"
+	"github.com/go-faster/tetragon/pkg/defaults"
 	"github.com/stretchr/testify/assert"
 	"golang.org/x/sys/unix"
 )

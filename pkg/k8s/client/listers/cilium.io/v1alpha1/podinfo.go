@@ -6,7 +6,7 @@
 package v1alpha1
 
 import (
-	ciliumiov1alpha1 "github.com/cilium/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
+	ciliumiov1alpha1 "github.com/go-faster/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	listers "k8s.io/client-go/listers"
 	cache "k8s.io/client-go/tools/cache"

@@ -12,9 +12,9 @@ import (
 
 	hubbleV1 "github.com/cilium/cilium/pkg/hubble/api/v1"
 	hubbleFilters "github.com/cilium/cilium/pkg/hubble/filters"
-	"github.com/cilium/tetragon/api/v1/tetragon"
-	"github.com/cilium/tetragon/pkg/fieldfilters"
-	"github.com/cilium/tetragon/pkg/filters"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/pkg/fieldfilters"
+	"github.com/go-faster/tetragon/pkg/filters"
 	"google.golang.org/grpc"
 	"google.golang.org/protobuf/encoding/protojson"
 )

@@ -1439,7 +1439,7 @@ struct pt_regs {
 
 #elif defined(__TARGET_ARCH_arm64)
 /* definitions for arm64 in this vmlinux.h file might be incomplete or wrong
- * for more information, see: https://github.com/cilium/tetragon/issues/786
+ * for more information, see: https://github.com/go-faster/tetragon/issues/786
  */
 
 struct user_pt_regs {

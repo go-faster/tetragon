@@ -17,7 +17,7 @@ spec:
       - name: setup
         securityContext:
           privileged: true
-        image: localhost/cilium/tetragon:latest
+        image: localhost/go-faster/tetragon:latest
         imagePullPolicy: IfNotPresent
         command: 
           - "tetragon-oci-hook-setup"

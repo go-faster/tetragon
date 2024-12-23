@@ -1,7 +1,7 @@
 # retrieve the hugo version from the netlify config file
 HUGO_VERSION      = $(shell grep ^HUGO_VERSION ../netlify.toml | tail -n 1 | cut -d '=' -f 2 | tr -d " \"\n")
 CONTAINER_ENGINE ?= docker
-CONTAINER_IMAGE  ?= cilium/tetragon-hugo:v$(HUGO_VERSION)
+CONTAINER_IMAGE  ?= go-faster/tetragon-hugo:v$(HUGO_VERSION)
 # mount the parent folder to get the git history for Docsy to display the "last modified" indicator
 CONTAINER_RUN    ?= "$(CONTAINER_ENGINE)" run --rm --interactive --tty --volume "$(abspath $(CURDIR)/..):/src" --workdir /src/docs
 HUGO_DOCKERFILE  ?= Dockerfile.hugo

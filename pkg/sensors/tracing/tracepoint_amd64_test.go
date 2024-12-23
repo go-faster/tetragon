@@ -14,13 +14,13 @@ import (
 	"syscall"
 	"testing"
 
-	"github.com/cilium/tetragon/api/v1/tetragon/codegen/eventchecker"
-	ec "github.com/cilium/tetragon/api/v1/tetragon/codegen/eventchecker"
-	"github.com/cilium/tetragon/pkg/jsonchecker"
-	"github.com/cilium/tetragon/pkg/kernels"
-	lc "github.com/cilium/tetragon/pkg/matchers/listmatcher"
-	"github.com/cilium/tetragon/pkg/observer/observertesthelper"
-	tus "github.com/cilium/tetragon/pkg/testutils/sensors"
+	"github.com/go-faster/tetragon/api/v1/tetragon/codegen/eventchecker"
+	ec "github.com/go-faster/tetragon/api/v1/tetragon/codegen/eventchecker"
+	"github.com/go-faster/tetragon/pkg/jsonchecker"
+	"github.com/go-faster/tetragon/pkg/kernels"
+	lc "github.com/go-faster/tetragon/pkg/matchers/listmatcher"
+	"github.com/go-faster/tetragon/pkg/observer/observertesthelper"
+	tus "github.com/go-faster/tetragon/pkg/testutils/sensors"
 	"github.com/stretchr/testify/assert"
 )
 

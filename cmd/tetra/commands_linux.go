@@ -4,14 +4,14 @@
 package main
 
 import (
-	"github.com/cilium/tetragon/cmd/tetra/bugtool"
-	"github.com/cilium/tetragon/cmd/tetra/cgtracker"
-	"github.com/cilium/tetragon/cmd/tetra/cri"
-	"github.com/cilium/tetragon/cmd/tetra/debug"
-	"github.com/cilium/tetragon/cmd/tetra/loglevel"
-	"github.com/cilium/tetragon/cmd/tetra/policyfilter"
-	"github.com/cilium/tetragon/cmd/tetra/probe"
-	"github.com/cilium/tetragon/cmd/tetra/tracingpolicy"
+	"github.com/go-faster/tetragon/cmd/tetra/bugtool"
+	"github.com/go-faster/tetragon/cmd/tetra/cgtracker"
+	"github.com/go-faster/tetragon/cmd/tetra/cri"
+	"github.com/go-faster/tetragon/cmd/tetra/debug"
+	"github.com/go-faster/tetragon/cmd/tetra/loglevel"
+	"github.com/go-faster/tetragon/cmd/tetra/policyfilter"
+	"github.com/go-faster/tetragon/cmd/tetra/probe"
+	"github.com/go-faster/tetragon/cmd/tetra/tracingpolicy"
 	"github.com/spf13/cobra"
 )
 

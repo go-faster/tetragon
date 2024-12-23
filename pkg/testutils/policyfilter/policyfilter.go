@@ -7,8 +7,8 @@ import (
 	slimv1 "github.com/cilium/cilium/pkg/k8s/slim/k8s/apis/meta/v1"
 	"k8s.io/client-go/tools/cache"
 
-	"github.com/cilium/tetragon/pkg/labels"
-	"github.com/cilium/tetragon/pkg/policyfilter"
+	"github.com/go-faster/tetragon/pkg/labels"
+	"github.com/go-faster/tetragon/pkg/policyfilter"
 )
 
 // DummyPF implements policyfilter.State.

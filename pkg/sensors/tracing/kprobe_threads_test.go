@@ -13,15 +13,15 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	ec "github.com/cilium/tetragon/api/v1/tetragon/codegen/eventchecker"
-	"github.com/cilium/tetragon/pkg/jsonchecker"
-	"github.com/cilium/tetragon/pkg/logger"
-	sm "github.com/cilium/tetragon/pkg/matchers/stringmatcher"
-	"github.com/cilium/tetragon/pkg/observer/observertesthelper"
-	"github.com/cilium/tetragon/pkg/reader/caps"
-	"github.com/cilium/tetragon/pkg/reader/namespace"
-	"github.com/cilium/tetragon/pkg/testutils"
-	tus "github.com/cilium/tetragon/pkg/testutils/sensors"
+	ec "github.com/go-faster/tetragon/api/v1/tetragon/codegen/eventchecker"
+	"github.com/go-faster/tetragon/pkg/jsonchecker"
+	"github.com/go-faster/tetragon/pkg/logger"
+	sm "github.com/go-faster/tetragon/pkg/matchers/stringmatcher"
+	"github.com/go-faster/tetragon/pkg/observer/observertesthelper"
+	"github.com/go-faster/tetragon/pkg/reader/caps"
+	"github.com/go-faster/tetragon/pkg/reader/namespace"
+	"github.com/go-faster/tetragon/pkg/testutils"
+	tus "github.com/go-faster/tetragon/pkg/testutils/sensors"
 	"github.com/stretchr/testify/assert"
 )
 

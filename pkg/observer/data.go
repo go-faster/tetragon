@@ -9,9 +9,9 @@ import (
 	"fmt"
 	"unsafe"
 
-	"github.com/cilium/tetragon/pkg/api/dataapi"
-	"github.com/cilium/tetragon/pkg/api/ops"
-	"github.com/cilium/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/api/dataapi"
+	"github.com/go-faster/tetragon/pkg/api/ops"
+	"github.com/go-faster/tetragon/pkg/logger"
 )
 
 func init() {

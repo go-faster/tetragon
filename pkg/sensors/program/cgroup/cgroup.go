@@ -6,7 +6,7 @@ package cgroup
 import (
 	"fmt"
 
-	"github.com/cilium/tetragon/pkg/sensors/program"
+	"github.com/go-faster/tetragon/pkg/sensors/program"
 	"golang.org/x/sys/unix"
 )
 

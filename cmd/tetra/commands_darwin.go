@@ -4,8 +4,8 @@
 package main
 
 import (
-	"github.com/cilium/tetragon/cmd/tetra/loglevel"
-	"github.com/cilium/tetragon/cmd/tetra/tracingpolicy"
+	"github.com/go-faster/tetragon/cmd/tetra/loglevel"
+	"github.com/go-faster/tetragon/cmd/tetra/tracingpolicy"
 	"github.com/spf13/cobra"
 )
 

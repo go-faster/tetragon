@@ -9,12 +9,12 @@ Thank you for taking the time to improve Tetragon's documentation.
 ## Find the content
 
 All the Tetragon documentation content can be found under
-[github.com/cilium/tetragon/docs/content/en/docs](https://github.com/cilium/tetragon/tree/main/docs/content/en/docs).
+[github.com/go-faster/tetragon/docs/content/en/docs](https://github.com/go-faster/tetragon/tree/main/docs/content/en/docs).
 
 {{< note >}}
 The main page served from a directory path is named `_index.md`. For example
 [/docs/contribution-guide]({{< ref "/docs/contribution-guide" >}}) is available
-under [/docs/content/en/docs/contribution-guide/\_index.md](https://github.com/cilium/tetragon/blob/main/docs/content/en/docs/contribution-guide/_index.md).
+under [/docs/content/en/docs/contribution-guide/\_index.md](https://github.com/go-faster/tetragon/blob/main/docs/content/en/docs/contribution-guide/_index.md).
 {{< /note >}}
 
 ## Style to follow

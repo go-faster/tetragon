@@ -10,20 +10,20 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/cilium/tetragon/api/v1/tetragon"
-	"github.com/cilium/tetragon/api/v1/tetragon/codegen/eventchecker"
-	ec "github.com/cilium/tetragon/api/v1/tetragon/codegen/eventchecker"
-	"github.com/cilium/tetragon/pkg/arch"
-	"github.com/cilium/tetragon/pkg/jsonchecker"
-	"github.com/cilium/tetragon/pkg/kernels"
-	lc "github.com/cilium/tetragon/pkg/matchers/listmatcher"
-	sm "github.com/cilium/tetragon/pkg/matchers/stringmatcher"
-	"github.com/cilium/tetragon/pkg/observer/observertesthelper"
-	"github.com/cilium/tetragon/pkg/testutils"
-	tus "github.com/cilium/tetragon/pkg/testutils/sensors"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/api/v1/tetragon/codegen/eventchecker"
+	ec "github.com/go-faster/tetragon/api/v1/tetragon/codegen/eventchecker"
+	"github.com/go-faster/tetragon/pkg/arch"
+	"github.com/go-faster/tetragon/pkg/jsonchecker"
+	"github.com/go-faster/tetragon/pkg/kernels"
+	lc "github.com/go-faster/tetragon/pkg/matchers/listmatcher"
+	sm "github.com/go-faster/tetragon/pkg/matchers/stringmatcher"
+	"github.com/go-faster/tetragon/pkg/observer/observertesthelper"
+	"github.com/go-faster/tetragon/pkg/testutils"
+	tus "github.com/go-faster/tetragon/pkg/testutils/sensors"
 	"github.com/stretchr/testify/assert"
 
-	_ "github.com/cilium/tetragon/pkg/sensors/exec"
+	_ "github.com/go-faster/tetragon/pkg/sensors/exec"
 )
 
 func testSigkill(t *testing.T, makeSpecFile func(pid string) string, checker *eventchecker.UnorderedEventChecker) {

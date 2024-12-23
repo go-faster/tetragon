@@ -10,7 +10,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/cilium/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 )

@@ -74,7 +74,7 @@ namespace than the default namespace, adjust the `kubectl apply` command
 accordingly.)
 
 ```shell
-wget https://raw.githubusercontent.com/cilium/tetragon/main/examples/quickstart/network_egress_cluster_enforce.yaml
+wget https://raw.githubusercontent.com/go-faster/tetragon/main/examples/quickstart/network_egress_cluster_enforce.yaml
 envsubst < network_egress_cluster_enforce.yaml | kubectl apply -n default -f -
 ```
 
@@ -129,7 +129,7 @@ this:
 
 The following extends the example from [File Access Monitoring]({{< ref "docs/getting-started/file-events" >}})
 with enforcement to ensure sensitive files are not read. The policy used is the
-[`file_monitoring_enforce.yaml`](https://github.com/cilium/tetragon/blob/main/examples/quickstart/file_monitoring_enforce.yaml),
+[`file_monitoring_enforce.yaml`](https://github.com/go-faster/tetragon/blob/main/examples/quickstart/file_monitoring_enforce.yaml),
 which you can review and extend as needed. The only difference between the
 observation policy and the enforce policy is the addition of an action block
 to `SIGKILL` the application and return an error on the operation.
@@ -139,21 +139,21 @@ To apply the policy:
 {{< tabpane lang=shell >}}
 
 {{< tab "Kubernetes (single node)" >}}
-kubectl delete -f https://raw.githubusercontent.com/cilium/tetragon/main/examples/quickstart/file_monitoring.yaml
-kubectl apply -f https://raw.githubusercontent.com/cilium/tetragon/main/examples/quickstart/file_monitoring_enforce.yaml
+kubectl delete -f https://raw.githubusercontent.com/go-faster/tetragon/main/examples/quickstart/file_monitoring.yaml
+kubectl apply -f https://raw.githubusercontent.com/go-faster/tetragon/main/examples/quickstart/file_monitoring_enforce.yaml
 {{< /tab >}}
 {{< tab "Kubernetes (multiple nodes)" >}}
-kubectl delete -f https://raw.githubusercontent.com/cilium/tetragon/main/examples/quickstart/file_monitoring.yaml
-kubectl apply -f https://raw.githubusercontent.com/cilium/tetragon/main/examples/quickstart/file_monitoring_enforce.yaml
+kubectl delete -f https://raw.githubusercontent.com/go-faster/tetragon/main/examples/quickstart/file_monitoring.yaml
+kubectl apply -f https://raw.githubusercontent.com/go-faster/tetragon/main/examples/quickstart/file_monitoring_enforce.yaml
 {{< /tab >}}
 {{< tab Docker >}}
-wget https://raw.githubusercontent.com/cilium/tetragon/main/examples/quickstart/file_monitoring_enforce.yaml
+wget https://raw.githubusercontent.com/go-faster/tetragon/main/examples/quickstart/file_monitoring_enforce.yaml
 docker stop tetragon
 docker run --name tetragon --rm --pull always \
   --pid=host --cgroupns=host --privileged               \
   -v ${PWD}/file_monitoring_enforce.yaml:/etc/tetragon/tetragon.tp.d/file_monitoring_enforce.yaml \
   -v /sys/kernel/btf/vmlinux:/var/lib/tetragon/btf      \
-  quay.io/cilium/tetragon:{{< latest-version >}}
+  quay.io/go-faster/tetragon:{{< latest-version >}}
 {{< /tab >}}
 {{< /tabpane >}}
 

@@ -4,7 +4,7 @@
 package metrics
 
 import (
-	"github.com/cilium/tetragon/pkg/metrics/consts"
+	"github.com/go-faster/tetragon/pkg/metrics/consts"
 )
 
 type FilteredLabels interface {

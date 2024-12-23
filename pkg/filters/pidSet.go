@@ -8,8 +8,8 @@ import (
 
 	v1 "github.com/cilium/cilium/pkg/hubble/api/v1"
 	hubbleFilters "github.com/cilium/cilium/pkg/hubble/filters"
-	"github.com/cilium/tetragon/api/v1/tetragon"
-	"github.com/cilium/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/pkg/logger"
 )
 
 // We could use an LRU here but we really don't want to evict old entries and risk failing

@@ -6,7 +6,7 @@ package exec
 import (
 	"syscall"
 
-	"github.com/cilium/tetragon/pkg/api"
+	"github.com/go-faster/tetragon/pkg/api"
 	"golang.org/x/sys/unix"
 )
 

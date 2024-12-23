@@ -10,8 +10,8 @@ import (
 
 	v1 "github.com/cilium/cilium/pkg/hubble/api/v1"
 	hubbleFilters "github.com/cilium/cilium/pkg/hubble/filters"
-	"github.com/cilium/tetragon/api/v1/tetragon"
-	"github.com/cilium/tetragon/api/v1/tetragon/codegen/helpers"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/api/v1/tetragon/codegen/helpers"
 	"github.com/google/cel-go/cel"
 	"github.com/sirupsen/logrus"
 	celk8s "k8s.io/apiserver/pkg/cel/library"

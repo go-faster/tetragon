@@ -24,40 +24,40 @@ import (
 
 	"github.com/cilium/ebpf"
 	"github.com/cilium/ebpf/asm"
-	"github.com/cilium/tetragon/api/v1/tetragon"
-	ec "github.com/cilium/tetragon/api/v1/tetragon/codegen/eventchecker"
-	"github.com/cilium/tetragon/pkg/arch"
-	"github.com/cilium/tetragon/pkg/bpf"
-	"github.com/cilium/tetragon/pkg/ftrace"
-	"github.com/cilium/tetragon/pkg/grpc/tracing"
-	"github.com/cilium/tetragon/pkg/jsonchecker"
-	"github.com/cilium/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
-	"github.com/cilium/tetragon/pkg/kernels"
-	"github.com/cilium/tetragon/pkg/logger"
-	bc "github.com/cilium/tetragon/pkg/matchers/bytesmatcher"
-	lc "github.com/cilium/tetragon/pkg/matchers/listmatcher"
-	sm "github.com/cilium/tetragon/pkg/matchers/stringmatcher"
-	"github.com/cilium/tetragon/pkg/metrics/consts"
-	"github.com/cilium/tetragon/pkg/metricsconfig"
-	"github.com/cilium/tetragon/pkg/observer"
-	"github.com/cilium/tetragon/pkg/observer/observertesthelper"
-	"github.com/cilium/tetragon/pkg/option"
-	"github.com/cilium/tetragon/pkg/reader/caps"
-	"github.com/cilium/tetragon/pkg/reader/namespace"
-	"github.com/cilium/tetragon/pkg/sensors"
-	"github.com/cilium/tetragon/pkg/testutils"
-	tuo "github.com/cilium/tetragon/pkg/testutils/observer"
-	"github.com/cilium/tetragon/pkg/testutils/perfring"
-	tus "github.com/cilium/tetragon/pkg/testutils/sensors"
-	"github.com/cilium/tetragon/pkg/tracingpolicy"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
+	ec "github.com/go-faster/tetragon/api/v1/tetragon/codegen/eventchecker"
+	"github.com/go-faster/tetragon/pkg/arch"
+	"github.com/go-faster/tetragon/pkg/bpf"
+	"github.com/go-faster/tetragon/pkg/ftrace"
+	"github.com/go-faster/tetragon/pkg/grpc/tracing"
+	"github.com/go-faster/tetragon/pkg/jsonchecker"
+	"github.com/go-faster/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
+	"github.com/go-faster/tetragon/pkg/kernels"
+	"github.com/go-faster/tetragon/pkg/logger"
+	bc "github.com/go-faster/tetragon/pkg/matchers/bytesmatcher"
+	lc "github.com/go-faster/tetragon/pkg/matchers/listmatcher"
+	sm "github.com/go-faster/tetragon/pkg/matchers/stringmatcher"
+	"github.com/go-faster/tetragon/pkg/metrics/consts"
+	"github.com/go-faster/tetragon/pkg/metricsconfig"
+	"github.com/go-faster/tetragon/pkg/observer"
+	"github.com/go-faster/tetragon/pkg/observer/observertesthelper"
+	"github.com/go-faster/tetragon/pkg/option"
+	"github.com/go-faster/tetragon/pkg/reader/caps"
+	"github.com/go-faster/tetragon/pkg/reader/namespace"
+	"github.com/go-faster/tetragon/pkg/sensors"
+	"github.com/go-faster/tetragon/pkg/testutils"
+	tuo "github.com/go-faster/tetragon/pkg/testutils/observer"
+	"github.com/go-faster/tetragon/pkg/testutils/perfring"
+	tus "github.com/go-faster/tetragon/pkg/testutils/sensors"
+	"github.com/go-faster/tetragon/pkg/tracingpolicy"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/testutil"
 	"github.com/sirupsen/logrus"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	"github.com/cilium/tetragon/pkg/sensors/base"
-	_ "github.com/cilium/tetragon/pkg/sensors/exec"
-	testsensor "github.com/cilium/tetragon/pkg/sensors/test"
+	"github.com/go-faster/tetragon/pkg/sensors/base"
+	_ "github.com/go-faster/tetragon/pkg/sensors/exec"
+	testsensor "github.com/go-faster/tetragon/pkg/sensors/test"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -6439,14 +6439,14 @@ spec:
 		stackTraceChecker = stackTraceChecker.WithUserStackTrace(ec.NewStackTraceEntryListMatcher().WithValues(
 			ec.NewStackTraceEntryChecker().WithModule(sm.Suffix(("contrib/tester-progs/user-stacktrace"))),
 			ec.NewStackTraceEntryChecker().WithSymbol(sm.Suffix(("main.main"))),
-			// syscall user-nix /home/user/go/src/github.com/cilium/tetragon/contrib/tester-progs/user-stacktrace __x64_sys_getcpu
+			// syscall user-nix /home/user/go/src/github.com/go-faster/tetragon/contrib/tester-progs/user-stacktrace __x64_sys_getcpu
 			// User:
-			//   0x0: runtime/internal/syscall.Syscall6 (/home/user/go/src/github.com/cilium/tetragon/contrib/tester-progs/user-stacktrace+0x2aee)
-			//   0x0: syscall.Syscall (/home/user/go/src/github.com/cilium/tetragon/contrib/tester-progs/user-stacktrace+0x63346)
-			//   0x0: syscall.Syscall.abi0 (/home/user/go/src/github.com/cilium/tetragon/contrib/tester-progs/user-stacktrace+0x634ae)
-			//   0x0: main.main (/home/user/go/src/github.com/cilium/tetragon/contrib/tester-progs/user-stacktrace+0x6503e)
-			//   0x0: runtime.main (/home/user/go/src/github.com/cilium/tetragon/contrib/tester-progs/user-stacktrace+0x3313d)
-			//   0x0: runtime.goexit.abi0 (/home/user/go/src/github.com/cilium/tetragon/contrib/tester-progs/user-stacktrace+0x5e661)
+			//   0x0: runtime/internal/syscall.Syscall6 (/home/user/go/src/github.com/go-faster/tetragon/contrib/tester-progs/user-stacktrace+0x2aee)
+			//   0x0: syscall.Syscall (/home/user/go/src/github.com/go-faster/tetragon/contrib/tester-progs/user-stacktrace+0x63346)
+			//   0x0: syscall.Syscall.abi0 (/home/user/go/src/github.com/go-faster/tetragon/contrib/tester-progs/user-stacktrace+0x634ae)
+			//   0x0: main.main (/home/user/go/src/github.com/go-faster/tetragon/contrib/tester-progs/user-stacktrace+0x6503e)
+			//   0x0: runtime.main (/home/user/go/src/github.com/go-faster/tetragon/contrib/tester-progs/user-stacktrace+0x3313d)
+			//   0x0: runtime.goexit.abi0 (/home/user/go/src/github.com/go-faster/tetragon/contrib/tester-progs/user-stacktrace+0x5e661)
 		))
 	} else {
 		// For kernels below 5.15 user stack trace information gathered from bpf might be not full

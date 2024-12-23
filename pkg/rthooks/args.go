@@ -9,9 +9,9 @@ import (
 	"strings"
 	"time"
 
-	v1 "github.com/cilium/tetragon/api/v1/tetragon"
-	"github.com/cilium/tetragon/pkg/cgroups"
-	"github.com/cilium/tetragon/pkg/watcher"
+	v1 "github.com/go-faster/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/pkg/cgroups"
+	"github.com/go-faster/tetragon/pkg/watcher"
 
 	corev1 "k8s.io/api/core/v1"
 )

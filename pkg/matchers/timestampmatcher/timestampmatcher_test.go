@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/cilium/tetragon/pkg/eventcheckertests/yamlhelpers"
+	"github.com/go-faster/tetragon/pkg/eventcheckertests/yamlhelpers"
 	"github.com/stretchr/testify/assert"
 	"google.golang.org/protobuf/types/known/timestamppb"
 )

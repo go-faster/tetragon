@@ -14,7 +14,7 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/cilium/tetragon/pkg/observer/observertesthelper"
+	"github.com/go-faster/tetragon/pkg/observer/observertesthelper"
 )
 
 // Command-line flags

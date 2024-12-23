@@ -3,7 +3,7 @@
 
 package base
 
-import "github.com/cilium/tetragon/pkg/sensors/program"
+import "github.com/go-faster/tetragon/pkg/sensors/program"
 
 // IsExecve returns true if this is a base execve program
 func IsExecve(p *program.Program) bool {

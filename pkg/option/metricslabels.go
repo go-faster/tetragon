@@ -6,7 +6,7 @@ package option
 import (
 	"strings"
 
-	"github.com/cilium/tetragon/pkg/metrics"
+	"github.com/go-faster/tetragon/pkg/metrics"
 )
 
 func DefaultLabelFilter() metrics.LabelFilter {

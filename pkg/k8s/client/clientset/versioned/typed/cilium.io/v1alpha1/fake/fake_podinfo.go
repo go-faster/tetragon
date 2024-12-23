@@ -6,8 +6,8 @@
 package fake
 
 import (
-	v1alpha1 "github.com/cilium/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
-	ciliumiov1alpha1 "github.com/cilium/tetragon/pkg/k8s/client/clientset/versioned/typed/cilium.io/v1alpha1"
+	v1alpha1 "github.com/go-faster/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
+	ciliumiov1alpha1 "github.com/go-faster/tetragon/pkg/k8s/client/clientset/versioned/typed/cilium.io/v1alpha1"
 	gentype "k8s.io/client-go/gentype"
 )
 

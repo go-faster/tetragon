@@ -4,7 +4,7 @@
 package main
 
 import (
-	_ "github.com/cilium/tetragon/pkg/sensors/exec"
-	_ "github.com/cilium/tetragon/pkg/sensors/test"
-	_ "github.com/cilium/tetragon/pkg/sensors/tracing"
+	_ "github.com/go-faster/tetragon/pkg/sensors/exec"
+	_ "github.com/go-faster/tetragon/pkg/sensors/test"
+	_ "github.com/go-faster/tetragon/pkg/sensors/tracing"
 )

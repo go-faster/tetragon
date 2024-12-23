@@ -13,10 +13,10 @@ import (
 	"github.com/cilium/ebpf"
 	"github.com/cilium/ebpf/btf"
 	"github.com/cilium/ebpf/link"
-	"github.com/cilium/tetragon/pkg/bpf"
-	cachedbtf "github.com/cilium/tetragon/pkg/btf"
-	"github.com/cilium/tetragon/pkg/logger"
-	"github.com/cilium/tetragon/pkg/sensors/unloader"
+	"github.com/go-faster/tetragon/pkg/bpf"
+	cachedbtf "github.com/go-faster/tetragon/pkg/btf"
+	"github.com/go-faster/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/sensors/unloader"
 )
 
 // AttachFunc is the type for the various attachment functions. The function is

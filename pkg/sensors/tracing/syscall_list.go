@@ -8,9 +8,9 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/cilium/tetragon/pkg/api/tracingapi"
-	"github.com/cilium/tetragon/pkg/arch"
-	"github.com/cilium/tetragon/pkg/syscallinfo"
+	"github.com/go-faster/tetragon/pkg/api/tracingapi"
+	"github.com/go-faster/tetragon/pkg/arch"
+	"github.com/go-faster/tetragon/pkg/syscallinfo"
 )
 
 // The code in this file deals with values found in syscall lists (type: "syscalls")

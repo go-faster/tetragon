@@ -20,7 +20,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
       with:
-        path: go/src/github.com/cilium/tetragon/
+        path: go/src/github.com/go-faster/tetragon/
 
     - name: Install Go
       uses: actions/setup-go@0a12ed9d6a96ab950c8f026ed9f722fe0da7ef32 # v5.0.2
@@ -58,7 +58,7 @@ jobs:
 
     - name: Ensure BPF programs pass verifier
       run: |
-        cd go/src/github.com/cilium/tetragon/
+        cd go/src/github.com/go-faster/tetragon/
         make verify
 
     - name: Run go tests
@@ -67,7 +67,7 @@ jobs:
         SUDO: sudo -E
       run: |
         go clean -cache -modcache -testcache -fuzzcache
-        cd go/src/github.com/cilium/tetragon/
+        cd go/src/github.com/go-faster/tetragon/
         sudo -E echo "run go tests: " `uname -a`
         sudo -E go mod verify
         export TETRAGON_LIB=$(realpath "bpf/objs/")

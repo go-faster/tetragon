@@ -4,7 +4,7 @@
 package execvemap
 
 import (
-	"github.com/cilium/tetragon/pkg/api/processapi"
+	"github.com/go-faster/tetragon/pkg/api/processapi"
 )
 
 type ExecveKey struct {

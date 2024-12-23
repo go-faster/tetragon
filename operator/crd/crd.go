@@ -8,17 +8,17 @@ import (
 
 	"github.com/cilium/cilium/pkg/logging"
 	"github.com/cilium/cilium/pkg/logging/logfields"
-	"github.com/cilium/tetragon/operator/option"
-	"github.com/cilium/tetragon/pkg/k8s/apis/cilium.io/client"
-	"github.com/cilium/tetragon/pkg/k8s/version"
-	version2 "github.com/cilium/tetragon/pkg/version"
+	"github.com/go-faster/tetragon/operator/option"
+	"github.com/go-faster/tetragon/pkg/k8s/apis/cilium.io/client"
+	"github.com/go-faster/tetragon/pkg/k8s/version"
+	version2 "github.com/go-faster/tetragon/pkg/version"
 	"github.com/sirupsen/logrus"
 	"k8s.io/apiextensions-apiserver/pkg/client/clientset/clientset"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/clientcmd"
 
-	"github.com/cilium/tetragon/pkg/k8s/crdutils"
+	"github.com/go-faster/tetragon/pkg/k8s/crdutils"
 )
 
 var (

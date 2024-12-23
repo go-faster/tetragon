@@ -4,7 +4,7 @@ weight: 7
 description: "Guide on how to write release notes for new contributions."
 ---
 
-Tetragon release notes are published on the [GitHub releases page](https://github.com/cilium/tetragon/releases).
+Tetragon release notes are published on the [GitHub releases page](https://github.com/go-faster/tetragon/releases).
 To ensure the release notes are accurate and helpful, contributors should write them alongside development. Then, at
 the time of release, the final notes are compiled and published.
 

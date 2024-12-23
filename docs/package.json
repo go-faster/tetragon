@@ -7,12 +7,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cilium/tetragon.git"
+    "url": "git+https://github.com/go-faster/tetragon.git"
   },
   "author": "The Authors of Tetragon",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/cilium/tetragon/issues"
+    "url": "https://github.com/go-faster/tetragon/issues"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",

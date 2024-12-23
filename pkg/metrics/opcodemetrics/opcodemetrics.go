@@ -6,9 +6,9 @@ package opcodemetrics
 import (
 	"fmt"
 
-	"github.com/cilium/tetragon/pkg/api/ops"
-	"github.com/cilium/tetragon/pkg/metrics"
-	"github.com/cilium/tetragon/pkg/metrics/consts"
+	"github.com/go-faster/tetragon/pkg/api/ops"
+	"github.com/go-faster/tetragon/pkg/metrics"
+	"github.com/go-faster/tetragon/pkg/metrics/consts"
 	"github.com/prometheus/client_golang/prometheus"
 )
 

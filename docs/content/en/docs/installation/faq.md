@@ -10,7 +10,7 @@ aliases: ["/docs/faq"]
 Tetragon needs Linux kernel version 4.19 or greater.
 
 We currently run tests on stable long-term support kernels 4.19, 5.4, 5.10,
-5.15 and bpf-next, see [this test workflow](https://github.com/cilium/tetragon/actions/workflows/vmtests.yml)
+5.15 and bpf-next, see [this test workflow](https://github.com/go-faster/tetragon/actions/workflows/vmtests.yml)
 for up to date information. Not all Tetragon features work with older kernel
 versions. BPF evolves rapidly and we recommend you use the most recent stable
 kernel possible to get the most out of Tetragon's features.
@@ -74,7 +74,7 @@ You can also run this command directly from the tetragon container image on a
 Kubernetes cluster node. For example:
 
 ```shell
-kubectl run bpf-probe --image=quay.io/cilium/tetragon-ci:latest --privileged --restart=Never -it --rm --command -- tetra probe
+kubectl run bpf-probe --image=quay.io/go-faster/tetragon-ci:latest --privileged --restart=Never -it --rm --command -- tetra probe
 ```
 
 The output should be similar to this (with boolean values depending on your

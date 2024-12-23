@@ -6,12 +6,12 @@ package alignchecker
 import (
 	"github.com/cilium/cilium/pkg/alignchecker"
 
-	"github.com/cilium/tetragon/pkg/api/processapi"
-	"github.com/cilium/tetragon/pkg/api/testapi"
-	"github.com/cilium/tetragon/pkg/api/tracingapi"
-	"github.com/cilium/tetragon/pkg/sensors/cgroup/cgrouptrackmap"
-	"github.com/cilium/tetragon/pkg/sensors/config/confmap"
-	"github.com/cilium/tetragon/pkg/sensors/exec/execvemap"
+	"github.com/go-faster/tetragon/pkg/api/processapi"
+	"github.com/go-faster/tetragon/pkg/api/testapi"
+	"github.com/go-faster/tetragon/pkg/api/tracingapi"
+	"github.com/go-faster/tetragon/pkg/sensors/cgroup/cgrouptrackmap"
+	"github.com/go-faster/tetragon/pkg/sensors/config/confmap"
+	"github.com/go-faster/tetragon/pkg/sensors/exec/execvemap"
 )
 
 // CheckStructAlignments checks whether size and offsets of the C and Go

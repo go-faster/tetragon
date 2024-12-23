@@ -175,7 +175,7 @@ jobs:
           retention-days: 1
 
   image-digests:
-    if: github.event_name == 'push' && github.repository == 'cilium/tetragon'
+    if: github.event_name == 'push' && github.repository == 'go-faster/tetragon'
     needs: build-and-push
     name: Display Digests
     runs-on: ubuntu-22.04

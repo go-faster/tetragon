@@ -7,9 +7,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cilium/tetragon/api/v1/tetragon"
-	"github.com/cilium/tetragon/pkg/api"
-	"github.com/cilium/tetragon/pkg/api/processapi"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/pkg/api"
+	"github.com/go-faster/tetragon/pkg/api/processapi"
 	"github.com/prometheus/client_golang/prometheus/testutil"
 	"github.com/stretchr/testify/assert"
 )

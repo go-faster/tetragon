@@ -3,7 +3,7 @@
 
 package config
 
-import "github.com/cilium/tetragon/pkg/kernels"
+import "github.com/go-faster/tetragon/pkg/kernels"
 
 // ExecObj returns the exec object based on the kernel version
 func ExecObj() string {

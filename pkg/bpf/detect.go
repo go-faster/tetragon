@@ -20,9 +20,9 @@ import (
 	ebtf "github.com/cilium/ebpf/btf"
 	"github.com/cilium/ebpf/features"
 	"github.com/cilium/ebpf/link"
-	"github.com/cilium/tetragon/pkg/arch"
-	"github.com/cilium/tetragon/pkg/btf"
-	"github.com/cilium/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/arch"
+	"github.com/go-faster/tetragon/pkg/btf"
+	"github.com/go-faster/tetragon/pkg/logger"
 	"golang.org/x/sys/unix"
 )
 

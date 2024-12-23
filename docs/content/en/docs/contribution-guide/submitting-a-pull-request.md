@@ -55,7 +55,7 @@ Signed-off-by: Djalal Harouni <djalal@cilium.io>
 ## Submit a pull request
 
 Contributions must be submitted in the form of pull requests against the
-upstream GitHub repository at https://github.com/cilium/tetragon.
+upstream GitHub repository at https://github.com/go-faster/tetragon.
 
 Please follow the checklist in the pull request template and write anything that reviewers should be aware of in the
 pull request description. After you create a pull request, a reviewer will be automatically assigned. They will provide

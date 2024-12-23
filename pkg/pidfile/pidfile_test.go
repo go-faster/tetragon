@@ -9,7 +9,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/cilium/tetragon/pkg/defaults"
+	"github.com/go-faster/tetragon/pkg/defaults"
 )
 
 func TestCreatePidFile(t *testing.T) {

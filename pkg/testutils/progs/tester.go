@@ -15,7 +15,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cilium/tetragon/pkg/testutils"
+	"github.com/go-faster/tetragon/pkg/testutils"
 
 	"github.com/stretchr/testify/require"
 	"golang.org/x/sys/unix"

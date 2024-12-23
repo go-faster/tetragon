@@ -6,11 +6,11 @@ package rthooks
 import (
 	"context"
 
-	"github.com/cilium/tetragon/pkg/logger"
-	"github.com/cilium/tetragon/pkg/metrics/policyfiltermetrics"
-	"github.com/cilium/tetragon/pkg/podhelpers"
-	"github.com/cilium/tetragon/pkg/policyfilter"
-	"github.com/cilium/tetragon/pkg/rthooks"
+	"github.com/go-faster/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/metrics/policyfiltermetrics"
+	"github.com/go-faster/tetragon/pkg/podhelpers"
+	"github.com/go-faster/tetragon/pkg/policyfilter"
+	"github.com/go-faster/tetragon/pkg/rthooks"
 	"github.com/google/uuid"
 	"github.com/sirupsen/logrus"
 )

@@ -10,11 +10,11 @@ import (
 	"sync"
 	"testing"
 
-	ec "github.com/cilium/tetragon/api/v1/tetragon/codegen/eventchecker"
-	"github.com/cilium/tetragon/pkg/jsonchecker"
-	"github.com/cilium/tetragon/pkg/observer/observertesthelper"
-	"github.com/cilium/tetragon/pkg/testutils"
-	tus "github.com/cilium/tetragon/pkg/testutils/sensors"
+	ec "github.com/go-faster/tetragon/api/v1/tetragon/codegen/eventchecker"
+	"github.com/go-faster/tetragon/pkg/jsonchecker"
+	"github.com/go-faster/tetragon/pkg/observer/observertesthelper"
+	"github.com/go-faster/tetragon/pkg/testutils"
+	tus "github.com/go-faster/tetragon/pkg/testutils/sensors"
 	"github.com/sirupsen/logrus"
 )
 

@@ -4,8 +4,8 @@
 package base
 
 import (
-	"github.com/cilium/tetragon/pkg/logger"
-	"github.com/cilium/tetragon/pkg/sensors"
+	"github.com/go-faster/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/sensors"
 	"github.com/sirupsen/logrus"
 )
 

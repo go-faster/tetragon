@@ -10,7 +10,7 @@ on:
 
 jobs:
   links-checker:
-    if: ${{ github.repository == 'cilium/tetragon' || github.event_name != 'schedule' }}
+    if: ${{ github.repository == 'go-faster/tetragon' || github.event_name != 'schedule' }}
     env:
       ISSUE_NAME: 'Documentation: broken links automatic report'
     runs-on: ubuntu-latest
@@ -33,7 +33,7 @@ jobs:
         id: search-issue
         run: |
           encoded_issue_name=$(echo "$ISSUE_NAME" | sed 's/ /%20/g')
-          response=$(curl -s -X GET "https://api.github.com/search/issues?q=$encoded_issue_name+repo:cilium/tetragon+state:open+label:automated-issue&type=Issues")
+          response=$(curl -s -X GET "https://api.github.com/search/issues?q=$encoded_issue_name+repo:go-faster/tetragon+state:open+label:automated-issue&type=Issues")
           issue_number=$(echo "$response" | jq -r '.items[0].number // empty')
           echo "issue_number=$issue_number" >> $GITHUB_OUTPUT
 
@@ -51,4 +51,4 @@ jobs:
         uses: peter-evans/close-issue@276d7966e389d888f011539a86c8920025ea0626 # v3.0.1
         with:
           issue-number: ${{ steps.search-issue.outputs.issue_number }}
-          comment: '[Periodic links check](https://github.com/cilium/tetragon/actions/workflows/check-links-cron.yaml) no longer finds broken links, closing issue.'
+          comment: '[Periodic links check](https://github.com/go-faster/tetragon/actions/workflows/check-links-cron.yaml) no longer finds broken links, closing issue.'

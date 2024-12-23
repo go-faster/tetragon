@@ -26,7 +26,7 @@ import (
 
 	"github.com/alecthomas/kong"
 	"github.com/cilium/lumberjack/v2"
-	"github.com/cilium/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
 	"github.com/opencontainers/runc/libcontainer/cgroups/systemd"
 	"github.com/opencontainers/runtime-spec/specs-go"
 	"google.golang.org/grpc"
@@ -37,7 +37,7 @@ var (
 	binDir                          = getBinaryDir()
 	defaultLogFname                 = filepath.Join(binDir, "tetragon-oci-hook.log")
 	defaultConfFile                 = filepath.Join(binDir, "tetragon-oci-hook.json")
-	defaultAgentAddress             = "unix:///var/run/cilium/tetragon/tetragon.sock"
+	defaultAgentAddress             = "unix:///var/run/go-faster/tetragon/tetragon.sock"
 	defaultAnnotationsNamespaceKeys = "io.kubernetes.pod.namespace,io.kubernetes.cri.sandbox-namespace"
 	defaultAllowNamspaces           = "kube-system"
 )

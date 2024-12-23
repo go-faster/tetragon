@@ -6,7 +6,7 @@ package policyfilter
 import (
 	"fmt"
 
-	"github.com/cilium/tetragon/pkg/metrics/policyfiltermetrics"
+	"github.com/go-faster/tetragon/pkg/metrics/policyfiltermetrics"
 )
 
 // podNamespaceConflictErr: even if a pod changes, we expect the namespace to remain the same

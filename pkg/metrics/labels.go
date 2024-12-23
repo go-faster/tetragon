@@ -6,8 +6,8 @@ package metrics
 import (
 	"fmt"
 
-	"github.com/cilium/tetragon/api/v1/tetragon"
-	"github.com/cilium/tetragon/pkg/api/ops"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/pkg/api/ops"
 	"github.com/prometheus/client_golang/prometheus"
 )
 

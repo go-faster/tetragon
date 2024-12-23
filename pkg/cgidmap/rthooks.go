@@ -6,10 +6,10 @@ package cgidmap
 import (
 	"context"
 
-	"github.com/cilium/tetragon/pkg/cgtracker"
-	"github.com/cilium/tetragon/pkg/logger"
-	"github.com/cilium/tetragon/pkg/option"
-	"github.com/cilium/tetragon/pkg/rthooks"
+	"github.com/go-faster/tetragon/pkg/cgtracker"
+	"github.com/go-faster/tetragon/pkg/logger"
+	"github.com/go-faster/tetragon/pkg/option"
+	"github.com/go-faster/tetragon/pkg/rthooks"
 	"github.com/google/uuid"
 	"github.com/sirupsen/logrus"
 )

@@ -7,10 +7,10 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/cilium/tetragon/pkg/eventhandler"
-	"github.com/cilium/tetragon/pkg/policyfilter"
-	"github.com/cilium/tetragon/pkg/sensors"
-	"github.com/cilium/tetragon/pkg/tracingpolicy"
+	"github.com/go-faster/tetragon/pkg/eventhandler"
+	"github.com/go-faster/tetragon/pkg/policyfilter"
+	"github.com/go-faster/tetragon/pkg/sensors"
+	"github.com/go-faster/tetragon/pkg/tracingpolicy"
 )
 
 type policyHandler struct{}

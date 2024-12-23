@@ -10,7 +10,7 @@ For local development, you will likely want to build and run bare-metal Tetragon
 
 ### Requirements
 
-- A Go toolchain with the [version specified in the main `go.mod`](https://github.com/cilium/tetragon/blob/main/go.mod#L4);
+- A Go toolchain with the [version specified in the main `go.mod`](https://github.com/go-faster/tetragon/blob/main/go.mod#L4);
 - GNU make;
 - A running Docker service (you can use Podman as well);
 - The [docker-buildx-plugin](https://github.com/docker/buildx?tab=readme-ov-file#linux-packages) (you may already have this);
@@ -39,7 +39,7 @@ To build using the local clang, you can use:
 CONTAINER_ENGINE='sudo podman' LOCAL_CLANG=1 LOCAL_CLANG_FORMAT=1 make
 ```
 
-See [Dockerfile.clang](https://github.com/cilium/tetragon/blob/main/Dockerfile.clang)
+See [Dockerfile.clang](https://github.com/go-faster/tetragon/blob/main/Dockerfile.clang)
 for the minimal required version of `clang`.
 
 ### Minimal build
@@ -71,7 +71,7 @@ Notes:
 
 ## Building and running a Docker image
 
-The base kernel should support [BTF](https://github.com/cilium/tetragon#btf-requirement)
+The base kernel should support [BTF](https://github.com/go-faster/tetragon#btf-requirement)
 or a BTF file should be bind mounted on top of `/var/lib/tetragon/btf` inside
 container.
 
@@ -86,7 +86,7 @@ docker run --name tetragon \
    --rm -it -d --pid=host \
    --cgroupns=host --privileged \
    -v /sys/kernel/btf/vmlinux:/var/lib/tetragon/btf \
-   cilium/tetragon:latest
+   go-faster/tetragon:latest
 ```
 
 Run the `tetra` binary to get Tetragon events:

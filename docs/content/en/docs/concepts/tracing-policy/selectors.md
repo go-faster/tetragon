@@ -486,7 +486,7 @@ matchNamespaceChanges:
 
 The `unshare` command, or executing in the host namespace using `nsenter` can
 be used to test this feature. See a
-[demonstration example](https://github.com/cilium/tetragon/blob/main/examples/tracingpolicy/match_namespace_changes.yaml)
+[demonstration example](https://github.com/go-faster/tetragon/blob/main/examples/tracingpolicy/match_namespace_changes.yaml)
 of this feature.
 
 ## Capability changes filter
@@ -507,7 +507,7 @@ matchCapabilityChanges:
   - "CAP_SETUID"
 ```
 
-See a [demonstration example](https://github.com/cilium/tetragon/blob/main/examples/tracingpolicy/match_capability_changes.yaml)
+See a [demonstration example](https://github.com/go-faster/tetragon/blob/main/examples/tracingpolicy/match_capability_changes.yaml)
 of this feature.
 
 ## Actions filter
@@ -1712,7 +1712,7 @@ The above would be executed in kernel as:
 ### Limitations
 
 {{% pageinfo %}}
-Those limitations might be outdated, see [issue #709](https://github.com/cilium/tetragon/issues/709).
+Those limitations might be outdated, see [issue #709](https://github.com/go-faster/tetragon/issues/709).
 {{% /pageinfo %}}
 
 Because BPF must be bounded we have to place limits on how many selectors can

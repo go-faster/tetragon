@@ -4,7 +4,7 @@
 package testapi
 
 import (
-	"github.com/cilium/tetragon/pkg/api/processapi"
+	"github.com/go-faster/tetragon/pkg/api/processapi"
 )
 
 type MsgTestEvent struct {

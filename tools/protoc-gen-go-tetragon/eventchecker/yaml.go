@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/cilium/tetragon/tools/protoc-gen-go-tetragon/common"
+	"github.com/go-faster/tetragon/tools/protoc-gen-go-tetragon/common"
 	"github.com/iancoleman/strcase"
 	"google.golang.org/protobuf/compiler/protogen"
 )

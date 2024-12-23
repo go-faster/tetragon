@@ -75,7 +75,7 @@ As a first step, we apply the following policy that uses the three hooks mention
 well as appropriate filtering:
 
 ```bash
-kubectl apply -f https://raw.githubusercontent.com/cilium/tetragon/main/examples/tracingpolicy/filename_monitoring.yaml
+kubectl apply -f https://raw.githubusercontent.com/go-faster/tetragon/main/examples/tracingpolicy/filename_monitoring.yaml
 ```
 
 Next, we deploy a `file-access` Pod with an interactive bash session:
@@ -220,7 +220,7 @@ the arguments of the observed system call. In the above case they are
 To disable the `TracingPolicy` run:
 
 ```bash
-kubectl delete -f https://raw.githubusercontent.com/cilium/tetragon/main/examples/tracingpolicy/filename_monitoring.yaml
+kubectl delete -f https://raw.githubusercontent.com/go-faster/tetragon/main/examples/tracingpolicy/filename_monitoring.yaml
 ```
 
 To delete the `file-access` Pod from the interactive bash session, type:
@@ -230,7 +230,7 @@ exit
 ```
 
 Another example of a [similar
-policy](https://raw.githubusercontent.com/cilium/tetragon/main/examples/tracingpolicy/filename_monitoring_filtered.yaml)
+policy](https://raw.githubusercontent.com/go-faster/tetragon/main/examples/tracingpolicy/filename_monitoring_filtered.yaml)
 can be found in our examples folder.
 
 ##  Limitations

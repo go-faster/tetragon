@@ -16,7 +16,7 @@ command.
 
 {{< note >}}
 You can find the chart and its documentation with all available values for
-configuration in [install/kubernetes/tetragon](https://github.com/cilium/tetragon/tree/main/install/kubernetes/tetragon)
+configuration in [install/kubernetes/tetragon](https://github.com/go-faster/tetragon/tree/main/install/kubernetes/tetragon)
 in the Tetragon repository. You can use any of the values and override them
 with `--set KEY1=VALUE1,KEY2=VALUE2`.
 {{< /note >}}
@@ -24,7 +24,7 @@ with `--set KEY1=VALUE1,KEY2=VALUE2`.
 ```shell
 helm repo add cilium https://helm.cilium.io
 helm repo update
-helm install tetragon cilium/tetragon -n kube-system
+helm install tetragon go-faster/tetragon -n kube-system
 ```
 
 To wait until Tetragon deployment is ready, use the following `kubectl` command:
@@ -48,7 +48,7 @@ You can then make modifications to the Tetragon configuration using `helm
 upgrade`, see the following example.
 
 ```shell
-helm upgrade tetragon cilium/tetragon -n kube-system --set tetragon.grpc.address=localhost:1337
+helm upgrade tetragon go-faster/tetragon -n kube-system --set tetragon.grpc.address=localhost:1337
 ```
 
 You can also edit the `tetragon-config` ConfigMap directly and restart the
@@ -64,7 +64,7 @@ kubectl rollout restart ds/tetragon -n kube-system
 Upgrade Tetragon using a new specific version of the helm chart.
 
 ```shell
-helm upgrade tetragon cilium/tetragon -n kube-system --version 0.9.0
+helm upgrade tetragon go-faster/tetragon -n kube-system --version 0.9.0
 ```
 
 ## Uninstall

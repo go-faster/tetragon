@@ -26,7 +26,7 @@ using the released container images.
 docker run -d --name tetragon --rm --pull always \
     --pid=host --cgroupns=host --privileged             \
     -v /sys/kernel/btf/vmlinux:/var/lib/tetragon/btf    \
-    quay.io/cilium/tetragon:{{< latest-version >}}
+    quay.io/go-faster/tetragon:{{< latest-version >}}
 ```
 
 This will start Tetragon in a privileged container running in the background.
@@ -37,11 +37,11 @@ section for more details.
 ## Run demo application
 
 To explore Tetragon it is helpful to have a sample workload. You can use Cilium’s
-demo application with [this Docker Compose file](https://github.com/cilium/tetragon/blob/main/examples/quickstart/docker-compose.yaml),
+demo application with [this Docker Compose file](https://github.com/go-faster/tetragon/blob/main/examples/quickstart/docker-compose.yaml),
 but any workload would work equally well:
 
 ```shell
-curl -LO https://github.com/cilium/tetragon/raw/main/examples/quickstart/docker-compose.yaml
+curl -LO https://github.com/go-faster/tetragon/raw/main/examples/quickstart/docker-compose.yaml
 docker compose -f docker-compose.yaml up -d
 ```
 

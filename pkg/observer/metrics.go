@@ -4,8 +4,8 @@
 package observer
 
 import (
-	"github.com/cilium/tetragon/pkg/metrics"
-	"github.com/cilium/tetragon/pkg/metrics/consts"
+	"github.com/go-faster/tetragon/pkg/metrics"
+	"github.com/go-faster/tetragon/pkg/metrics/consts"
 	"github.com/prometheus/client_golang/prometheus"
 )
 
@@ -22,7 +22,7 @@ var (
 
 var (
 	// TODO: These metrics are also stored as Observer struct fields. We could
-	// collect them only once: https://github.com/cilium/tetragon/issues/2834
+	// collect them only once: https://github.com/go-faster/tetragon/issues/2834
 
 	RingbufReceived = prometheus.NewCounter(prometheus.CounterOpts{
 		Namespace:   consts.MetricsNamespace,

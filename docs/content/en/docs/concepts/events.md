@@ -114,7 +114,7 @@ in a Kubernetes cluster  `process_exec.process.pod`. The binary and args being e
 the event here `process_exec.process.binary` and `process_exec.process.args`. Finally, a `node_name`
 and `time` provide the location and time for the event and will be present in all event types.
 
-A default deployment writes the JSON log to `/var/run/cilium/tetragon/tetragon.log` where it can
+A default deployment writes the JSON log to `/var/run/go-faster/tetragon/tetragon.log` where it can
 be exported through normal log collection tooling, e.g. 'fluentd', logstash, etc.. The file will
 be rotated and compressed by default. See [Helm Options] for details on how to customize this location.
 
@@ -254,7 +254,7 @@ password arguments.
 
 ### `tetra` CLI
 
-A second way is to use the [`tetra`](https://github.com/cilium/tetragon/tree/main/cmd/tetra) CLI. This
+A second way is to use the [`tetra`](https://github.com/go-faster/tetragon/tree/main/cmd/tetra) CLI. This
 has the advantage that it can also be used to filter and pretty print the output. The tool
 allows filtering by process, pod, and other fields. To install tetra see the
 [Tetra Installation Guide]({{< ref "/docs/installation/tetra-cli" >}})
@@ -293,7 +293,7 @@ set from helm with the `tetragon.grpc.address` flag or disabled completely if
 needed with `tetragon.grpc.enabled`.
 
 ```shell
-helm install tetragon cilium/tetragon -n kube-system --set tetragon.grpc.enabled=true --set tetragon.grpc.address=localhost:54321
+helm install tetragon go-faster/tetragon -n kube-system --set tetragon.grpc.enabled=true --set tetragon.grpc.address=localhost:54321
 ```
 
 An example gRPC endpoint is the Tetra CLI when its not piped JSON output directly,

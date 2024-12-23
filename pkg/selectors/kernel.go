@@ -10,15 +10,15 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/cilium/tetragon/api/v1/tetragon"
-	"github.com/cilium/tetragon/pkg/api/processapi"
-	gt "github.com/cilium/tetragon/pkg/generictypes"
-	"github.com/cilium/tetragon/pkg/idtable"
-	"github.com/cilium/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
-	"github.com/cilium/tetragon/pkg/kernels"
-	"github.com/cilium/tetragon/pkg/mbset"
-	"github.com/cilium/tetragon/pkg/reader/namespace"
-	"github.com/cilium/tetragon/pkg/reader/network"
+	"github.com/go-faster/tetragon/api/v1/tetragon"
+	"github.com/go-faster/tetragon/pkg/api/processapi"
+	gt "github.com/go-faster/tetragon/pkg/generictypes"
+	"github.com/go-faster/tetragon/pkg/idtable"
+	"github.com/go-faster/tetragon/pkg/k8s/apis/cilium.io/v1alpha1"
+	"github.com/go-faster/tetragon/pkg/kernels"
+	"github.com/go-faster/tetragon/pkg/mbset"
+	"github.com/go-faster/tetragon/pkg/reader/namespace"
+	"github.com/go-faster/tetragon/pkg/reader/network"
 )
 
 const (

@@ -14,7 +14,7 @@ PLURAL_EXCEPTIONS=${1:-"TracingPolicyNamespaced:TracingPoliciesNamespaced,PodInf
 kube::codegen::gen_client \
     --with-watch \
     --output-dir "${K8S_PKG}/client" \
-    --output-pkg "github.com/cilium/tetragon/pkg/k8s/client" \
+    --output-pkg "github.com/go-faster/tetragon/pkg/k8s/client" \
     --plural-exceptions ${PLURAL_EXCEPTIONS} \
     --boilerplate "${K8S_PKG}/hack/custom-boilerplate.go.txt" \
     "${K8S_PKG}/apis"

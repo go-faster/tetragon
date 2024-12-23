@@ -49,8 +49,8 @@ assignees: ''
 
   - [ ] Create `vX.Y` branch from the tag you pushed
   - [ ] Create a "Starting `X.Y+1` development" PR to the main branch with the following changes:
-    - Add the new stable branch to [renovate.json5](https://github.com/cilium/tetragon/blob/main/.github/renovate.json5)
-    - Update [CustomResourceDefinitionSchemaVersion](https://github.com/cilium/tetragon/blob/main/pkg/k8s/apis/cilium.io/v1alpha1/version.go) to `X.Y+1.0`
+    - Add the new stable branch to [renovate.json5](https://github.com/go-faster/tetragon/blob/main/.github/renovate.json5)
+    - Update [CustomResourceDefinitionSchemaVersion](https://github.com/go-faster/tetragon/blob/main/pkg/k8s/apis/cilium.io/v1alpha1/version.go) to `X.Y+1.0`
   - [ ] Once PR is merged, tag the first commit in the main branch which is not in the `X.Y` branch as `vX.Y+1.0-pre.0`. The high level view of the status after this tag is shown in the following figure (RELEASE is `v0.10.0` in this example):
 
 ```mermaid
@@ -74,8 +74,8 @@ gitGraph
 
 - [ ] Go to [Image CI Releases workflow] and wait for the release image build to finish.
   - Get approval for your release build workflow from [a Tetragon maintainer]
-  - https://quay.io/repository/cilium/tetragon?tab=tags
-  - https://quay.io/repository/cilium/tetragon-operator?tab=tags
+  - https://quay.io/repository/go-faster/tetragon?tab=tags
+  - https://quay.io/repository/go-faster/tetragon-operator?tab=tags
 
 - [ ] When a tag is pushed, a GitHub Action job takes care of creating a new GitHub
       draft release, building artifacts and attaching them to the draft release. Once
@@ -95,9 +95,9 @@ gitGraph
    - Once the pull request is merged and the chart is published, go to [cilium/charts GKE workflow] and wait for the
      CI run to pass.
 
-[release blockers]: https://github.com/cilium/tetragon/issues?q=is%3Aissue+is%3Aopen+label%3Arelease-blocker
-[Image CI Releases workflow]: https://github.com/cilium/tetragon/actions/workflows/build-images-releases.yml
+[release blockers]: https://github.com/go-faster/tetragon/issues?q=is%3Aissue+is%3Aopen+label%3Arelease-blocker
+[Image CI Releases workflow]: https://github.com/go-faster/tetragon/actions/workflows/build-images-releases.yml
 [cilium/charts RELEASE.md]: https://github.com/cilium/charts/blob/master/RELEASE.md
 [cilium/charts GKE workflow]: https://github.com/cilium/charts/actions/workflows/conformance-tetragon-gke.yaml
-[releases page]: https://github.com/cilium/tetragon/releases
+[releases page]: https://github.com/go-faster/tetragon/releases
 [a Tetragon maintainer]: https://github.com/orgs/cilium/teams/tetragon-maintainers/members

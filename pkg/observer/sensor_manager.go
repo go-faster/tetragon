@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/cilium/tetragon/pkg/sensors"
+	"github.com/go-faster/tetragon/pkg/sensors"
 )
 
 var (

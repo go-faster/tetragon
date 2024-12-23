@@ -6,11 +6,11 @@ package userinfo
 import (
 	"errors"
 
-	"github.com/cilium/tetragon/pkg/api/processapi"
-	"github.com/cilium/tetragon/pkg/metrics/errormetrics"
-	"github.com/cilium/tetragon/pkg/option"
-	"github.com/cilium/tetragon/pkg/reader/namespace"
-	"github.com/cilium/tetragon/pkg/reader/userdb"
+	"github.com/go-faster/tetragon/pkg/api/processapi"
+	"github.com/go-faster/tetragon/pkg/metrics/errormetrics"
+	"github.com/go-faster/tetragon/pkg/option"
+	"github.com/go-faster/tetragon/pkg/reader/namespace"
+	"github.com/go-faster/tetragon/pkg/reader/userdb"
 )
 
 // Errors

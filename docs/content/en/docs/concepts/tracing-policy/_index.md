@@ -19,7 +19,7 @@ issues such as TOCTOU bugs.
 {{< /caution >}}
 
 For the complete custom resource definition (CRD) refer to the YAML file
-[`cilium.io_tracingpolicies.yaml`](https://github.com/cilium/tetragon/blob/main/pkg/k8s/apis/cilium.io/client/crds/v1alpha1/cilium.io_tracingpolicies.yaml).
+[`cilium.io_tracingpolicies.yaml`](https://github.com/go-faster/tetragon/blob/main/pkg/k8s/apis/cilium.io/client/crds/v1alpha1/cilium.io_tracingpolicies.yaml).
 One practical way to explore the CRD is to use `kubectl explain` against a
 Kubernetes API server on which it is installed, for example `kubectl explain
 tracingpolicy.spec.kprobes` provides field-specific documentation and details

@@ -4,7 +4,7 @@
 package eventhandler
 
 import (
-	"github.com/cilium/tetragon/pkg/observer"
+	"github.com/go-faster/tetragon/pkg/observer"
 )
 
 type Handler func([]observer.Event, error) ([]observer.Event, error)
